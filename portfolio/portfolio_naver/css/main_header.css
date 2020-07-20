@@ -1,0 +1,192 @@
+
+
+/*헤더박스 레이아웃*/
+.header_wrap{
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*로고 영역*/
+h1.header_logo{
+    width: 87px;
+    height: 17px;
+    margin: 32px 0 0 32px;
+    background: url('../img/header_logo.png') no-repeat center;
+    background-size: cover;
+    float: left;
+}
+.header_logo a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+/*메인메뉴 영역*/
+nav{
+    display: inline-block;
+}
+ul.gnb_menu{
+    font-size: 0;
+    text-align: center;
+}
+    li.gnb_menu_list, li.gnb_menu_list_recruit{
+        font-size: 1rem;
+        display: inline-block;
+    }
+    /* 
+    ul.gnb_menu &  li.gnb_menu_list, li.gnb_menu_list_recruit
+    ul의 폰트 사이즈를 0으로 해주면 li가 사라지지만
+    다시 폰트사이즈를 주면 살아남.
+    위치 조절하기에 편해지겠지 */
+
+    a.gnb_menu_item{
+        display: block;
+        margin: 0 32px;
+        padding: 30px 0 30px;
+        font-size: 15px;
+        color: #333;
+        position: relative;	 /*가상요소 before의 앱솔루트포지션 relative임.*/
+    }
+
+/*가상요소*/
+.gnb_menu .gnb_menu_list .gnb_menu_item:before,
+.gnb_menu .gnb_menu_list_recruit .gnb_menu_item:before { 
+    content: '';
+    position: absolute; /*숨겨줄거야 ~*/
+    left: -1px; /* ~ left -1로 줄건데, a태그 기준으로 숨어져있음. (li가 아님)*/
+    bottom: 20px; /*패딩 위아래로 30이고 총 60, 밑에서부터 20만큼에 대기.*/
+    width:calc(100% + 2px); /*a기준의 사이즈만큼 에다가 2px더 하자.*/
+    height: 2px;
+    background-color: #1ec545;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.gnb_menu_list:hover .gnb_menu_item:before,
+.gnb_menu_item:focus:before,
+.gnb_menu_list_recruit:hover .gnb_menu_item:before,
+.gnb_menu_item_recruit:focus:before
+{
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.gnb_menu_list:hover .gnb_dropmenu_wrap{
+    display: block;
+}
+/*언어 선택기 영역*/
+.header_util{
+    float:right;
+    margin: 30px 25px 0 0;
+    width: 144px;
+}
+.header_util .header_lang{
+    display: inline-block; /*인라인 값은 크기값을 가질 수 없기때문에 인라인블럭 속성 부여. */
+    vertical-align: middle; /*그래야 다른 속성값들을 넣어서 적용시킬 수 이땅.*/
+    margin: 0 41px 0 0;
+    font-size: 13px;
+}
+.header_util .header_lang a:first-child{
+    padding-right: 10px;
+    color: #333;
+    border-right: 1px solid #6e6e6e;
+}
+.header_util .header_lang a:last-child{
+    padding-left: 7px;
+    color: #333;
+}
+
+
+/*드롭다운 메뉴*/
+.gnb_dropmenu_wrap{
+    display: none;
+    background-color:#0ECA61;
+    min-width: 1100px;
+    height: 276px;
+    z-index: 999; /*포토샵이 레이어 기능과 유사하다. 숫자가 높을 수록 더 올라옴.*/
+    position: absolute; /*브라우저 즉 html을 기준으로 뜨기 때문에 포지션은 앱솔루트*/
+    left: 0;
+    right: 0;
+    top: 80px;
+    text-align: center;
+    font-size: 0; /*왜? 싸고있는 ul이라..li를 블럭값을 줘서 n군데로 나눌거임.*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15)
+}
+.gnb_dropmenu_wrap > li{
+    display: inline-block;
+    width: 190px;
+    height: 276px;
+    padding-top: 28px;
+    vertical-align: top;
+    font-size: 1rem;
+    border-left: 1px solid rgba(255,255,255,0.3);
+}
+/*li 오른쪽 보더라인 생성*/
+.gnb_dropmenu_wrap > li:last-child{
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+.gnb_dropmenu_wrap > li:hover{
+    background-color: #0FB93C;
+}
+
+/*드롭다운 메뉴 스타일*/
+.gnb_dropmenu > li{
+    margin: 0 0 5px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.gnb_dropmenu a{
+    color: #fff;
+    font-size: 15px;
+}
+.gnb_dropmenu > li.depth_blank{
+    margin-bottom: 14px;
+}
+.classify{
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 17px;
+    margin-bottom: 25px;
+}
+.gnb_dropmenu > .classify:first-child{
+    border-top: 0;
+    padding-top: 0;
+}
+
+a.gnb_dropmenu_item{
+    display: block;
+    padding-left: 28px;
+}
+
+
+.gnb_dropmenu_item .depth{
+    color: rgba(255,255,255,0.7);
+}
+.gnb_dropmenu_item .depth:hover{
+    color: rgba(255,255,255,1);
+}
+.gnb_dropmenu_item li:before{ 
+    content: '';
+    position: absolute; /*숨겨줄거야 ~ */
+    left: -1px; /* ~ left -1로 줄건데, a태그 기준으로 숨어져있음. (li가 아님)*/
+    bottom: 10px; /*패딩 위아래로 30이고 총 60, 밑에서부터 20만큼에 대기.*/
+    width:calc(100% + 2px); /*a기준의 사이즈만큼 에다가 2px더 하자.*/
+    height: 2px;
+    background-color: red;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.gnb_dropmenu_item:hover .gnb_dropmenu_item:before,
+.gnb_dropmenu_item:focus:before
+{
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
