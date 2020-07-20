@@ -1,0 +1,37 @@
+
+  .slider {
+    list-style:none;
+    max-height: 100%;
+    overflow:hidden;
+  }
+  .slider:after {
+    content:'';
+    display:block;
+    clear:both;
+  }
+  .slider li {
+    opacity:0;
+  }
+  .slider li div {
+    width:100%;
+    height:100%;
+    /* background-size:cover;
+    position:relative; */
+  }
+  
+  .slider li dt {
+    color:#fff;
+    /* font-size:3rem;
+    text-shadow:1px 1px 10px #444; */
+  }
+  .slider li dd {
+    color:#fff;
+    /* text-shadow:1px 1px 10px #444; */
+  }
+  .btn {
+    text-align:center;
+  }
+  .btn button {
+    cursor:pointer;
+  }
+  
