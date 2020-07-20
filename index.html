@@ -126,7 +126,9 @@
         .desktop_icon.iconNaver{top: 328px;}
         .desktop_icon.iconStarwars{top: 410px;}
         .desktop_icon.iconKakaobank{top: 492px;}
-
+        #clock{
+            style="width:80px; height:50px; line-height:30px; color:rgb(0, 0, 0);font-size:10px; text-align:center;
+        }
 
     </style>
 </head>
@@ -208,8 +210,8 @@
                 <img src="windows_images/task-scheduler-16x16.png" alt="">
                 <img src="windows_images/audio-okay-16x16.png" alt="">
             </div>
-            <div class="taskBar_time" onload="printClock()">
-                <div id="clock" style="width:80px; height:50px; line-height:30px; color:rgb(0, 0, 0);font-size:10px; text-align:center;">
+            <div class="taskBar_time">
+                <div id="clock" onload=printClock()>
                   오후 00:00
                 </div>
             </div>
@@ -314,7 +316,7 @@
             
             if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
                 amPm = 'PM';
-                currentHours = addZeros(currentHours - 12,2);
+                currentHours = addZeros(currentHours - 12, 2);
             }
 
             if(currentSeconds >= 50){// 50초 이상일 때 색을 변환해 준다.
