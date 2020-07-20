@@ -1,0 +1,672 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: 'Segoe UI',SegoeUI,'Malgun Gothic',Gulim,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    min-width: 320px;
+    color: #000;
+    background-color: #fff;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    color: #262626;
+    display: inherit;
+}
+img{
+    max-width: 100%;
+    height: auto;
+} /* 0520오옷..굉장히 사소하면서도 중요하다..! */
+/* #wrapper{
+    padding: 0 5%;
+} */
+
+#header{
+    padding: 0 5%;
+}
+/* header */
+#ms_logo img{
+    width: 108px;
+    height: 23px;
+    padding: 16px 6px 14px 10px;
+    float: left;
+}
+#show-pipe::before {
+    content: "|";
+    display: block;
+    font-size: 24px;
+    font-weight: normal;
+    margin-left: -13px;
+    padding-left: 30px;
+    position: absolute;
+    top: 12px;
+}
+#show-pipe{
+    display: inline-block;
+}
+#show-pipe span{
+    padding-left: 40px;
+    font-weight: 600;
+    font-size: 18px;
+}
+#nav1 {
+    display: inline-block;
+    /* border:1px black solid; */
+}
+#nav-menu-1{
+    display: inline-block;
+    padding: 16px;
+    font-size: 13px;
+}
+#nav-menu-1 li{
+    padding-right: 20px;
+}
+#nav2{
+    display: inline-block;
+    float: right;
+    /* padding: 10px 0 10px 0; */
+    font-size: 13px;
+    padding: 20px 0;
+    /* border:1px black solid; */
+}
+#nav2 img{
+    vertical-align: middle;
+    /* border:1px black solid; */
+}
+#ms-click img{
+    width: 10px;
+    height: 10px;
+}
+
+
+/* edge-intro-main */
+#edge-intro-main{
+    width: 100%;
+}
+div.edge-intro-main-img{
+    width: 100%;
+    height: 800px;
+    position: relative;
+    background-image: url('../images_mswindow/1920_Panel01_Hero_Things.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% center;
+}
+.edge-first-card{
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.edge-first-card > div{
+    position: absolute;
+    left: 60%;
+    right: 0;
+    margin: 0 auto;
+    text-align: left;
+    width: 35%;
+}
+.fst-card-heading h1{
+    font-size: 46px;
+    padding-bottom: 30px;
+    font-weight: 200;
+    /* border: 1px solid red; */
+}
+.fst-card-txt p{
+    font-size: 23px;
+    padding: 10px 0 30px 0;
+    font-weight: 300;
+}
+
+
+
+
+.dwnbtn{
+    width:240px;
+}
+.dropbtn{
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    background-color: #0067b8;
+    color: #fff;
+    border: 1px solid transparent;
+    border-left: 2px solid #038dff;
+}
+.mainPopup{
+    display: none;
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+    padding: 2px 0;
+    text-align: center;
+    opacity: 0.66;
+    color: #000;
+    background: #e6e6e6;
+    font-size: .73333333rem;
+}
+.mainPopup p{
+    border-bottom: 1px solid slategrey;
+    font-size: 9px;
+}
+.mainPopup li{
+    clear: both;
+    text-align: left;
+    display: block;
+    padding: 8px 10px;
+}
+.mainPopup li a{
+    display: inline-block;
+}
+    .mainPopup li:after{    
+        content: ">";
+        font-family: "MWF-MDL2";
+        float: right;
+    }
+
+
+/* edge-sec-card */
+#edge-sec-card{
+    /* border:1px solid red; */
+    padding: 0 5%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 48px;
+    padding-bottom: 28px;
+}
+.edge-heading h2{
+    font-size: 34px;
+    line-height: 40px;
+}
+.edge-description {
+    padding: 24px 0;
+}
+.edge-description p{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* edge-third-cards */
+#edge-third-cards{
+    text-align: center;
+    font-size: 0;
+    padding: 0 8%;
+    overflow: hidden;
+}
+.card-section{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 100px 0;
+}
+.card-section img{
+    width: 90%;
+    padding: 0 10px 20px;
+    display: block;
+    /* border: 1px solid blue; */
+}
+.card-section h4{
+    text-align: left;
+    width: 100%;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 24px;
+    padding: 0px 5px 40px;
+}
+.card-section p{
+    text-align: left;
+    padding:0 5px;
+}
+
+/* bxslider 속성 오버레이*/
+#slide-content{
+    font-size: 34px;
+    /* border: 1px solid red; */
+}
+.bx-wrapper{
+    position: relative;
+    border: 0px solid transparent;
+    box-shadow: 0 0 0 transparent;
+}
+.bx-wrapper .bx-pager{
+    position: relative;
+    width: 100%;
+}
+.bx-controls-direction .bx-prev:hover{
+    opacity: .8;
+    box-shadow: none;
+    background:;
+}
+#c-quote{
+    padding: 0 5%;
+    text-align: center;
+    font-family: inherit;
+}
+.c-logo{
+    position: relative;
+    padding-top: 15px;
+    display: inline-block;
+}
+.c-logo img{
+    margin: 0 auto;
+    width: 150px;
+    height: 40px;
+}
+.c-heading{
+    font-size: 34px;
+    font-weight: 500;
+    opacity: .95;
+}
+.c-quote_quoteSymbol{
+    font-size: 62px;
+    font-weight: 600;
+    opacity: .95;
+    font-family: TimesNewRoman,"Times New Roman",Times,serif;
+}
+.bx-wrapper .bx-controls-direction a{
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+.bx-wrapper .bx-pager{
+    padding: 0;
+}
+.bx-wrapper .bx-pager.bx-default-pager a{
+    background-color: white;
+    text-indent: -9999px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin: 0 5px;
+    outline: 0;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+
+/* 
+ main-images 1/2 * main-images 2/2 
+아......
+ */
+.main-images{
+    padding: 0 5%;
+    margin: 0 auto;
+    /* border: 1px solid springgreen; */
+    /*div로 영역을 일부러 나눴는데
+    height값이 안먹히는 경우가 많음.
+    => 아래 코드 두개를 삽입하라고 함.
+    ==> div에 주면 메인gnb가 깨짐
+    ===> overflow:hidden;
+        height:auto;.*/
+}
+.m-i-paragraph{
+    padding-top: 12px;
+}
+.m-i-button{
+    padding: 10px 3px 7px 0;
+    color: #005da6;
+    font-size: 15px;
+    font-weight: 600;
+}
+.main-images-list-r{
+    width: 100%;
+    overflow:hidden;
+    height:auto;
+    position: relative;
+    margin-top: 80px;
+    /* border: 1px solid red; */
+}
+.main-images-list-r img{
+    width: 65%;
+    float: right;
+}
+.m-i-cards-l{
+    width: 33%;
+    float: left;
+    padding: 10px;
+    overflow:hidden;
+    height:auto; 
+    position: absolute;
+    top: 30%;
+    /* border: 1px solid green; */
+}
+
+.main-images-list-l{
+    width: 100%;
+    overflow:hidden;
+    height:auto;
+    position: relative;
+    margin-top: 80px;
+    /* border: 1px solid blue; */
+}
+.main-images-list-l img{
+    width: 65%;
+    float: left;
+}
+.m-i-cards-r{
+    width: 33%;
+    float: right;
+    padding: 10px;
+    overflow:hidden;
+    height:auto;
+    clear: both;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    /* border: 1px solid salmon; */
+}
+
+ /* main-images bxslider */
+
+
+
+/* helpdesk */
+#helpdesk{
+    display: block;
+    padding: 0 5%;
+    /* border: 1px springgreen solid; */
+}
+.helpdesk-card{
+    display: inline-block;
+    width: 32%;
+    margin: 0 auto;
+    text-align: center;
+    /* border: 1px slateblue solid; */
+}
+.helpdesk-card h5{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.helpdesk-card a{
+    color: #0067b8;
+    white-space: normal;
+}
+
+
+
+/* dark-footer-paragraph */
+#dark-footer-paragraph{
+    padding: 0 5%;
+    display: block;
+    margin-top: 5%;
+    background-color: #333;
+}
+.d-p-contents{
+    padding: 0 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.d-caption{
+    padding: 4px 0 4px;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* snsBar */
+.sns-bar{
+    padding: 0 5%;
+    display: block;
+    margin: 48px 0 0 0;
+    /* border:1px solid violet; */
+}
+.sns-bar p {
+    display: inline-block;
+    float: left;
+    padding-top: 6px;
+    padding-right: 10px;
+     /* border:1px solid red; */
+}
+.sns-bar img{
+    width: 28px;
+    height: 28px;
+    padding-right: 10px;
+}
+
+/* footer */
+#footer{
+    width: 100%;
+    color: #616161;
+    background: #f2f2f2;
+    margin-top: 48px;
+}
+#wrap{
+    padding: 0 5%;
+}
+.c-menu{
+    padding: 0 12px 0 0;
+    width: 30%;
+}
+.f-menu{
+    /* border: 1px solid red; */
+    display: inline-block;
+    width: 100%;
+    padding-top: 30px;
+}
+.f-menu-group-left{
+    float: left;
+    width: 50%;
+}
+.c-menu{
+    float: left;
+}
+.f-menu-group-right{
+    float:right;
+}
+.c-menu{
+    float: left;
+}
+.f-menu-heading {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+}
+.f-menu-context li{
+    display: block;
+    padding: 8px 0;
+    font-size: 12.5px;
+}
+
+#base{
+    margin: 0 auto;
+    padding:30px 0px 16px;
+    display: inline-box;
+    /* border: 1px solid red; */
+}
+#base div{
+    display: inline-block;
+}
+.base-right{
+    float: right;
+    margin-top: 15px;
+    /* border: 1px solid blue; */
+}
+.base-right li{
+    padding-right: 15px;
+}
+.lang{
+    display: inline-block;
+}
+.lang p{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    /* border: 1px solid blue; */
+}
+.lang img{
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+
+
+
+
+/*서브메뉴 패널*/
+#panel{
+    display: block;
+    padding: 0 5%;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 100000;
+}
+ul, li, a{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+#panel-wrap{
+    border: 1px solid rgba(128, 128, 128, .3);
+    display: block;
+    margin: 0 auto;
+    width: 820px;
+    background: #f2f2f2;
+    width: 80%;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.nav-menu > h2, ul{
+    font-size: 13px;
+}
+.nav-menu > h2{
+    padding-bottom: 20px;
+}
+.nav-menu ul{
+    padding-bottom: 20px;
+}
+.nav-menu{
+    width: 16%;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    padding: 0;
+}
+.nav-menu ul{
+    font-weight: 300;
+}
+.nav-menu li{
+    padding-bottom: 10px;
+    font-weight: 300;
+}
+.nav-menu li a{
+    text-decoration:none;
+    color: black;
+}
+.nav-menu li a:hover{
+    text-decoration: underline grey;
+}
+.morebtn {
+    display: inline;
+    background-color: #e6e6e6;
+}
+.morebtn p{
+    border-top: 1px solid rgba(0,0,0,0.3);
+    text-align: center;     
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(0,0,0,0.8);
+    padding:10px 0;
+    margin-top: 30px;
+}
+
+
+
+
+/*main-images bxslider*/
+
+
+.emailsms-desktop{
+    padding: 0 5%;
+    margin: 0 auto;
+}
+.emailsms-field, .emailsms-imgs{
+    float: left;
+    border: 1px solid blue;
+    width: 48%;
+}
+.emailsms-field{
+    margin: 0 auto;
+}
+.emailsms-toggle img{
+    width: 100px;
+}
+.blind {
+    visibility: hidden;
+    text-indent: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.emailsms-img{
+    width: 100%;
+    float: left;
+}
+.windows-img img{
+    width: 100%;
+    padding: 20px;
+}
+
+
+
+
+
+.blind {
+    visibility: hidden;
+    text-indent: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+.smallbtn::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f078";
+    position: absolute;
+    font-size: 8px;
+    display: inline-block;
+    color: currentColor;
+    font-weight: 600;
+    padding-top: 7px;
+    padding-left: 3px;
+}
+
+
+
+/* 0711 */
+#nav-menu-1 .arrow_btn:after{
+    display: inline-block;
+    content:'';
+    background: url('../images_ms/down_icon.png');
+    background-size: 13px 13px;
+    width: 13px;
+    height: 15px;
+    vertical-align: middle;
+    margin-left:5px;
+}
+#nav-menu-1 .buy10{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
