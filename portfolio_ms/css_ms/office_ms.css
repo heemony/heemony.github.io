@@ -1,0 +1,737 @@
+*{
+    padding:0; margin:0; box-sizing: border-box; font-size: 13px; color: #262626;}
+body{
+    font-family: 'Segoe UI',SegoeUI,'Malgun Gothic',Gulim,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    min-width: 320px;
+    color: #000;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #262626;
+}
+#wrapper{ padding: 0 5%}
+/* header */
+#header{
+    position: relative;
+}
+.toggle_btn{display: none;}
+h1.ms_logo{
+    float: left;
+    display: block;
+    padding-left: 14px;
+    padding-right: 17px;
+}
+h1.ms_logo a{ 
+    display:block;
+    width: 108px; 
+    line-height: 50px;
+}
+h1.ms_logo img{
+    width: 100%;
+    vertical-align: middle;
+}
+.show_pipe::before {
+    content: "|";
+    font-size: 24px;
+    margin-left: 5px;
+    padding-left: 0px;
+    position: absolute;
+    top: 8px;
+}
+.main_heading a{
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+/* nav1 */
+.nav1{
+    float: left;
+    line-height: 55px;
+}
+.nav1 > ul > li {
+    display: inline-block;
+    padding: 0 10px;
+}
+.nav1 > ul > li > a:hover{
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+}
+
+.now_purchase{
+    border: 1px solid black; 
+    padding: 4px;
+    border-radius: 5%;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* nav1 서브 패널 */
+.nav1_panel{
+    display: none;
+    position: absolute;
+    top: 60px;
+    width: auto;
+    z-index: 99;
+}
+.nav1_panel.p_1{
+    width: 100%;
+    left: 1%;
+    background: rgb(245, 245, 245);
+    border-bottom: 2px solid black;
+}
+.product_menu li.panel_items{
+    width: 20%;
+    float: left;
+    padding:0 20px;
+}
+.product_menu > li{
+    display: block;
+}
+
+.product_btn.on, .resource_btn.on{
+    border: dashed 1px black;
+}
+
+.resource_menu{
+    top: 65px; 
+    width: 200px;
+    background: rgb(245, 245, 245);
+    border-bottom: 2px solid black;
+}
+.resource_menu > li{
+    padding-left: 30px;
+}
+
+
+/* nav2 */
+.nav2{
+    float: right;
+    line-height: 45px;
+}
+.nav2 img{
+    vertical-align: middle;
+}
+.nav2 > ul > li {
+    display: inline-block;   
+}
+li.nav2_menu_list{
+    padding:0 5px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+li.nav2_menu_list.on{
+    border: 1px dashed rgb(67, 67, 67);
+}
+.nav1_menu li{
+    border: none;
+}
+.nav1_menu li.on{
+    border: 1px dashed rgb(67, 67, 67);
+}
+
+
+/* 서브패널 */
+#panel{display: none;}
+#panel.on{
+    background-color: #f2f2f2;
+    position: absolute; 
+    /*헤더에 렐러티브줌.. 
+    1. 헤더 기준으로 최소한의 너비값 주고싶었으나 안됨.
+    2. li.nav2_menu_list에다가 렐러티브해서 배치하고 싶었으나 아래와 같은 이유로 안됨.
+    */
+    display: block;
+    top: 55px;
+    right: 30px;
+    width: 95%;
+    /* margin-left: -900px;  nav2 > li.nav2_menu_list에 렐러티브 주면 이걸 줘야하는데 뒤로 빠져버림..ㅠㅠ*/
+    border: 1px solid rgb(211, 211, 211);
+    z-index: 99999;
+}
+ul#panel_menu{
+    font-size: 0;
+}
+ul#panel_menu > li{
+    display: inline-block;
+    width: 16.66%;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    vertical-align: top;
+}
+.more_info{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.more_btn{
+    display: block;
+    width: 270px;
+    line-height: 38px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+/***********************************main1***********************************/
+nav#gnb{
+    position: relative;
+}
+/* .main1{
+    height: 450px; 높이값 지정해줌으로써 이미지가 앱솔루트로 떠있어도 밑으로 컨텐츠가 깔리지 않도록한다.
+    background-size: cover;
+} */
+/* .main1 img{
+    position: absolute; main1이미지의 앱솔루트 속성 때문에 main2가 올라가는 문제가 생김.
+    top: 60px;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 450px;
+    vertical-align: middle;
+    z-index: 1;
+} */
+.main1 img{
+    width: 100%;
+    z-index: -999;
+}
+.main1_card{
+    position: absolute;
+    max-width: 50%;
+    padding-left: 9%;
+    top: 223px;
+    z-index: 2;
+}
+.m_heading{
+    position: relative;
+    top: 50%;
+    width: 100%;
+}
+.m_heading h1{
+    font-size: 46px;
+    letter-spacing: -0.46px;
+    margin-bottom: 5px;
+}
+.m_heading p{
+    color: #000;
+    font-weight: 400;
+    padding: 8px 0 0;
+}
+.blank{
+    display: block;
+    width: 100%;
+    height: 2px;
+}
+
+
+/***********************************main2***********************************/
+/* main2 */
+.container{
+    padding: 0 5%;
+}
+.main2{
+    padding: 100px 0;
+}
+.m2_heading{
+    display: block;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.m2_heading h2{
+    font-size: 34px;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+.m2_heading span a{
+    color: #005da6;
+    font-weight: 600;
+}
+.m2_list{
+    width:100%;
+    text-align: center; /*중앙배열*/
+    padding-bottom: 30px;
+}
+.m2_list div{
+    width: 10%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.link_offset img{
+    display: block;
+    max-width: 75px;
+    min-width: 75px;
+    display: block;
+    margin: 0 auto;
+}
+.link_offset span{
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 0;
+    text-align: center;
+}
+/* main2끝 */
+
+
+/***********************************main3***********************************/
+/* main3 */
+.main3{
+    width: 100%;
+}
+.main3_card{
+    display: inline-block;
+    width: 33%;
+    padding-left: 12px;
+    padding-right: 12px;
+    vertical-align: top;
+}
+.main3_card img{
+    width: 100%;
+}
+.home_desc h4{
+    padding-top: 30px;
+    font-size: 20px;
+}
+.home_desc p{
+    display: block;
+}
+.home_desc span{
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 10px;
+    color: #005da6;
+    font-weight: 600;
+}
+/* main3끝 */
+
+
+
+/***********************************main4***********************************/
+/* main4 */
+.main4{
+    width: 100%;
+    padding-top: 100px;
+}
+.fri_qna_heading h2{
+    font-size: 34px;
+    padding-bottom: 10px;
+}
+.qna_p_right{
+    display: block;
+    float: right;
+    display: inline;
+    padding: 5px;
+}
+.qna_p_right button{
+    display: inline;
+    padding: 10px;
+    border:none;
+    background-color: transparent;
+}
+.qna_p_right button.on{
+    color: #0067b8;
+}
+.qna_p_right button.off{
+    color: rgba(0,0,0,.2);
+}
+.fir_qna_drawer button{
+    font-size: 13px;
+    line-height: 16px;
+    padding: 14px 12px 14px 6px;
+    /* position: relative; */
+    border: 2px solid transparent;
+    outline: 1px solid transparent;
+    outline-offset: -3px;
+    background: #f0f0f0;
+    color: rgba(0,0,0,.8);
+    font-weight: 400;
+    /* left: 0; */
+    text-align: left;
+    width: 100%;
+    display: inline;
+}
+/* .fir_qna_drawer ul li{
+    display: inline;
+} */
+.drop_answer{
+    background: #fff;
+    padding: 0 12px 24px 12px;
+}
+        /* 0715  */
+        .fri_qna_list{
+            /* border: 1px solid blue; */
+        }
+
+        .drop_answer_list{
+            display: none;
+        }
+        .drop_answer_list.on{
+            display: block;
+            padding: 30px 0;
+        }
+        li.list_menu_heading{
+            font-size: 15px;
+            padding: 15px 0 15px 5px;
+        }
+        li.list_menu_heading a{
+            list-style-type: disc;
+            margin-left: 15px;
+        }
+        li.style_visible{
+            margin-left: 30px;
+            list-style-type: disc;
+            padding: 5px 0;
+        }
+        span.txt_clr{
+            color: #005da6;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .fri_qna_lists button:hover{
+            box-shadow: 0 0 4px 2px rgba(0, 0, 0, .16);
+            color: royalblue;
+            background: #f0f0f0;
+        }
+        .fri_qna_lists button:before{
+            content:'';
+            display: inline-block;
+            float: left;
+            margin-right: 10px;
+            padding-left: 10px;
+            width: 16px;
+            height: 16px;
+            background: url('../images_ms/down_icon.png') no-repeat center;
+            background-size: 14px 14px;
+        }
+        .fri_qna_lists button.on:before{
+            content:'';
+            display: inline-block;
+            float: left;
+            margin-right: 10px;
+            padding-left: 10px;
+            width: 16px;
+            height: 16px;
+            background: url('../images_ms/up_icon.png') no-repeat center;
+            background-size: 14px 14px;
+        }
+        .qna_p_right.on button{
+            /* padding: 6px 10px 8px; */
+            color: #0067b8;
+        }
+        .qna_p_right button.disabled{
+            /* padding: 6px 10px 8px; */
+            cursor: none;
+            color: rgba(0, 0, 0, 0.2);
+        }
+        .qna_p_right button:hover{
+            /* padding: 6px 10px 8px; */
+            color: white !important;
+            background-color: #0067b8;
+        }
+        ul.dropoff {
+            display: none;
+        }
+        ul.dropoff.dropon {
+            display: block;
+            font-size: 13px;
+        }
+        /*  */
+/* main4끝 */
+
+
+/***********************************main5***********************************/
+/* main5 */
+.main5{
+    width: 100%;
+    text-align: center; /*중앙배열*/
+    padding: 100px 30px;
+    height: 400px
+}
+.more_bottom_info{
+    position: absolute;
+    left:0;
+    right:0;
+    width: 100%;
+    padding: 40px 0 100px;
+}
+.more_bottom_info div{
+    display: inline-block;
+    width: 24%;
+    padding: 10px 0;
+}
+.m5_heading{
+    display: block;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.m5_heading h3{
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 40px;
+}
+.more_info_card p{
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    padding-top: 15px;
+}
+.more_info_card span{
+    display: block;
+    padding: 15px 0 0 ;
+    color: #005da6;
+}
+.snsmenu{
+    display: inline-block;
+    vertical-align: middle;
+}
+.snsmenu p{
+    display: inline-block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 20px;
+    margin-top: 20px;
+    padding-top: 50px;
+}
+.snsmenu img{
+    width: 30px;
+    vertical-align: middle;
+}
+.snsmenu ul{
+    display: inline;
+}
+
+.divider{
+    border: 0;
+    margin: 0;
+    border-top: 1px solid rgba(0,0,0,.2);
+}
+/* main5끝 */
+
+/***********************************main5***********************************/
+.primary_06{ padding: 100px 0 50px; width: 100%; }
+.sns_bar span{ line-height: 30px; float: left; font-size: 15px; color: rgba(0,0,0,.6); padding-right: 10px;}
+.sns_bar > ul {display: inline-block;}
+.sns_bar > ul > li{display: inline-block; padding: 0 6px;}
+.sns_bar img{ width: 28px; height: 28px;}
+
+.more_bottom_info {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(111, 111, 111);
+}
+/* main6 끝 */
+
+
+/***********************************main 끝**********************************/
+
+
+/* footer */
+#footer{background-color: #f2f2f2;}
+#footer a {font-size: 11px; color: #616161;}
+#footer > .f_wrapper{padding: 0 5%; overflow: hidden;}
+nav.f_menu {padding-top: 36px;}
+nav.f_menu p {font-size: 15px; padding-bottom: 10px;}
+nav.f_menu > ul.f_menu_group {display: block; font-size: 0;}
+nav.f_menu > ul.f_menu_group > li{display: inline-block; vertical-align: top; width: 16.6%;}
+ul.txtBox_context > li {padding: 8px 0;}
+
+
+nav.f_base{display: block; overflow: hidden; padding: 30px 0;}
+.f_lang {float: left;}
+.f_lang img{display: inline-block; vertical-align: top;}
+.f_lang span{display: inline-block; line-height:30px; font-size: 11px; color: #616161;}
+.f_copyright {float: right; line-height: 30px;}
+.f_copyright > ul > li {display: inline-block; padding: 0 10px;}
+
+
+
+
+
+
+
+
+/***********************************미디어쿼리***********************************/
+
+@media screen and (max-width:700px){
+}
+
+
+@media screen and (max-width:820px){
+    /* header */
+    #wrapper{ padding: 0;}
+    .toggle_btn{display: block;}
+    h1.ms_logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    h1.ms_logo a{ 
+        line-height: 45px;
+    }
+    .nav1,
+    li.nav2_menu_list a,
+    li.nav2_menu_list_h span{
+        display: none;
+    }
+    .nav2 li.search_btn{
+        position: absolute;
+        left: 40px;
+    }
+    .toggle_btn {
+        width: 48px;
+        height: 48px;
+        float: left;
+        padding: 15px 0px 5px 5px;
+    }
+    .toggle_btn button{
+        border: none;
+        background-color: #fff;
+    }
+    .toggle_btn span.burger{
+        display: block; 
+        width: 20px; 
+        height: 1px; 
+        margin: 4px; 
+        border: 1px solid black;
+        border-radius: 3px;
+        box-sizing: border;
+    }
+    .toggle_btn #toggle_menu{
+        background-color: #f2f2f2;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid black;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 99999;
+        display: none;
+    }
+    .toggle_btn #toggle_menu.on{
+        display: block;
+    }
+    .toggle_btn #toggle_menu ul li{
+        padding: 13px 0 13px 15px;
+        border-bottom: 1px solid #e6e6e6;
+        font-size: 13px;
+    }
+    .toggle_btn #toggle_menu ul .toggle_icon{
+        position: relative;
+        right: 0;
+        float: right;
+        margin-right: 20px;
+    }
+    .toggle_btn #toggle_menu ul .toggle_icon:before{
+        content:'';
+        display: block;
+        background-image: url('../images_ms/down_icon.png');
+        width: 11px;
+        height: 11px;
+        background-size: contain;
+    }
+    .toggle_btn #toggle_menu ul .toggle_icon.on:before{
+        content:'';
+        display: block;
+        background-image: url('../images_ms/up_icon.png');
+        width: 11px;
+        height: 11px;
+        background-size: contain;
+    }
+
+    /*main*/
+    .m2_list div {
+        width: 20%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .main3 div{
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    nav.f_menu > ul.f_menu_group > li {
+        display: inline-block;
+        vertical-align: top;
+        width: 30%;
+    }
+
+}
+
+/* 895이상 -> 자세히 버튼 추가하려고 780으로 변경함 1399이하*/
+@media screen and (min-width:820px) and (max-width: 1299px){
+    /* header */
+    .nav2_menu_list_h span{
+        display: none;
+    }
+    li.nav2_menu_list {
+        /* padding: 0 10px; */
+        margin-right: 0;
+        margin-top: 5px;
+    }
+    .txtBox.img1txt{
+        width: 100%;
+        height: 300px;
+    }
+    .txtBox.img1txt h2{
+        padding: 0 0 0 4px;
+    }
+    .txtBox.img1txt p{
+        margin-top: 30px;
+        font-size: 15px;
+    }
+    
+    .txtBox.img1txt a{
+        bottom : 50%;
+    }
+    .txtBox.img2txt{
+        width: 40%;
+    } 
+    .txtBox.img1txt h2,.txtBox.img2txt h2{
+        font-size: 24px;
+    }
+}
+
+
+
+@media screen and (max-width: 1050px){
+    .movewrap, .footer{
+        padding-top: 200px;
+    }
+    .main1_card{
+        position: relative;
+        top: 100px;
+        left:0;
+        right: 0;
+        height: 50%;
+        padding:0;
+        max-width: 100%;
+    } 
+    .m_heading {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+.nav1_menu li.hide{
+    display: none;
+}
+.nav1 > ul > li.hide{
+    display: none;
+    border: 1px solid red;
+}
+
