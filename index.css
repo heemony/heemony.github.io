@@ -42,22 +42,69 @@ a{ text-decoration: none; }
     /* background-color: blue; */
     text-align: center;
 }
-.desktop_icon.left_top{
+.desktop_icon.right_top{
     position: absolute;
-    right: 100px;       
+    /* right: 100px;        */
+    top: 30px;
+    right: 180px;
 }
-.desktop_icon.left_top .icon_wrapper{
+.desktop_icon.right_top .icon_wrapper{
     position: absolute;
-    padding-left: 5px;
+    /* padding-left: 5px; */
 }
-.desktop_icon.left_top .icon_wrapper img{
-    width: 150px;
+.desktop_icon.right_top .icon_wrapper img{
+    width: 200px;
     height: auto;
-    transform:rotate(0deg);
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
+    animation-name:rotating;
+    animation-duration:1.5s;
+    animation-iteration-count:infinite;
 }
-.desktop_icon .left_top_title{
+/* zz */
+/* @-webkit-keyframes rotating{
+    0% {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+    100% {
+      -webkit-transform: rotate(-180deg);
+      -o-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+    }
+  }
+  @keyframes rotating {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    
+      }
+      50%{
+          -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+      100% {
+        -webkit-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        
+      }
+  }
+  .rotating {
+    -webkit-animation: rotating 3s linear infinite;
+    -moz-animation: rotating 3s linear infinite;
+    -ms-animation: rotating 3s linear infinite;
+    -o-animation: rotating 3s linear infinite;
+    animation: rotating 3s linear infinite;
+  } */
+/* zz */
+.desktop_icon .right_top_title{
     position: absolute;
     right: 50px;
     display: block;
@@ -255,17 +302,62 @@ button.clickbtn{
     /* left: 583px; */
     top: 20px;
     left: 50%;
-    width: 500px;
-    height: 540px;
+    width: 460px;
+    height: 500px;
     transform: translateX(-50%);
     display: flex;
     border-color: rgb(223, 223, 223) rgb(128, 128, 128) rgb(128, 128, 128) rgb(223, 223, 223);
     border-style: solid;
     border-width: 2px 2px;
     font-family: 'px_sans_nouveaux';
+    transition: all 0.3s ease-in-out;
 }
 .window.off { 
     display: none;
+}
+/* min */
+.task.modal{
+    position: relative;
+}
+.window.min{ 
+    top: 3px;
+    left: 80px;
+    height: 36px;
+    width: 150px;
+}
+.window.min .window_content{
+    display: none;
+}
+.window.min .window_btn{ 
+    display: none;
+}
+.window.min .window_titlebar{
+    position: absolute;
+    bottom: 1px;
+    max-width: 149px;
+    height: 96%;
+    transition: all 1.2s ease-in-out;
+}
+.window.min img.icon{
+    width: 35px;
+    height: 35px;
+}
+.window.min .window_title_area {
+    line-height: 37px;
+    padding-left: 11px;
+}
+
+/* min */
+.window.max{ 
+    display: absolute;
+    left:0;
+    right:0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
 }
 .window img.icon{
     width: 30px;
@@ -290,6 +382,7 @@ button.clickbtn{
     height: 30px;
     background: linear-gradient(to right, rgb(0, 0, 128) 0%, rgb(16, 132, 208) 100%);
     color: rgb(255, 255, 255);
+    transition: all 0.8s ease-in-out;
 }
 .window_btn{ 
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAKCAYAAADo3z3CAAAAoUlEQVRIS9VVWw7AIAib9z/0FpZgCOFRgpluf9MClhYdV++7gfDhYLxYDw+UyiHd5F8S5lr6zNa6Xpv/KwhHOahQpLB1+CwfycgYrwmE0WK8MTsIR1aOGsR+NYkkYzN5/pGwVA9xA/diq8LeHCKuQxQ+aoYt2yJWtpSNZth0edRpGVC5eGQcSg4hXLml3fdpBeHs8evWyPKX9ruXVqnYCeAHA8IyC9K2kmkAAAAASUVORK5CYII=);
@@ -327,6 +420,13 @@ button.clickbtn{
 .window_min_button{background-position: calc(-0 * 13px - 1px) 1px;}
 .window_max_button{background-position: calc(3 * 34px - 1px) 3px;}
 .window_close_button{background-position: calc(-7 * 31px + 1px) 3px;}
+
+.window.min .window_min_button, .window.max .window_max_button, .window.off .window_close_button{ 
+    background-color: rgb(206, 206, 206); 
+    border-color: rgb(143, 143, 143) rgb(233, 233, 233) rgb(224, 224, 224) rgb(122, 122, 122);
+    border-width: 3px;
+    border-style: solid;
+}
 .window_content{
     font-size: 20px;
     width: 100%;
@@ -335,7 +435,7 @@ button.clickbtn{
 .window_content_area{
     position: absolute;
     top: 60px;
-    bottom: 5px;
+    bottom: 7px;
     left: 5px;
     right: 5px;
     width: auto;

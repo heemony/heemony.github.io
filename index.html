@@ -13,11 +13,11 @@
 </head>
 <body>
     <div class="desktop">
-        <div class="desktop_icon left_top">
+        <div class="desktop_icon right_top">
             <div class="icon_wrapper">
                 <a href="#"><img src="gif_files/XlO9.gif" alt=""></a>         
             </div>
-            <div class="left_top_title">Click  Me!</div>
+            <div class="right_top_title">Click  Me!</div>
         </div>
         <div class="desktop_icon iconMs">
             <div class="icon_wrapper">
@@ -125,7 +125,9 @@
             </div>
         </div>
         <div class="taskBar_divider"></div>
-        <div class="task"></div>
+        <div class="task">
+
+        </div>
         <div class="taskBar_divider"></div>
         <div class="taskTray">
             <div class="tray_icon">
@@ -139,11 +141,11 @@
     </div>
 
     <!-- 클릭하면 div를 추가하면서 얘가 보이게 만들어야함. -->
-    <div class="window">
+    <div class="window off">
         <div class="window_titlebar">
             <img class="icon" src="icon_images/wow2_main_1.png" alt="">
             <div class="window_title_area">
-                <span>README...</span>
+                <span>HI! it's ME...</span>
             </div>
             <button class="window_min_button window_btn"></button>
             <button class="window_max_button window_btn"></button>
@@ -166,64 +168,88 @@
             </div>
         </div>
     </div>
-
     <script>
-        var winBrowser = document.querySelector('.window');
-        var winBtn = winBrowser.querySelector('.window_titlebar');
-        winBtn.addEventListener('click', btnWork);
-        function btnWork(e){
-            e.preventDefault();
-            console.log(e.target);
-            if(e.target.className === '.window_min_button'){
-                console.log('작게')
-            }else if(e.target.className === '.window_max_button'){
-                console.log('크게')
-            }else if(e.target.className === '.window_close_button'){
-                winBrowser.classList.add('off');
-            }
-        };
-       
-        // var minBtn = document.querySelector('.window_min_button');
-        // var maxBtn = document.querySelector('.window_max_button');
-        // var closeBtn = document.querySelector('.window_close_button');
-        
-        // closeBtn.addEventListener('click', function(){
-        //     winBrowser.classList.add('off');
-        // });
-        
-    </script>
-    <script>
+        var desktopBtn = document.querySelector('.desktop');
         var startBtn = document.querySelector('.startBtn');
         var showMenu = document.querySelector('.taskBar_submenu');
 
+        // 릭 캐릭터 누르면 readme 나오고 닫히는거.
+        const whoamiBtn = document.querySelector('.right_top');
+        const windowModal = document.querySelector('.window');
+        const closeBtn = windowModal.querySelector('.window_close_button');
+        const minBtn = windowModal.querySelector('.window_min_button');
+        const maxBtn = windowModal.querySelector('.window_max_button');
+        const taskbar = document.querySelector('.task');
+
+        const openModal = () => {
+            windowModal.classList.remove('off');
+        }
+        const closeModal = () => {
+            windowModal.classList.add('off');
+        }
+        //최소화 버튼
+        const minModal = () => {
+            windowModal.classList.add('min'); //.window.min 붙임 (taskbar css적용)
+            taskbar.classList.add('modal'); //taskbar에 클래스 modal붙임 => (position:relative css적용)
+
+            const mClone = windowModal.cloneNode(true); //사라지면 안되니까 복사한다.
+            windowModal.classList.add('off'); //상단에 멍청하게 뜬다....이거뭐냐 ㅠㅠㅠㅠㅠ 흑흑 없애주면 되지만..
+            taskbar.appendChild(mClone);  //찐windowModal 대신에 mClone 복제된걸 넣고.
+            taskbar.addEventListener('click', function (e){ //최소화 된거 다시 누르면 원상태.
+                e.preventDefault();
+                    // 을수썜께 질문!! 0723일
+                    console.log(taskbar.childNodes); //여러번 하면 에러뜨는데...아래 라인떄문에 뜸...
+                    // taskbar.childNodes[1].remove(mClone); //windowModal 대신에 mClone 복제된 거 삭제한다고 했는데, 두번 이상할 경우 에러
+                    taskbar.removeChild(mClone) // 그래서 얘로 바꿔봤는데도 에러뜸.
+                
+                windowModal.classList.remove('min'); //다시 창 보이게 원상태로. 1/2) 작게된 거 원상태.
+                windowModal.classList.remove('off'); //다시 창 보이게 원상태로. 2/2) 안 보이는 거 원상태,
+            }); 
+        }
+        //최대화 버튼
+        const maxModal = () => {
+            console.log('maxBtn 눌림')
+            if(windowModal.className === 'window max'){
+                windowModal.classList.remove('max');
+            } else windowModal.classList.add('max');     
+        }
+
+        whoamiBtn.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
+        minBtn.addEventListener('click', minModal);
+        maxBtn.addEventListener('click', maxModal);
+
+
+
+
+
+
+        //taskbar  start버튼 누르면 메뉴 열림.닫힘.
         startBtn.addEventListener('click', function(){
             if(startBtn.className === 'startBtn toggle'){
                 startBtn.classList.add('clickbtn');
-                showmenu();
+                showMenu.classList.add('clickbtn');
             }else{
                 startBtn.classList.remove('clickbtn');
                 showMenu.classList.remove('clickbtn');
             }
         });
-        function showmenu(){
-            showMenu.classList.add('clickbtn');
-        }
 
-    </script>
-
-    <script>
-        var desktopBtn = document.querySelector('.desktop');
+        
         document.addEventListener('dblclick', showWin);
+
+        // 더블클릭해서 window 창 열기.
         function showWin(e){
             e.preventDefault();
             console.log('더블클릭됐어')
             if(e.target.parentNode !== 'desktop_icon') {return};
             
             var newDiv = desktopBtn.createElement('div');
-            console.log(newDiv)
+            // console.log(newDiv)
             // newDiv.appendChild('div.window');
             document.body.insertBefore(newDiv, desktopBtn); 
         };
+
     </script>
 
     
