@@ -141,6 +141,7 @@
     </div>
 
     <!-- 클릭하면 div를 추가하면서 얘가 보이게 만들어야함. -->
+
     <div class="window off">
         <div class="window_titlebar">
             <img class="icon" src="icon_images/wow2_main_1.png" alt="">
@@ -166,7 +167,7 @@
                     <img class="window_c_icon" src="win93_images/mail.png" alt=""><span>noodle9323@naver.com</span>
                 </div>
             </div>
-        </div>
+        </div>    
     </div>
     <script>
         var desktopBtn = document.querySelector('.desktop');
@@ -238,7 +239,7 @@
         
         document.addEventListener('dblclick', showWin);
 
-        // 더블클릭해서 window 창 열기.
+        // 더블클릭해서 window 창 열기. 아직 안돼...'ㅅ'..
         function showWin(e){
             e.preventDefault();
             console.log('더블클릭됐어')
@@ -264,7 +265,7 @@
         setDrag('div.iconStarwars');
         setDrag('div.iconKakaobank');
         setDrag('div.iconYoutube');
-        // setDrag('.window');
+        setDrag('.window');
 
         function setDrag(selector) {
             var startX = 0;

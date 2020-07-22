@@ -301,16 +301,16 @@ button.clickbtn{
     z-index: 28;
     /* left: 583px; */
     top: 20px;
-    left: 50%;
+    left: 33%;
     width: 460px;
     height: 500px;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); 얘 때문에 자꾸 클릭이 이상해짐*/
     display: flex;
     border-color: rgb(223, 223, 223) rgb(128, 128, 128) rgb(128, 128, 128) rgb(223, 223, 223);
     border-style: solid;
     border-width: 2px 2px;
     font-family: 'px_sans_nouveaux';
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
 }
 .window.off { 
     display: none;
