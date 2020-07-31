@@ -21,7 +21,7 @@
         </div>
         <div class="desktop_icon iconMs">
             <div class="icon_wrapper">
-                <a href="#">
+                <a href="../portfolio_ms/index_ms.html">
                     <img src="icon_images/ms_image.gif" alt="Microsoft">
                 </a>         
             </div>
@@ -29,7 +29,7 @@
         </div>
         <div class="desktop_icon icon29">
             <div class="icon_wrapper">
-                <a href="#">
+                <a href="../portfolio_29cm/index.html">
                     <img src="icon_images/sp_29cm.png" alt="29CM">
                 </a>         
             </div>
@@ -37,7 +37,7 @@
         </div>
         <div class="desktop_icon iconCarhartt">
             <div class="icon_wrapper">
-                <a href="#">
+                <a href="../portfolio_carhartt/carhartt_index.html">
                     <img src="icon_images/carhartt.png" alt="Carhartt WIP">
                 </a>         
             </div>
@@ -45,7 +45,7 @@
         </div>
         <div class="desktop_icon iconEyescream">
             <div class="icon_wrapper">
-                <a href="#">
+                <a href="../portfolio_eye/index.html">
                     <img src="icon_images/eyescream.gif" alt="Eyescream">
                 </a>         
             </div>
@@ -53,7 +53,7 @@
         </div>
         <div class="desktop_icon iconNaver">
             <div class="icon_wrapper">
-                <a href="#">
+                <a href="../portfolio_naver/index.html">
                     <img src="icon_images/naver.png" alt="Naver">
                 </a>         
             </div>
@@ -61,7 +61,7 @@
         </div>
         <div class="desktop_icon iconKakaobank">
             <div class="icon_wrapper">
-                <a href="#">
+                <a href="../portfolio_kakaobank/index.html">
                     <img src="icon_images/kakaobank.png" alt="KakaoBank">
                 </a>         
             </div>
@@ -69,7 +69,7 @@
         </div>
         <div class="desktop_icon iconStarwars">
             <div class="icon_wrapper">
-                <a href="#">
+                <a href="../portfolio_starwars/index.html">
                     <img src="icon_images/starwars.png" alt="Starwars">
                 </a>         
             </div>
@@ -81,7 +81,7 @@
                     <img src="icon_images/youtube.png" alt="Youtube">
                 </a>         
             </div>
-            <div class="title">Youtube Channel</div>
+            <div class="title">✨MUSIC✨</div>
         </div>
     </div>
 
@@ -187,26 +187,37 @@
         }
         const closeModal = () => {
             windowModal.classList.add('off');
+            var v = Array.from(taskbar.children);
+            if(v.length > 0)
+             for(let i = 1; i < v.length; i++){
+                   v.remove[i]; 
+                }
+
+            // var a = taskbar.getElementsByTagName('.div');
+            // if( a.className !== 'window.min'){
+            //     taskbar.removeChild('window.min');
+            // }
+            // windowModal.removeChild('window.min');
+           
         }
         //최소화 버튼
         const minModal = () => {
             windowModal.classList.add('min'); //.window.min 붙임 (taskbar css적용)
             taskbar.classList.add('modal'); //taskbar에 클래스 modal붙임 => (position:relative css적용)
-
-            const mClone = windowModal.cloneNode(true); //사라지면 안되니까 복사한다.
-            windowModal.classList.add('off'); //상단에 멍청하게 뜬다....이거뭐냐 ㅠㅠㅠㅠㅠ 흑흑 없애주면 되지만..
-            taskbar.appendChild(mClone);  //찐windowModal 대신에 mClone 복제된걸 넣고.
-            taskbar.addEventListener('click', function (e){ //최소화 된거 다시 누르면 원상태.
-                e.preventDefault();
-                    // 을수썜께 질문!! 0723일
-                    console.log(taskbar.childNodes); //여러번 하면 에러뜨는데...아래 라인떄문에 뜸...
-                    // taskbar.childNodes[1].remove(mClone); //windowModal 대신에 mClone 복제된 거 삭제한다고 했는데, 두번 이상할 경우 에러
-                    taskbar.removeChild(mClone) // 그래서 얘로 바꿔봤는데도 에러뜸.
-                
-                windowModal.classList.remove('min'); //다시 창 보이게 원상태로. 1/2) 작게된 거 원상태.
-                windowModal.classList.remove('off'); //다시 창 보이게 원상태로. 2/2) 안 보이는 거 원상태,
-            }); 
+            const mClone = windowModal.cloneNode(true);  //클론을 해서 붙인거라서, 이 함수 안에서 최소화된 창 눌렀을 때 클론된 요소를 삭제하려고 했음
+            windowModal.classList.add('off'); 
+            taskbar.appendChild(mClone);
+            
         }
+         //최소화 된거 다시 누르면 원상태.
+        const min_maxModal = (e) => {
+            e.preventDefault();
+            if(taskbar.children.length === 0) return; //task에 아무것도 없을 때 누르면 반응없음.
+            windowModal.classList.remove('min'); //다시 창 보이게 원상태로. 1/2) 작게된 거 원상태.
+            windowModal.classList.remove('off'); //다시 창 보이게 원상태로. 2/2) 안 보이는 거 원상태,
+        
+        }
+    
         //최대화 버튼
         const maxModal = () => {
             console.log('maxBtn 눌림')
@@ -219,7 +230,7 @@
         closeBtn.addEventListener('click', closeModal);
         minBtn.addEventListener('click', minModal);
         maxBtn.addEventListener('click', maxModal);
-
+        taskbar.addEventListener('click', min_maxModal);
 
 
 
