@@ -70,7 +70,7 @@ header{
         display: inline-block;
         height: 100%;
     }
-    .menu_toggle_btn{
+    /* .menu_toggle_btn{
         background: url('../eyes_images/sprite.png') no-repeat center;
         background-position: 0 0;
         width: 25px;
@@ -78,9 +78,25 @@ header{
         position: absolute;
         top: 40px;
         right: 20px;
+    } */
+    button.menu_toggle_btn{
+        width: 30px;
+        height: 1px;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        border: #fff;
+        z-index: 10;
     }
-
-
+    .menu_toggle_btn span:nth-child(1){
+        top: 4px;
+    }
+    .menu_toggle_btn span:nth-child(2){
+        top: 10px;
+    }
+    .menu_toggle_btn span:nth-child(3){
+        top: 16px;
+    }
 
 
 
@@ -592,6 +608,7 @@ footer{
     
     
     */
+
 
 
 
