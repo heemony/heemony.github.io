@@ -88,6 +88,7 @@ index.css 파일 329라인에 있음 */
     width: 20%;
     float: left;
     /*border: 1px solid red;*/
+    padding: 0 2px;
     margin-bottom: 20px;
 }
 
@@ -132,8 +133,7 @@ index.css 파일 329라인에 있음 */
 }
 .detailed_info .det_txt{
     text-align: center;
-    padding: 100px 0;
-    
+    padding: 60px 0;
 }
 .detailed_info .det_title{
     margin-bottom: 10px;font-size: 13px;
@@ -142,7 +142,7 @@ index.css 파일 329라인에 있음 */
 /*content_section*/
 .content_section{
     text-align: center;
-    display: block;
+    /* display: block; */
     /* width: 960px; */
     width: 90%;
     position: relative;
@@ -159,17 +159,30 @@ index.css 파일 329라인에 있음 */
 .storeimgs{
     display: block;
     /* width: 960px; */
-    width: 100%;
+    /* width: 100%; */
     height: 640px;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.imgbox1{background: url('../carhartt_shop_images/shop1.jpg') no-repeat center;}
-.imgbox2{background: url('../carhartt_shop_images/shop2.jpg') no-repeat center;}
-.imgbox3{background: url('../carhartt_shop_images/shop3.jpg') no-repeat center;}
-.imgbox4{background: url('../carhartt_shop_images/shop4.jpg') no-repeat center;}
-.imgbox5{background: url('../carhartt_shop_images/shop5.jpg') no-repeat center;}
+.imgbox1{background: url('../carhartt_shop_images/shop1.jpg') no-repeat center; }
+.imgbox2{background: url('../carhartt_shop_images/shop2.jpg') no-repeat center; }
+.imgbox3{background: url('../carhartt_shop_images/shop3.jpg') no-repeat center; }
+.imgbox4{background: url('../carhartt_shop_images/shop4.jpg') no-repeat center; }
+.imgbox5{background: url('../carhartt_shop_images/shop5.jpg') no-repeat center; }
+a.storeimgs.imgbox1, a.storeimgs.imgbox2, a.storeimgs.imgbox3, a.storeimgs.imgbox4, a.storeimgs.imgbox5{
+    background-size: contain;
+}
+.slick-slide{
+    width: 90%;
+}
+.slick-slide.slick-current.slick-active{
+    width: 90%;
+    height: auto;
+}
+.slick-slide.slick-cloned{
+    width: 90%;
+}
 
 .store_desc{
     padding-bottom: 100px;
@@ -177,9 +190,6 @@ index.css 파일 329라인에 있음 */
 .store_desc h2, span{
     display: block;
 }
-
-
-
 
 /* bx-slider수정 */
 .bx-wrapper {
