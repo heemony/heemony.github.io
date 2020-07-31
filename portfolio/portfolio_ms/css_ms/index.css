@@ -124,6 +124,7 @@ ul#panel_menu > li{
 }
 .bx-wrapper img{
     position: relative;
+    width: 100vw;
 }
 .txtBox{
     position: absolute;
