@@ -5,6 +5,7 @@
     padding: 74px 0 70px;
     text-align: center;
     position: relative;
+    font-size: 14px;
 }
 .footer_logo{
     position: absolute;
@@ -12,8 +13,7 @@
     left: 30px;
     width: 63px;
     height: 13px;
-    border: 1px solid blue;
-    background-image: url('../img/footer_logo.png') no-repeat;
+    background: url('../img/footer_logo.png') no-repeat center;
     -webkit-background-size: 63px 13px;
     background-size: 63px 13px;
 }
@@ -40,7 +40,7 @@
     left: -10px;
     width: 1px;
     height: 12px;
-    background-color: #878890;
+    background-color: #f8f9fa;
 }
 .footer_menu > li:first-child:before{
     display: none;
@@ -49,12 +49,13 @@
     position: absolute;
     right: 30px;
     top: 74px;
-    border: 1px solid red;
     padding-right: 15px;
 }
 .btn_affiliate{
-	padding-right: 26px;
-	position: relative;
+	padding:0 10px;
+    /* position: relative; */
+    background-color: transparent;
+    border: none;
 }
 .affiliate_box .btn_affiliate:before{
     content:'';
@@ -72,12 +73,12 @@
 ul.affiliate_list{
     display: none; /*평소에는 안보여용*/
     position: absolute;
-    left: -81px;
+    left: -76px;
     bottom: 0;
     width: 200px;
     padding: 27px 0 25px;
     text-align: left;
-    /* border: 1px solid green; */
+    border: 1px solid rgb(203, 203, 203);
     background-color: #fff;
 }
 .affiliate_item{

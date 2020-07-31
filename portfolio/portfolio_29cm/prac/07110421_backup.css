@@ -1,0 +1,82 @@
+
+
+/* --------------추천아이템 카드섹션-------------- */
+.sub_items .items_cardSec{ /*전체*/
+    position: relative;
+    padding: 20px 30px;
+    height: auto;
+}
+.sub_items .items_cardSec a{ /*왼쪽*/
+    display: inline-block;
+    padding: 20px 0;
+    border-top: 1px solid rgb(143, 143, 143);
+    float: left;
+    width: 75%;  
+}
+.sub_items .items_cardSec .c_imgBox img{
+    width: 52px;
+    height: 52px;
+    float: left;
+}
+.sub_items .items_cardSec .c_info{
+    float: left;
+    font-size: 11px;
+    height: 54px;
+    width: 70%;
+    padding: 5px 10px;
+}
+.sub_items .items_cardSec .c_info .price{
+    color: orangered;
+    font-size: 8px;
+    font-weight: 500;
+}
+.sub_items .items_cardSec .like_btn:before{
+    content: '';
+    display: inline-block;
+    border-left: 1px solid rgb(143, 143, 143);
+    height: 80px;
+    text-align: center;
+    margin: 0 auto;
+}
+.sub_items .items_cardSec .like_btn{ /*오른쪽*/
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgb(143, 143, 143);
+}
+.sub_items .items_cardSec .like_btn .hrtBox{
+    display: inline-block;
+    position: absolute;
+    height: 54px;
+    top: 10px;
+    left: 50%;
+    padding-top: 10px;
+    transform: translateX(-50%);
+}
+.sub_items .items_cardSec .like_btn .hrt{
+    display: block;
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+.sub_items .items_cardSec .like_btn .hrt path{
+    stroke: #5d5d5d;
+    fill: none;
+}
+.sub_items .items_cardSec .like_btn .hrt.on path{
+    stroke: red;
+    background-color: red;
+    fill: red;
+}
+.sub_items .items_cardSec .like_btn span.count{
+    display: block;
+    width: 40px;
+    padding: 10px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+ㅋㅏ드섹션부분 0711 토0420

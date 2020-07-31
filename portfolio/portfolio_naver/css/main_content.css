@@ -1,11 +1,9 @@
 .main_content{
     max-width: 100%;
     padding: 0 160px 120px;
-    border: 1px solid blue;
 }
 .content_summary{
     margin-top: 67px;
-    border: 1px solid red;
 }
         /*다른 컨텐츠와의 거리는 padding이 훨씬 빠르게 적용된다*/
 .summary_container{
@@ -13,16 +11,16 @@
     width: 26.6%;
     padding-left: 20px;
     padding-right: 20px;
-    border: 1px solid green;
+    border-right: 1px solid rgb(221, 221, 221);
 }
 .summary_container:last-child{
     width: 20.2%;
     padding-right: 0;
+    border-right: 0;
 }
 .summary_container:first-child{
     padding-left: 0;
-}
-
+} 
 /*요기부터*/
 .content_summary:after{
     content:'';
@@ -58,13 +56,13 @@
     color: #333;
 }
 .news_text{
-    border: 1px solid red;
     height: 44px;
     margin-top: 10px;
     text-overflow: ellipsis;
     font-size: 15px;
     overflow: hidden;
     line-height: 1.6;
+    color: rgb(143, 143, 143);
 }
 .news_box a:hover .news_title, 
 .news_box a:focus .news_title{
@@ -120,12 +118,13 @@
     background-size: 417px 1250px; /*가져다쓰는 이미지의 값*/
     -webkit-background-size: 417px 1250px; /*파폭지원*/
     background-position: -277px -38px;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 .date{
     border-top: 1px solid black;
     text-align: right;
     margin-top: 12px;
+    padding-top: 12px;
     font-size: 12px;
     font-family: NanumSquare-EB, 나눔고딕, 돋움, Dotum, sans-serif;
     color: #878787;
@@ -209,7 +208,7 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     position: relative;
     overflow: hidden;/*텍스트를 -120으로 해서 마지막 라인에서 얘가 잡히게됨 이걸 방지하기 위함.*/
@@ -280,7 +279,7 @@
     color: #fff;
 }
 .thumbnail_dimmed dl{
-    border: 1px solid royalblue;
+    /* border: 1px solid royalblue; */
     position: absolute;
     bottom: -130px; /*원래 위치는 30인데 호버할 때 나타나도록 평소에 밑에 숨겨둠. 그래서 -130*/
     padding-top: 50px;

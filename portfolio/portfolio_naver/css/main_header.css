@@ -86,7 +86,7 @@ ul.gnb_menu{
 .header_util .header_lang{
     display: inline-block; /*인라인 값은 크기값을 가질 수 없기때문에 인라인블럭 속성 부여. */
     vertical-align: middle; /*그래야 다른 속성값들을 넣어서 적용시킬 수 이땅.*/
-    margin: 0 41px 0 0;
+    /* margin: 0 41px 0 0; */
     font-size: 13px;
 }
 .header_util .header_lang a:first-child{
@@ -190,3 +190,195 @@ a.gnb_dropmenu_item{
     transform: scaleX(1);
 }
 
+
+
+
+
+
+/* 토클 사이트맵 박스 */
+.header_util .sitemap_box {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 30%;
+    top: -11px;
+    left: 10px;
+}
+.sitemap_box button.box_btn{
+    position: absolute;
+    top: -5px;
+    width: 25px;
+    height: 22px;
+    border: none;
+    background-color: transparent;
+}
+.sitemap_box .btn_line{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    right: 0;
+    background-color: #333;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.sitemap_box .btn_line:nth-child(2){
+    top: 4px;
+}
+.sitemap_box .btn_line:nth-child(3){
+    top: 10px;
+}
+.sitemap_box .btn_line:nth-child(4){
+    top: 16px;
+}
+.sitemap_box:hover .btn_line:nth-child(2),
+.sitemap_box:hover .btn_line:nth-child(3),
+.sitemap_box:hover .btn_line:nth-child(4){
+    background-color:#0ECA61;
+}
+
+.sitemap_box.click{
+    background-color: #fff;
+}
+.sitemap_box.click .btn_line:nth-child(3){
+    display: none;
+}
+.sitemap_box.click .btn_line:nth-child(2){
+    top: -10px;
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    transform: translateY(20px) rotate(-45deg);
+}
+.sitemap_box.click .btn_line:nth-child(4){
+    top: 30px;
+    -webkit-transform: translateY(-20px) rotate(45deg);
+    transform: translateY(-20px) rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+nav.click {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: #0ECA61;
+}
+nav.click ul.gnb_menu{
+    display: inline-block;
+    position: absolute;
+    top: 60px;
+    left:0;
+    right:0;
+    min-width: 1200px;
+}
+nav.click ul.gnb_menu  li.gnb_menu_list{
+    display: inline-block;
+    vertical-align: top;
+}
+nav.click ul.gnb_menu  li.gnb_menu_list, li.gnb_menu_list_recruit{
+    font-size: 1rem;
+    display: inline-block;
+    width: 190px;
+    /* border: 1px solid red; */
+}
+nav.click ul.gnb_menu a.gnb_menu_item{
+    display: inline-block;
+    margin: 0 20px;
+    padding: 30px 30px 20px;
+    font-size: 15px;
+    color: #333;
+    position: relative;	
+    /* border: 1px solid blue; */
+    vertical-align: top;
+}
+
+nav.click .gnb_dropmenu_wrap{
+    display: inline-block;
+    background-color: transparent;
+    width: 100px;
+    height: 100vh;
+    z-index: 999;
+    text-align: center;
+    font-size: 0;
+    box-shadow: none;
+    position: relative;
+    left:0;
+    right:0;
+}
+nav.click ul.gnb_menu a.gnb_dropmenu_item {
+    width: 190px;
+    /* border: 1px solid blue; */
+}
+nav.click ul.gnb_menu ul.gnb_dropmenu{
+    width: 190px;
+}
+nav.click ul.gnb_menu .gnb_dropmenu > li{
+    /* border: 1px solid red; */
+    width: 190px;
+}
+
+nav.click .gnb_dropmenu_wrap > li {
+    display: inline;
+    padding-top: 28px;
+    font-size: 1rem;
+    border-left: 1px solid rgba(255,255,255,0.3);
+}
+
+
+nav.click .gnb_dropmenu_wrap > li {
+    border-left: none;
+}
+
+
+
+nav.click .gnb_dropmenu_wrap > li:hover {
+    border-left: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav.click div.header_util{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 30px 25px 0 0;
+    width: 144px;
+}
+nav.click .header_util .header_lang{
+    display: inline-block; /*인라인 값은 크기값을 가질 수 없기때문에 인라인블럭 속성 부여. */
+    vertical-align: middle; /*그래야 다른 속성값들을 넣어서 적용시킬 수 이땅.*/
+    /* margin: 0 41px 0 0; */
+    font-size: 13px;
+}
+nav.click .header_util .header_lang a:first-child{
+    padding-right: 10px;
+    color: #333;
+    border-right: 1px solid #6e6e6e;
+}
+nav.click .header_util .header_lang a:last-child{
+    padding-left: 7px;
+    color: #333;
+}

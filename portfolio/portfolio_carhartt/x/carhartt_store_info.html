@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion_async.js"></script>
+    <script type="text/javascript" src="http://www.googletagmanager.com/gtag/js?id=AW-944994218&amp;l=dataLayer&amp;cx=c"></script>
+    <script src="https://kit.fontawesome.com/e545ec33c1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> 
+    
+    
+    <title>CARHARTT WIP CLONE</title>
+
+    <link rel="stylesheet" href="carhartt_css/reset.css">
+    <link rel="stylesheet" href="carhartt_css/common.css">
+    <link rel="stylesheet" href="carhartt_css/index.css">
+    <link rel="stylesheet" href="carhartt_css/shop.css">
+
+    <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=1f59e6e2149fb420238861835e286d6d"></script>
+    <script>
+        $(document).ready(function(){
+            $('#menutgl').click(function(){
+                $('#menutgl>span').toggleClass('on');   
+            })
+       
+    
+        // var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        //     mapOption = { 
+        //         center: new kakao.maps.LatLng(37.5180475,127.0416413), // 지도의 중심좌표
+        //         level: 3 // 지도의 확대 레벨
+        //     };
+
+        //     // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+        //     var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+        //     // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+        //     var mapTypeControl = new kakao.maps.MapTypeControl();
+
+        //     // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+        //     // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+        //     map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+        //     // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+        //     var zoomControl = new kakao.maps.ZoomControl();
+        //     map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+            
+            $('.store_slide').slick({
+                arrows: true,
+                focusOnSelect: false,
+                prevArrow: $('.slick-prev'),
+                nextArrow: $('.slick-next')
+            })
+        });
+
+    </script>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+        <h2 class="blind">주요 헤더 메뉴 영역</h2>
+        <div class="header">
+            <div id="news_1">
+                <p class="add_title">CARHARTT WIP SS20 2ND MID SEASON SALE</p>
+            </div> <!--news_1-->
+            <a href="#" class="btn" id="close_news">
+                <img src="carhartt_images/btn_top_notice_close.png" alt="닫기">
+            </a> <!--enws_1의 닫기버튼-->
+
+            <nav class="header_content">
+                <a href="#" class="txt_logo_carhartt">
+                    <img src="carhartt_images/carhartt_web.png" alt="CARHARTT WIP">
+                </a> <!--carhartt logo image-->
+
+                <div class="menu_area">
+                    <div class="menu">
+                        <a href="#" id="menutgl">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a> <!--main_menu_toggle-->
+                        <a href="#" class="radio_btn"><img src="carhartt_images/btn_radio.png" alt="칼하트 라디오"></a>
+                    </div>
+                    <div class="sub_menu">
+                        <ul class="sub_ctr_menu">
+                            <li>
+                                <a href="#">SEARCH</a>
+                                <div class="util_add"> <!--버튼 누르면 나오는 영역, 평소에는 blind-->
+                                    <div class="drop_sub_menu">
+                                        <span>
+                                            <input type="text" name="srcTxt" placeholder="SEARCH">
+                                        </span>
+                                    </div>
+                                </div> <!--SEARCH util_add-->
+                            </li> <!--SEARCH-->
+                            <li><a href="#">HELP</a>
+                                <div class="util_add"> <!--버튼 누르면 나오는 영역, 평소에는 blind-->
+                                    <div class="util_help_info">
+                                        <dt>
+                                            <span>PHONE</span>
+                                        </dt>
+                                        <dd>02-514-0854</dd>
+                                        <dt>
+                                            <span>MON~FRI</span>
+                                        </dt>
+                                        <dd>9:30 ~ 17:30</dd>
+                                        <dt>
+                                            <span>BREAK</span>
+                                        </dt>
+                                        <dd>12:30 ~ 13:30</dd>
+                                    </div><!--util_help_info-->
+                                    <a href="#" class="help_more">
+                                        <span>MORE INFORMATION</span>
+                                    </a>
+                                </div> <!--HELP util_add-->
+                            </li> <!--HELP-->
+                            <li><a href="#">LOG-IN</a>
+                                <div class="util_add"> <!--버튼 누르면 나오는 영역, 평소에는 blind-->
+                                    <div class="add_content">
+                                        <!--로그인 메뉴 영역-->
+                                        <div class="login_menu_area">
+                                            <div class="login_menu">
+                                                <!--로그인 영역-->
+                                                <span class="input_txt">
+                                                    <input type="text" name="email" id="email" placeholder="ID(email)">
+                                                </span>
+                                                <span class="input_txt">
+                                                    <input type="password" name="pwd" id="pwd" placeholder="PASSWORD">
+                                                </span>
+                                                <a href="#" id="login_btn" class="black_btn">
+                                                    <span>LOGIN</span>
+                                                </a>
+                                                <!--아이디 / 비밀번호 찾기, 회원가입-->
+                                                <ul class="find_all_btn">
+                                                    <li>
+                                                        <a href="#"><span>아이디찾기</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><span>비밀번호변경</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><span>회원가입</span></a>
+                                                    </li>
+                                                </ul>
+                                                <!-- <div class="btn_area"> -->
+                                                <a href="#" class="order_check"><span>비회원주문확인</span></a>
+                                                <!-- </div> -->
+                                            </div> <!--login_menu-->
+                                        </div><!--login_menu_area 로그인 메뉴 영역-->
+                                        <!--로그인 하위영역, 아이디 찾기 영역-->
+                                        <div class="find_id_area blind">
+                                            <p>아이디 찾기</p>
+                                            <div class="find_form_input">
+                                                <span class="input_txt">
+                                                    <input type="text" name="f_name" id="f_name" placeholder="이름">
+                                                </span>
+                                            </div>
+                                            <div class="phone_array">
+                                                <div class="input_phone_number">
+                                                    <span class="input_txt">
+                                                        <input type="text" name="phone" id="phone01" placeholder="010">
+                                                    </span>
+                                                    <span class="input_txt">
+                                                        <input type="text" name="phone" id="phone02">
+                                                    </span>
+                                                    <span class="input_txt">
+                                                        <input type="text" name="phone" id="phone03">
+                                                    </span>
+                                                    <span>
+                                                        <a href="#" class="gray_btn">인증</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <span class="input_txt">
+                                                <input type="text" name="certNum01" id="certNum01" placeholder="인증번호"> 
+                                            </span>
+                                            <a href="#" id="next_btn" class="black_btn">다음</a>
+                                        </div> <!--find_id_area-->
+                                        <!--로그인 하위영역, 비밀번호 변경 영역-->
+                                        <div class="change_pw_area blind">
+                                            <p>비밀번호 변경</p>
+                                            <div class="find_form_input">
+                                                <span class="input_txt">
+                                                    <input type="text" name="f_name" id="user_mail" placeholder="아이디(이메일)">
+                                                </span>
+                                                <span class="input_txt">
+                                                    <input type="text" name="f_name" id="f_name" placeholder="이름">
+                                                </span>
+                                            </div>
+                                            <div class="phone_array">
+                                                <div class="input_phone_number">
+                                                    <span class="input_txt">
+                                                        <input type="text" name="phone" id="phone01" placeholder="010">
+                                                    </span>
+                                                    <span class="input_txt">
+                                                        <input type="text" name="phone" id="phone02">
+                                                    </span>
+                                                    <span class="input_txt">
+                                                        <input type="text" name="phone" id="phone03">
+                                                    </span>
+                                                    <span>
+                                                        <a href="#" class="gray_btn">인증</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <span class="input_txt">
+                                                <input type="text" name="certNum01" id="certNum01" placeholder="인증번호"> 
+                                            </span>
+                                            <a href="#" id="next_btn" class="black_btn">다음</a>
+                                        </div> <!--change_pw_area-->
+                                    </div> <!--add_content-->
+                                </div> <!--LOG-IN util_add-->
+                            </li> <!--LOG-IN-->
+                            <li><a href="#">CART (0)</a>
+                                <div class="util_add"> <!--버튼 누르면 나오는 영역, 평소에는 blind-->
+                                    <div class="cart_slider_area">
+                                        <div class="user_cart">
+                                            <!--우선 빈공간, 장바구니 추가하면 아이템이 채워지는 공간.-->
+                                        </div>
+                                        <div class="cart_txt">
+                                            <div class="txt">TOTAL:</div>
+                                            <div class="ico_price">0</div>
+                                            <div class="buy_btn">
+                                                <a href="#">BUY NOW</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!--util_ad-->
+                            </li>
+                        </ul>                    
+                    </div> <!--sub_menu-->
+                </div> <!--menu area-->
+            </nav> <!--header_content-->
+        </div> <!--header-->
+        </header>
+
+        <h2 class="blind">본문 영역</h2>
+        <div class="container">
+            <div class="content_wrap"> <!--얘로 컨테이너 레이아웃 비율 잡기.-->
+                <div class="all_menu_section"> 
+                    <div class="snb_fixed"> <!--포지션 고정-->
+                        <div class="snb_shop_box"> <!--stor-info로 css바꾸기-->
+                          <h2>STORE INFO</h2>
+                        </div>
+                        <div class="shop_menu"> <!--stor-list로 css바꾸기-->
+                           <ul class="store_name">
+                               CARHARTT WIP STORE
+                               <li><a href="#">서울 압구정</a></li>
+                               <li><a href="#">서울 홍대 와우산</a></li>
+                               <li><a href="#">서울 홍대 와우산 우먼</a></li>
+                               <li><a href="#">서울 코엑스몰</a></li>
+                               <li><a href="#">서울 타임스퀘어</a></li>
+                               <li><a href="#">서울 눈스퀘어</a></li>
+                               <li><a href="#">천안</a></li>
+                               <li><a href="#">전주</a></li>
+                               <li><a href="#">광주</a></li>
+                               <li><a href="#">대구 동성로</a></li>
+                               <li><a href="#">대구 신세계백화점</a></li>
+                               <li><a href="#">부산 신세계백화점 센텀시티몰</a></li>
+                               <li><a href="#">제주</a></li>
+                               <li><a href="#">칼하트 아울렛</a></li>
+
+                           </ul>
+                        </div>
+                        <div class="shop_collabo dealers"> <!--DEALERS로 css바꾸기-->
+                            <ul>   
+                                <li><a href="#">DEALERS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!--all_menu_section : 왼쪽 고정.-->
+               
+               
+               
+                <div class="content_section">
+                    <div class="store_loc">
+                        <div class="store_slide">
+                            <div><a href="#" class="storeimgs imgbox1"></a></div>
+                            <div><a href="#" class="storeimgs imgbox2"></a></div>
+                            <div><a href="#" class="storeimgs imgbox3"></a></div>
+                            <div><a href="#" class="storeimgs imgbox4"></a></div>
+                            <div><a href="#" class="storeimgs imgbox5"></a></div>
+                        </div>
+                        <!-- <img src="http://www.carhartt-wip.co.kr/resources/worksout/images/storeinfo/CA_APGUJEONG_01.jpg" alt=""> -->
+                        
+                        <div class="store_desc">
+                            <h2>CARHARTT WIP STORE SEOUL APGUJEONG</h2>
+                            <span>서울특별시 강남구 압구정로54길 21 신우빌딩 1층</span>
+                            <span>02.541.0870</span>
+                            <span>MON - SUN, 12:00 PM - 9:00 PM</span>
+                        </div>
+                        <div class="btn">
+                            <div class="slick-prev"><span class="b">PREV</span></div>
+                            <div class="slick-next"><span class="b">NEXT</span></div>
+                        </div>
+
+                    
+                        <h3 class="map_info">칼하트 서울 압구정 찾아오시는 길</h3>
+                        <div id="map" style="border: 1px solid black; width: 100%; height: 400px; margin: 0 auto;"></div>
+                    </div>
+                </div> <!--content_area-->
+            </div>
+        </div><!--container-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer>
+        <h2 class="blind">하단 영역</h2>
+        <div class="footer_content">
+            <div class="footer_menu">
+                <ul class="f_left_menu"> 
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CUSTOMER CARE</a></li>
+                    <li><a href="#">WORK WITH US</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul><!--f-left-menu-->
+                <ul class="f_right_menu">
+                    <li><a href="#">CARHARTT WIP POST</a></li>
+                    <li><a href="#">CARHARTT WIP FACEBOOK</a></li>
+                    <li><a href="#">CARHARTT WIP INSTAGRAM</a></li>
+                    <li><a href="#">CARHARTT WIP NEWSLETTER</a></li>
+                    <li class="drop_email" style="visibility: hidden;">
+                        <input type="email" name="f-sub-email" id="f-sub-email" placeholder="E-MAIL">
+                        <a href="#">SUBSCRIBE</a>
+                    </li>
+                </ul><!--f-right-menu-->
+            </div> <!--footer_menu (left+right) -->
+            <ul class="footer_copyright">
+                <li class="c_txt01">© 2003-2019 WORKSOUT Inc.</li>
+                <li class="c_txt02">
+                    <span>상호명: (주)웍스아웃 | 주소: 서울시 마포구 월드컵북로23길 24 |</span>
+                    <span>전자우편주소: customer@worksout.co.kr |</span>
+                    <span>사업자등록번호: 106-86-85373 |</span>
+                    <span>통신판매업신고: 2014-서울마포-0219 |</span>
+                    <span>호스팅사업자: (주)오라클 |</span>
+                    <span>대표: 강승혁, 박선영 |</span>
+                    <span class="tel">전화: 02-541-0854 |</span>
+                    </span>
+                    <span id="policy" web-developer-inline-style="cursor:pointer;"><font color="ORANGE">개인정보취급방침 |</font></span>
+                    <span id="usePolicy" web-developer-inline-style="cursor:pointer;"><font color="ORANGE">이용약관</font></span>
+                </li>
+                <li class="c_txt03">  
+                    <a href="#" id="escrowPop">구매안전 (에스크로) 서비스 가입사실 확인</a>
+                </li>
+            </ul> <!--footer_copyright-->
+        </div><!--footer_content--> 
+        </footer>    
+    </div>
+
+
+
+
+</body>
+</html>

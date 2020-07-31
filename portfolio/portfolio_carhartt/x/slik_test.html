@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> 
+    <script src="https://kit.fontawesome.com/e545ec33c1.js" crossorigin="anonymous"></script>
+    
+
+
+    <link rel="stylesheet" href="carhartt_css/shop.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content_section">
+        <div class="store_loc">
+            <div class="store_slide">
+                <div><a href="#" class="storeimgs imgbox1"></a></div>
+                <div><a href="#" class="storeimgs imgbox2"></a></div>
+                <div><a href="#" class="storeimgs imgbox3"></a></div>
+                <div><a href="#" class="storeimgs imgbox4"></a></div>
+                <div><a href="#" class="storeimgs imgbox5"></a></div>
+            </div>
+            <!-- <img src="http://www.carhartt-wip.co.kr/resources/worksout/images/storeinfo/CA_APGUJEONG_01.jpg" alt=""> -->
+            
+            <div class="store_desc">
+                <h2>CARHARTT WIP STORE SEOUL APGUJEONG</h2>
+                <span>서울특별시 강남구 압구정로54길 21 신우빌딩 1층</span>
+                <span>02.541.0870</span>
+                <span>MON - SUN, 12:00 PM - 9:00 PM</span>
+            </div>
+            <div class="btn">
+                <div class="slick-prev"><span class="b">PREV</span></div>
+                <div class="slick-next"><span class="b">NEXT</span></div>
+            </div>
+
+        
+            <h3 class="map_info">칼하트 서울 압구정 찾아오시는 길</h3>
+            <div id="map" style="border: 2px solid black; width: 100%; height: 400px; margin: 0 auto;"></div>
+        </div>
+    </div> <!--content_area-->
+
+
+    <script>
+        $('.store_slide').slick({
+            arrows: true,
+            focusOnSelect: false,
+            prevArrow: $('.slick-prev'),
+            nextArrow: $('.slick-next')
+        });
+    </script>
+
+</body>
+</html>
