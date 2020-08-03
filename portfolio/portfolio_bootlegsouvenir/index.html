@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>bootleg souvenir</title>
+    <script>
+         $(document).ready(function(){
+            $('.about_btn').click(function(){
+                $('.tgl_btn').toggleClass('active'); 
+                $('.tgl_menu').toggleClass('active');
+            })
+            $('.tgl_btn').click(function(){
+                $('.tgl_btn').toggleClass('active'); 
+                $('.tgl_menu').toggleClass('active');
+            })
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="main_menu">
+            <marquee id="marquee" direction="right" scrollamount="15" onMouseOver="stop();" onMouseOut="start();" >
+                <ul>
+                    <li>
+                        <span></span>
+                        <a class="about_btn" href="#">ABOUT</a>
+                    </li>
+                    <li>
+                        <span></span>
+                        <a href="#">INSTAGRAM</a>
+                    </li>
+                    <li>
+                        <span></span>
+                        <a href="#">SPOTIFY</a>
+                    </li>
+                    <li>
+                        <span></span>
+                        <a href="#">STORE</a>
+                    </li>
+                </ul>
+            </marquee>
+        </div>
+        <div class="logo">
+
+        </div>
+    </header>
+    <div class="main">
+        <div class="wrapper gallery">
+            <img src="images/img1.jpg">
+            <img src="images/img2.jpg">
+            <img src="images/img1.jpg">
+            <img src="images/img2.jpg">
+            <img src="images/img1.jpg">
+            <img src="images/img2.jpg">
+            <img src="images/img1.jpg">
+            <img src="images/img2.jpg">
+            <img src="images/img1.jpg">
+            <img src="images/img2.jpg">
+        </div>
+        <div class="tgl_menu">
+            <!-- <div class="menu_wrapper"> -->
+                <a href="#" class="tgl_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <div class="desc_txt"> 
+                    <p>
+                        LQQK STUDIO, ESTABLISHED IN 2010, STARTED AS A CREATIVE HUB FOR PRINTMAKERS AND DESIGNERS. BEYOND PRODUCING ORIGINAL PRODUCTS, WE HAVE ALWAYS HAD A COMMUNITY BASED APPROACH TO WORKING WITH BRANDS AND OTHER CREATIVES. WE OPERATE AS A FULL SERVICE CREATIVE AGENCY, PARTNERING WITH BRANDS, ARTISTS AND DESIGNERS TO PROVIDE SERVICES THAT INCLUDE BRANDING, ADVERTISING, EXPERIENTIAL MARKETING, AND CREATIVE CONSULTING.
+                        <br>
+                        <br>
+                        BALCK Dragons STORE<br>
+                        Gwangju Si.<br>
+                        Gyunggi Do.<br>
+                        <br>
+                        GENERAL INQUIRES > BALCK Dragons STORE
+                        <br>
+                        PHONE > 010-4459-1878
+                    </p>
+                </div>
+            <!-- </div> -->
+        </div>
+    </div>
+    <script>
+
+        //무한스크롤링
+        window.onscroll = function(ev) {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                const el = document.querySelector('.gallery img');
+                document.querySelector('.gallery').appendChild(el);
+                // const a = document.querySelector('.gallery img');
+                // a.parentNode.appendChild(a);
+            }
+        };
+
+        //marquee function
+        function stop(){    
+            var obj = document.getElementById("marquee");
+            obj.setAttribute("scrollAmount", 0);
+        }
+        function start(){
+            var obj = document.getElementById("marquee");
+            obj.setAttribute("scrollAmount", 15);
+        }
+
+    </script>
+</body>
+</html>
