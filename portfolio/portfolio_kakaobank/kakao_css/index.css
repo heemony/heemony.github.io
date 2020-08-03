@@ -568,10 +568,10 @@ img.ico_arr{
     position: absolute;
     display: block;
     top: 210px;
-    right: 125px;
+    right: 115px;
     width: 110px;
     height: 110px;
-    border-radius: 55px;
+    border-radius: 50%;
     overflow: hidden;
 }
 .intro_cont.cont_loan .moon .moon_original{
@@ -579,8 +579,8 @@ img.ico_arr{
     display: block;
     top: 0px;
     right: 0px;
-    width: 104px;
-    height: 104px;
+    width: 120px;
+    height: 120px;
     border-radius: 55px;
     background-color: #ffdc00;
     -webkit-transition: background-color .85s;
@@ -588,11 +588,11 @@ img.ico_arr{
 }
 .intro_cont.cont_loan .moon .moon_shadow{
     position: absolute;
-    left: -40px;
-    top: -40px;
-    width: 1px;
-    height: 1px;
-    border-radius: 56px;
+    left: -50px;
+    top: -50px;
+    /* width: 1px;
+    height: 1px; */
+    border-radius: 55px;
     background-color: #333b58;
     -webkit-transition-property: background-color,top,left;
     -webkit-transition-timing-function: ease-in-out;
@@ -608,10 +608,9 @@ img.ico_arr{
 .intro_cont.cont_loan .moon.night .moon_shadow {
     top: -25px;
     left: -25px;
-    width: 101%;
-    height: 101%;
+    width: 100%;
+    height: 100%;
     background-color: #333b58;
-    border: 1px solid #333b58;
 }
 
 /* star */
