@@ -1,0 +1,19 @@
+@media screen and (max-width: 1140px){
+    .slick-slide img { margin: 0 auto; width: 83%; height: calc(100% - 5% );}
+    
+    .pu_slider .pu_all_content {
+        height: 330px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .flex-items li.allBox {
+        position: relative;
+        width: calc(50% - 80px);
+    }
+    .new_arrivals_section {
+        display: block;
+        padding: 0 30px 50px;
+        margin: 70px auto;
+    }
+}
