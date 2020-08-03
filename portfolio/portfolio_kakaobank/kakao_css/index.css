@@ -579,8 +579,10 @@ img.ico_arr{
     display: block;
     top: 0px;
     right: 0px;
-    width: 120px;
-    height: 120px;
+    /* width: 120px;
+    height: 120px; */
+    width: 100%;
+    height: 100%;
     border-radius: 55px;
     background-color: #ffdc00;
     -webkit-transition: background-color .85s;
@@ -588,10 +590,10 @@ img.ico_arr{
 }
 .intro_cont.cont_loan .moon .moon_shadow{
     position: absolute;
-    left: -50px;
-    top: -50px;
-    /* width: 1px;
-    height: 1px; */
+    left: -75px;
+    top: -75px;
+    width: 1px;
+    height: 1px;
     border-radius: 55px;
     background-color: #333b58;
     -webkit-transition-property: background-color,top,left;
