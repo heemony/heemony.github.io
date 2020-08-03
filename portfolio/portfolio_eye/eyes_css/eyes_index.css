@@ -174,14 +174,23 @@ header{
 
 
         /*메인 슬라이드 좌우 버튼*/
-        button.main_scroll_btn, button.slick-prev, button.slick-next{
+        button.main_scroll_btn{
             border: none;
-            color: white;
+            color: #fff;
             background-color: transparent;
             font-size: 1rem;
             position: absolute;
             top: 52%;
-            font-size: 16px;
+            font-size: 18px;
+        }
+        button.slick-prev, button.slick-next{
+            border: none;
+            color: #000;
+            background-color: transparent;
+            font-size: 1rem;
+            position: absolute;
+            top: 52%;
+            font-size: 18px;
         }
         button.main_scroll_btn.left, button.slick-prev{
             -ms-transform: rotate(90deg); /* IE 9 */
@@ -195,17 +204,27 @@ header{
             transform: rotate(270deg);
             right: 15px;
         }
-        button.main_scroll_btn:after,
-        button.slick-prev:after,
-        button.slick-next:after{
+        button.main_scroll_btn:after{
             content:'';
             width: 20px;
             height: 1px;
-            background:white;
+            background-color: #fff;
             display: block;
             opacity: 1;
             top:35px;
             left: 10px;
+            position: absolute;
+        }
+        button.slick-prev:after,
+        button.slick-next:after{
+            content: '';
+            width: 27px;
+            height: 1px;
+            background-color: #000;
+            display: block;
+            opacity: 1;
+            top: 20px;
+            left: 0px;
             position: absolute;
         }
         button.main_scroll_btn.left:after,
@@ -257,7 +276,15 @@ header{
         .slick-slide { margin: 10px 5px; }
         .slick-slide img { margin: 0 auto; height: 90%; width: 75%;}
 
+
         /*슬릭 이미지 (사이드 이미지, 센터이미지)*/
+        .pu_slider .pu_all_content{
+            width: 305px; 
+            height: 380px; 
+            position: relative;
+            margin:0 auto; 
+        }
+        
         .pu_slider img{
             height: 100%;
             transform: scale(0.75);
@@ -278,7 +305,6 @@ header{
             filter: grayscale(0%);
             box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.5);
         }
-        .pu_slider .pu_all_content{width: 305px; height: 400px; position: relative; margin:0 auto; }
 
         /*컨텐츠  meta data */
         .pu_slider .slick-center .meta {
@@ -391,15 +417,29 @@ header{
         .pick_up_section{
             position: relative;
         }
-        .pu_btn .slick-prev{
+        .pu_btn .slick-prev,  .pu_btn .slick-next{
             position: absolute;
             top: 60%;
         }
-        .pu_btn .slick-next{
+        .pu_btn .slick-next:before{
+            content: 'Next';
             position: absolute;
-            top: 60%;
+            left: -7px;
+            top: -14px;
+            color: #000;
+            font-weight: 600;
         }
-
+        .pu_btn .slick-prev:before{
+            content: 'Prev';
+            color: #000;
+            position: absolute;
+            top: -16px;
+            left: -4px;
+            font-weight: 600;
+        }
+        .pu_btn .slick-prev:hover, .pu_btn .slick-next:hover{
+            color: #000;
+        }
 /*------------------------------NEW ARRIVALS SECTION-----------------------------*/
     h3.newArriv_title{
         font-family: "Overpass", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", sans-serif;
@@ -611,18 +651,4 @@ footer{
 
 
 
-
-
-
-@media screen and (max-width: 1140px){
-    .flex-items li.allBox {
-        position: relative;
-        width: calc(50% - 60px);
-    }
-    .new_arrivals_section {
-        display: block;
-        padding: 0 30px 50px;
-        margin: 70px auto;
-    }
-}
 

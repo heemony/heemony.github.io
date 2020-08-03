@@ -1,0 +1,293 @@
+body{
+    font-family: "Overpass", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+header{
+    background-color: rgb(255, 255, 255);
+}
+.header_content{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background-color: white;
+    box-shadow: 1px 0px 1px rgb(0, 0, 0);
+}
+.header_logo{
+    background: url('../eyes_images/ogp_eyesrream.png') no-repeat center;
+    background-size: cover;
+    width: 250px;
+    height: 50px;
+    margin: 30px 0 0 30px;
+    position: absolute;
+    top: -5px;
+}
+
+
+
+
+
+.container{
+    padding: 0 auto;
+    text-align: center;
+}
+.content{
+    padding-top: 100px; /*헤더의 크기가 100px*/
+}
+.c_heading_img{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+.blur_bg{
+    background-image:url('https://eyescream.jp/wp-content/uploads/2020/06/0c9780961272fda9d810016072167451.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 110%;
+    height: 110%;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.c_header{padding: 5px;}
+.c_feature{
+    display: inline;
+    padding: 0 10px;
+}
+.c_date{
+    display: inline;
+    padding: 0 10px;
+}
+
+.c_description{
+    max-width: 760px;
+    margin: 0 auto;
+}
+.c_desc_head{
+    padding: 10px 0;
+    margin-bottom: 150px;
+}
+.c_description a{
+    color:black;
+}
+.c_description p{
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    /*border: 1px solid blue;*/
+}
+
+.slider1_wrap{
+    position: relative;
+}
+.c_slider1{
+    width: 760px;
+    margin: 0 auto;
+}
+.c_slider1 img{
+    width: 100%;
+    height: auto;
+}
+.c_slider1_txt{
+    margin: 8px 0px;
+    display: block;
+    text-align: right;
+    font-style: italic;
+    font-size: 10px;
+}
+/*버튼위치*/
+.slider1_wrap{
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.c_slider1_btn .slick-prev,
+.c_slider1_btn .slick-next{
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    color: black;
+    background-color: transparent;
+}
+.c_slider1_btn .slick-prev{
+    -ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+    transform: rotate(270deg);   
+    left: 0px;
+}
+.c_slider1_btn .slick-next{
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    right: 0px;
+}
+
+.c_slider1_btn .slick-prev:after,
+.c_slider1_btn .slick-next:after{
+    display: none;
+}
+/*
+.slick-dots li{
+    display: inline-block;
+}
+button#slick-slide-control00, button#slick-slide-control01{
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+}*/
+
+.info_box{
+    display: flex;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 60px;
+    margin-bottom: 60px;
+}
+
+.info_txt{
+    width: 70%;
+    margin-right: 20px;
+}
+.info_txt p{
+    padding-bottom: 20px;
+    font-size: 12px;
+}
+.info_img{
+    width: 30%;
+    background: url('../eyes_images/eyes_sub1_img/1b1c088650ef8d7c46c8cc4b90df7ca5.jpg') no-repeat top center;
+    background-size: 100%;
+    transform: translateY(0px);
+}
+
+
+.info_sns{
+    max-width: 760px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.info_sns a{
+    width: 33.3%;
+    height: 52px;
+    line-height: 52px;
+    float: left;
+    color: #fff;
+}
+.info_sns a.twit{
+    background-color: #55acee;
+}
+.info_sns a.fb{
+    background-color: #3b5998;
+}
+.info_sns a.insta{
+    background: linear-gradient(-15deg, #427eff 0%, #f13f79 70%) no-repeat;
+}
+.info_sns a:hover{
+    background-color: black;
+    transition: all 0.5s linear;
+    height: 52px;
+}
+.info_sns .black:hover{
+    background-color: black;
+    transition: all 0.5s linear;
+    height: 52px;
+}
+
+ 
+.info_box, .c_description {
+    animation-duration: 5s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-bottom: 50%;
+
+    }
+  
+    to {
+      margin-bottom: 0%;
+
+    }
+  } 
+
+
+
+
+/*popular_content*/
+.popular_content{
+    margin: 0 auto;
+    padding: 60px;
+    text-align: center;
+}
+.pop_heading{
+    padding-bottom: 60px;
+    font-size: 36px;
+}
+.headline{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: baseline; */
+}
+.article{
+    position: relative;
+    width: calc(33.3% - 60px);
+    overflow: hidden;
+    margin: 0 30px 60px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s cubic-bezier(0.39, 0.58, 0.57, 1);
+}
+.article .imgBox{
+    opacity: 1;
+    transition: 300ms;
+    height: auto;
+    width: 100%;
+    height: 270px;
+    display: inline-block;
+    max-height: 270px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article .txt{
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    position: relative;
+}
+
+.article a.popu_img1{
+    background-image: url('../eyes_images/eyes_sub1_img/imgbox1.jpg');
+}
+.article a.popu_img2{
+    background-image: url('../eyes_images/eyes_sub1_img/imgbox2.jpg');
+}
+.article a.popu_img3{
+    background-image: url('../eyes_images/eyes_sub1_img/imgbox3.jpg');
+}
+.article a.popu_img4{
+    background-image: url('../eyes_images/eyes_sub1_img/imgbox4.jpg');
+}
+.article a.popu_img5{
+    background-image: url('../eyes_images/eyes_sub1_img/imgbox5.jpg');
+}
+.article a.popu_img6{
+    background-image: url('../eyes_images/eyes_sub1_img/imgbox6.jpg');
+}

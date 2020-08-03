@@ -1,0 +1,36 @@
+@media screen and (max-width: 1190px){
+    .slick-slide img { margin: 0 auto; width: 83%; height: calc(100% - 5% );}
+    
+    .pu_slider .pu_all_content {
+        height: 330px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .newArriv {
+        display: block;
+        padding: 0 30px 50px;
+        margin: 70px auto;
+    }
+    .newArriv .itemBox{
+        width: 40%;
+    }
+}
+
+
+@media screen and (max-width: 870px){
+    .slick-slide img { margin: 0 auto; width: 83%; height: calc(100% - 5% );}
+    
+    .pu_slider .pu_all_content {
+        height: 260px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .newArriv {
+        display: block;
+        padding: 0 100px;
+        margin: 70px auto;
+    }
+    .newArriv .itemBox{
+        width: 100%;
+    }
+}
