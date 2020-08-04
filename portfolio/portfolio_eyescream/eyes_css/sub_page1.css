@@ -26,9 +26,6 @@ header{
 }
 
 
-
-
-
 .container{
     padding: 0 auto;
     text-align: center;
@@ -290,4 +287,30 @@ button#slick-slide-control00, button#slick-slide-control01{
 }
 .article a.popu_img6{
     background-image: url('../eyes_images/eyes_sub1_img/imgbox6.jpg');
+}
+
+
+.menu_toggle_btn span {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+.active.menu_toggle_btn span {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.txt h3{
+    font-size: 14px;
+    text-align: left;
+}
+.txt span{
+    font-size: 12px;
+    float: right;
+    padding: 10px 0;
 }
