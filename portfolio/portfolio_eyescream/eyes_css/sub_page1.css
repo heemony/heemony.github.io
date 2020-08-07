@@ -243,50 +243,53 @@ button#slick-slide-control00, button#slick-slide-control01{
 .article{
     position: relative;
     width: calc(33.3% - 60px);
+    height: auto;
     overflow: hidden;
     margin: 0 30px 60px;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
     transition: all 0.25s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
-.article .imgBox{
+.article a.imgBox{
     opacity: 1;
+    display: inline-block;
     transition: 300ms;
     height: auto;
     width: 100%;
-    height: 270px;
-    display: inline-block;
-    max-height: 270px;
+    padding-top: 100%; /*이게 되네*/
     background-position: center center;
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .article .txt{
     width: 100%;
+    height: 35%;
     background-color: #fff;
     padding: 30px;
-    position: relative;
+    position: absolute;
+    bottom: 0;
 }
-
 .article a.popu_img1{
-    background-image: url('../eyes_images/eyes_sub1_img/imgbox1.jpg');
+    background: url('../eyes_images/eyes_sub1_img/imgbox1.jpg');
+    /* background-size: contain; */
 }
 .article a.popu_img2{
-    background-image: url('../eyes_images/eyes_sub1_img/imgbox2.jpg');
+    background: url('../eyes_images/eyes_sub1_img/imgbox2.jpg') ; 
 }
 .article a.popu_img3{
-    background-image: url('../eyes_images/eyes_sub1_img/imgbox3.jpg');
+    background: url('../eyes_images/eyes_sub1_img/imgbox3.jpg') ;
+    /* background-size: contain; */
 }
 .article a.popu_img4{
-    background-image: url('../eyes_images/eyes_sub1_img/imgbox4.jpg');
+    background: url('../eyes_images/eyes_sub1_img/imgbox4.jpg') ;
+    /* background-size: cover; */
 }
 .article a.popu_img5{
-    background-image: url('../eyes_images/eyes_sub1_img/imgbox5.jpg');
+    background: url('../eyes_images/eyes_sub1_img/imgbox5.jpg') ;
+    /* background-size: cover; */
 }
 .article a.popu_img6{
-    background-image: url('../eyes_images/eyes_sub1_img/imgbox6.jpg');
+    background: url('../eyes_images/eyes_sub1_img/imgbox6.jpg') ;
+    /* background-size: cover; */
 }
 
 
@@ -312,5 +315,27 @@ button#slick-slide-control00, button#slick-slide-control01{
 .txt span{
     font-size: 12px;
     float: right;
-    padding: 10px 0;
+    padding: 15px 0;
+}
+
+@media screen and (max-width: 900px){
+    .article{
+        position: relative;
+        width: 100%;
+        height: 600px;
+        margin: 0 30px 60px;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+        transition: all 0.25s cubic-bezier(0.39, 0.58, 0.57, 1);
+    }
+    .article a.imgBox{
+        opacity: 1;
+        display: block;
+        transition: 300ms;
+        height: auto;
+        width: 100%;
+        padding-top: 100%; /*이게 되네*/
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }

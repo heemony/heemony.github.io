@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" media="screen and (max-width:950px) "  href="assets/css/index_media_1.css">
+
     <title>STARWARS_CLONE</title>
+    <script>
+         $(document).ready(function(){
+            $('.toggle-icon').click(function(){
+                $('.menubar_wrapper').toggleClass('on'); 
+                $('.toggle-icon').toggleClass('on');
+            })
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -19,48 +34,56 @@
                     <div id="nav_sw_logo">
                             <a href="#" class="logo_img" title="Star Wars Logo"></a>
                     </div>
-                    <div id="drawer">
-                        <div id="nav_social_content">
-                            <ul id="social_links">
-                                <li><a href="#" class="soc_link"><span class="facebook_icon"></span></a></li>
-                                <li><a href="#" class="soc_link"><span class="instagram_icon"></span></a></li>
-                                <li><a href="#" class="soc_link"><span class="tumblr_icon"></span></a></li>
-                                <li><a href="#" class="soc_link"><span class="twitter_icon"></span></a></li>
-                                <li><a href="#" class="soc_link"><span class="youtube_icon"></span></a></li>
-                            </ul>
-                            <div class="kids_btn"><a href="#" class="soc_link"><span class="kids_icon"></span></a></div>
-                        </div> <!--nav_social_content-->
-                        <div id="nav_utility">
-                            <div id="nav_serach_container">
-                                <form id="nav_search_input">
-                                    <div class="input_box">
-                                        <input type="text" placeholder="Search Star Wars">
-                                    </div>
-                                </form>
-                                <button id="nav_search_icon" class="nav_search_button"></button>
-                            </div>
-                            <div id="nav_login">
-                                <div class="logged_out_container">
-                                    <div class="login">Log In</div>
-                                    <p>//</p>
-                                    <div class="signup">Sign Up</div>
-                                </div>
-                                <!-- <div class="logged_in_container"></div> -->
-                            </div>
-                        </div> <!--nav_utility-->
-                        <div id="nav_content_bar">
-                            <div id="nav_content">
-                                <ul id="section_links">
-                                    <li><a href="#">NEWS + BLOG</a></li>
-                                    <li><a href="#">VIDEO</a></li>
-                                    <li><a href="#">FILMS</a></li>
-                                    <li><a href="#">SERIES</a></li>
-                                    <li><a href="#">INTERACTIVE</a></li>
-                                    <li><a href="#">COMMUNITY</a></li>
-                                    <li><a href="#">DATABANK</a></li>
+                    <div class="menubar_wrapper">
+                        <div class="toggle-icon">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <div id="drawer">
+                            <div id="nav_social_content">
+                                <ul id="social_links">
+                                    <li><a href="#" class="soc_link"><span class="facebook_icon"></span></a></li>
+                                    <li><a href="#" class="soc_link"><span class="instagram_icon"></span></a></li>
+                                    <li><a href="#" class="soc_link"><span class="tumblr_icon"></span></a></li>
+                                    <li><a href="#" class="soc_link"><span class="twitter_icon"></span></a></li>
+                                    <li><a href="#" class="soc_link"><span class="youtube_icon"></span></a></li>
                                 </ul>
-                            </div> 
-                        </div> <!--nav_content_bar-->
+                                <div class="kids_btn"><a href="#" class="soc_link"><span class="kids_icon"></span></a></div>
+                            </div> <!--nav_social_content-->
+                            <div id="nav_utility">
+                                <div id="nav_serach_container">
+                                    <form id="nav_search_input">
+                                        <div class="input_box">
+                                            <input type="text" placeholder="Search Star Wars">
+                                        </div>
+                                    </form>
+                                    <button id="nav_search_icon" class="nav_search_button"></button>
+                                </div>
+                                <div id="nav_login">
+                                    <div class="logged_out_container">
+                                        <div class="login">Log In</div>
+                                        <p>//</p>
+                                        <div class="signup">Sign Up</div>
+                                    </div>
+                                    <!-- <div class="logged_in_container"></div> -->
+                                </div>
+                            </div> <!--nav_utility-->
+                            <div id="nav_content_bar">
+                                <div id="nav_content">
+                                    <ul id="section_links">
+                                        <li><a href="#">NEWS + BLOG</a></li>
+                                        <li><a href="#">VIDEO</a></li>
+                                        <li><a href="#">FILMS</a></li>
+                                        <li><a href="#">SERIES</a></li>
+                                        <li><a href="#">INTERACTIVE</a></li>
+                                        <li><a href="#">COMMUNITY</a></li>
+                                        <li><a href="#">DATABANK</a></li>
+                                    </ul>
+                                </div> 
+                            </div> <!--nav_content_bar-->
+                        </div>
+                        <div class="page_overlap"></div>
                     </div>
                 </div> <!--nav_wrapper-->
                 
@@ -82,7 +105,119 @@
         </section>
 
         <section id="main_slider" class="hero_single">
+            <div class="main_slider_box">
+                <ul class="single_slide">
+                    <li class="single_slide_list">
+                        <div class="single_slide_bg_img">
+                            <img src="assets/images/s_slide_1.jpeg" alt="">
+                        </div>
+                        <div class="single_slide_bg_txtBox">
+                            <div class="txtBox_content">
+                                <img src="assets/images/s_slide_content_img.webp" alt="">
+                            </div>
+                            <div class="txtBox_content_desc">
+                                <h3>
+                                    <b>
+                                        Complete your Jedi trials -- watch the season finale of
+                                        <i>Star Wars: Jedi Temple Challenge</i>
+                                        now!
+                                    </b>
+                                </h3>
+                            </div>
+                            <div class="txtBox_content_btn">
+                                <span class="cbtn_item">
+                                    <span>
+                                        <a href="#">WATCH NOW</a>
+                                    </span>
+                                </span>
+                                <span class="cbtn_item">
+                                    <span>
+                                        <a href="#">READ MORE</a>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="single_slide_list"> 
+                        <div class="single_slide_bg_img">
+                            <img src="assets/images/s_slide_2.jpeg" alt="">
+                        </div>
+                        <div class="single_slide_bg_txtBox">
 
+                        </div>
+                    </li>
+                    <li class="single_slide_list">
+                        <div class="single_slide_bg_img">
+                            <img src="assets/images/s_slide_3.jpeg" alt="">
+                        </div>
+                        <div class="single_slide_bg_txtBox">
+
+                        </div>
+                    </li>
+                    <li class="single_slide_list">
+                        <div class="single_slide_bg_img">
+                            <img src="assets/images/s_slide_4.jpeg" alt="">
+                        </div>
+                        <div class="single_slide_bg_txtBox">
+
+                        </div>
+                    </li>
+                </ul>
+                <div class="preview_cards active">
+                    <span class="preview_card">
+                        <div class="pro_bar"></div>
+                        <div class="pro_contents">
+                            <div class="pro_bg">
+                                <img src="assets/images/s_slide_1.jpeg" alt="">
+                            </div>
+                            <div class="pro_txt">
+                                <span>
+                                    Star Wars: Jedi Temple Challenge
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="preview_card">
+                         <div class="pro_bar"></div>
+                        <div class="pro_contents">
+                            <div class="pro_bg">
+                                <img src="assets/images/s_slide_2.jpeg" alt="">
+                            </div>
+                            <div class="pro_txt">
+                                <span>
+                                    Star Wars: Jedi Temple Challenge
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="preview_card">
+                         <div class="pro_bar"></div>
+                        <div class="pro_contents">
+                            <div class="pro_bg">
+                                <img src="assets/images/s_slide_3.jpeg" alt="">
+                            </div>
+                            <div class="pro_txt">
+                                <span>
+                                    Star Wars: Jedi Temple Challenge
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="preview_card">
+                         <div class="pro_bar"></div>
+                        <div class="pro_contents">
+                            <div class="pro_bg">
+                                <img src="assets/images/s_slide_4.jpeg" alt="">
+                            </div>
+                            <div class="pro_txt">
+                                <span>
+                                    Star Wars: Jedi Temple Challenge
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
         </section>
         <section id="disney_gallery" class="hero_single">
 
@@ -143,5 +278,17 @@
         </section>
 
     </footer>
+
+    <script>
+        $('.single_slide').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            // autoplay: true,
+            autoplaySpeed: 2000,  
+        });
+    </script>
 </body>
 </html>
