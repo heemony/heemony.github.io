@@ -16,8 +16,16 @@
     
     <script>
         $(document).ready(function(){
+            //토글
             $('#menutgl').click(function(){
                 $('#menutgl>span').toggleClass('on');   
+            }),
+            // list mouseover, out
+            $('.sub_ctr_menu>li').mouseover(function(){
+                $(this).addClass('on');   
+            }),
+            $('.sub_ctr_menu>li').mouseout(function(){
+                $(this).removeClass('on');   
             })
         });
     </script>
@@ -205,6 +213,10 @@
                 </nav> <!--header_content-->
             </div> <!--header-->
         </header>
+        <!-- 웹버전 메뉴영역 -->
+
+        <!-- 모바일버전 메뉴영역 --> 
+
 
         <h2 class="blind">본문 영역</h2>
         <div class="container">

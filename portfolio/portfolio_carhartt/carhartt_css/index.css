@@ -587,23 +587,31 @@ footer{
 
 /* 화면 조절했을 때 위치가 아예 고정이 되려면
 %를 쓰기보단 위치값을 지정해줘야 원하는대로 배치됨. */
-.a{
-    transition: 0.3s;
+/* .a{
+    height: 0;
+    transition: height 3s ease-in-out;
 }
-.a:hover{
+.a.on{
+    height: auto;
     color: rgb(196, 195, 195);
-}
+    transition: height 3s ease-in-out;
+} */
 
 
 /*서브메뉴 토글*/
 .util_add{
-    display: none;
+    /* display: none; */
+    visibility: hidden;
     position: absolute;
     top: 10px;
     background-color: white;
 }
-.sub_menu .sub_ctr_menu > li:hover .util_add,
-.sub_menu .sub_ctr_menu > li:focus .util_add{
-    display: block;
+.sub_menu .sub_ctr_menu > li.on .util_add
+/* .sub_menu .sub_ctr_menu > li:focus .util_add */{
+    /* display: block; */
+    visibility: visible;
+
 }
-/*오예~*/
+
+
+/* 웹버전 메뉴영역 */
