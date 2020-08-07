@@ -93,21 +93,34 @@ body{
 
 /* 서브 메뉴 (오른쪽 고정) */
 .sub_menu{
+    position: relative;
+    right: 20px;
     float: right;
     padding: 15px 0; 
-    width: 300px;
-    position: relative;
+    width: 270px;
 }
 ul.sub_ctr_menu{
-    font-size: 12px; 
     text-align: center;
-    /* height: 73px;
-    line-height: 73px;*/
+    line-height: 10px; 
+    font-size: 0;
 }
 .sub_ctr_menu li{
     display: inline-block;
-    padding: 5px 5px;
-    margin: 6px;
+    padding: 5px 0;
+    font-size: 12px;
+}
+.sub_ctr_menu > li:after{
+    display: inline-block;
+    content: '';
+    background: url("../carhartt_images/bu_dot02.gif") no-repeat center center;
+    background-position: 4px;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.sub_ctr_menu > li:nth-child(4):after{
+    display: none;
 }
 
 /*********헤더 오른쪽메뉴**********/
@@ -131,7 +144,7 @@ ul.sub_ctr_menu{
         width: 100%;
         height: auto;
         margin: 0 auto;
-        padding-top:70px; 
+        padding-top: 70px; 
         /* background-color: thistle; */
         z-index: -100;
     }
@@ -144,13 +157,12 @@ ul.sub_ctr_menu{
     }
     .drop_sub_menu input{
         padding: 10px;
-        width: 270px;
+        width: 90%;
     }
 
     /* help 영역 */
     .util_help_info{
-        display: block;
-        padding:30px 40px 20px 40px;
+        padding:20px;
     }
     .util_help_info dt{
         display: block;
@@ -190,11 +202,13 @@ ul.sub_ctr_menu{
         /*공통부분*/
     .add_content{
         height: auto;
-        padding: 0 15%;
-        display: block;
+        padding: 0 5%;
     }
         /*1) login_menu_area*/
         .login_menu_area{
+            width:  100%;
+        }
+        .login_menu{
             width: 100%;
         }
         .input_txt{
@@ -220,10 +234,13 @@ ul.sub_ctr_menu{
             margin: 10px 0px;
             padding: 0px;
         }
-        .find_all_btn span:after{
+        .find_all_btn li:after{
             content: '';
             background: url('../carhartt_images/bu_dot01.gif') right center no-repeat;
             padding-left: 10px;
+        }
+        .find_all_btn li:nth-child(3):after{
+            display: none;
         }
         .order_check{
             display: block;
@@ -259,7 +276,7 @@ ul.sub_ctr_menu{
         .input_txt{
             padding: 8px;
             margin-top: 3px;
-            border: 1px solid gray;
+            border: none;
         }
         .gray_btn{
             color: white;
@@ -282,11 +299,20 @@ ul.sub_ctr_menu{
         .cart_txt .txt{
             display: block;
             float:left;
-            padding: 0;
+            width: 50%;
+            text-align: left;
+            border-bottom: 1px solid gray;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
         }
         .cart_txt .ico_price{
             display: block;
-            float:right;
+            float:right;    
+            width: 50%;
+            text-align: right;
+            border-bottom: 1px solid gray;
+            padding-bottom: 5px;
+            margin-bottom: 10px;    
         }
         .ico_price:before{
             content:'';
@@ -296,13 +322,12 @@ ul.sub_ctr_menu{
         .buy_btn{
             clear:both; 
             border-top: 1px solid gray;
-            padding-top: 20px;
+            background-color: black;
         }
         .buy_btn a{
             display: block;
             width: 100%;
-            color: white;
-            background-color: black;
+            color: white;      
         }
 
 
