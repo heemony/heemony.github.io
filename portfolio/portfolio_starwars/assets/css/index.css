@@ -66,7 +66,7 @@ ul#section_links > li:last-child{border-right: 1px solid #333;}
     background-color: #000000;
     background-image: url('../images/background-stars-desktop.webp');
     background-position: center top;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     margin-top: 188px;
     text-align: center;
 }
@@ -286,7 +286,7 @@ li.single_slide_list{
     position: relative;
     margin-top: 50px;
     padding: 0 10%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .single_bg img{
     display: block; 
@@ -347,6 +347,7 @@ li.single_slide_list{
 .items .col2_left{
     float: left;
     width: 50%;
+    height: 100%;
     overflow: hidden;
     border-radius: 5px 0 0 5px;
 }
@@ -355,9 +356,10 @@ li.single_slide_list{
     transition: all .5s ease;
 }
 .items .col2_right{
+    position: relative;
     float: right;
     width: 50%;
-    position: relative;
+    overflow: hidden;
 }
 .col2_right .top_contain{
     height: 8px;
@@ -386,7 +388,7 @@ li.single_slide_list{
     background-color: rgba(26,26,26,0.9);
     border-radius: 0 0 5px 0;
     text-align: left;
-    padding: 30px 20px 0;
+    padding: 25px 20px 0;
     font-size: 20px;
 }
 .col2_right .bottom_contain{
@@ -433,6 +435,55 @@ li.single_slide_list{
     background: #ffffff;
     box-shadow: 0 0 6px 1px white;
     transition: all .5s ease;
+}
+
+/* latest */
+.lastest_thing{
+    border: 1px solid blue;
+    margin-top: 50px;
+    padding: 0 15%;
+}
+.row1_top{
+    width: 100%;
+}
+.row1_top img{
+    display: block;
+    width: 100%;
+}
+.row1_btm{
+    position: relative;
+    width: 100%;
+}
+.row1_btm .content_contain{
+    background-color: rgba(48, 47, 47, 0.918);
+}
+.row1_btm .bottom_contain:before {
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(48, 47, 47, 0.918);
+}
+
+.latest_slide ul{
+    font-size: 0;
+}
+.latest_slide1, .latest_slide2{
+    display: inline-block;
+    border: 1px solid red;
+}
+.latest_slide1 div,
+.latest_slide2 div{
+    display: inline-block;
+    padding-right: 8px;
+}
+.latest_slide1 .item2:nth-child(1){
+    width: 50%;
+}
+.latest_slide1 .item2:nth-child(2),
+.latest_slide1 .item2:nth-child(3){
+    width: 25%;
+}
+
+.latest_slide2 .item2{
+    width: 25%;
 }
 
 
