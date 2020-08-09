@@ -60,7 +60,6 @@ ul#section_links > li:last-child{border-right: 1px solid #333;}
 /* main */
 
 #main{
-    /* position: relative; */
     display: block;
     width: 100%;
     min-height: 500px;
@@ -86,7 +85,6 @@ span.title_img img { vertical-align: top; height: 30px;}
 /* section1 */
 #main_slider{
     width: 100%;
-    border: 1px solid red;
 }
 .main_slider_box{
     position: relative;
@@ -100,24 +98,22 @@ li.single_slide_list{
     height: auto;
 }
 .single_slide_bg_txtBox{
-    width: 30%;
     margin: 0 auto;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
 }
 .txtBox_content img{
     width: 100%;
 }
-
 .txtBox_content_desc{
     margin-top: 10px;
     font-size: 1.25rem;
     letter-spacing: 0.0125rem;
     line-height: 30px;
 }
-
+.txtBox_content_desc *{
+    color: #fff;
+}
 .txtBox_content_btn{
     padding: 20px 0px;
 }
@@ -130,22 +126,17 @@ li.single_slide_list{
 .txtBox_content_btn .cbtn_item a{
     font-size: 20px;
     font-weight: 700; 
-    padding: 15px 35px;
+    padding: 15px 20px;
     border-radius: 5px;
 }
-.txtBox_content_btn .cbtn_item:nth-child(1) a{
-    background-color: rgb(16, 106, 224);
-    border: 1px solid rgb(16, 106, 224);
-}
-.txtBox_content_btn .cbtn_item:nth-child(2) a{
-    border: 1px solid rgb(255, 255, 255);
-}
+
+/* ㅠㅡㅠ 이친구들 쓰고싶은데..
 
 .preview_cards{
     width: 100%;
+    height: 80px;
     position: absolute;
     bottom: 0;
-    border: 1px solid grey;
 }
 .preview_cards span+span{
     margin-left: 20px;
@@ -154,38 +145,296 @@ li.single_slide_list{
     position: relative;
     display: inline-block;
     width: 200px;
-    height: 80px;
-    border: 1px solid green;
+    height: 100%;
+} */
+
+.pro_bg{
+    overflow: hidden;
 }
-.pro_bar.active{
+.pro_bg img{
+    display: block;
     width: 100%;
-    height: 2px;
-    background-color: rgb(16, 106, 224);
-}
-.preview_card img{
-    width: 200px;
     height: 80px;
 }
 .pro_txt{
     position: absolute;
+    top: 5px;
+    text-align: left;
+    padding: 5px;
+}
+
+
+/* dots */
+.slick-dots{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 0;
+}
+.slick-dots li{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 80px;
+}
+.slick-dots li+li{
+    margin-left: 20px;
+}
+.slick-dots li img{
+    width: 100%;
+} 
+
+.pro_bar{
+    position: absolute;
     top: 0;
+    height: 4px;
+}
+.slick-dots li.slick-active .pro_ani{
+        animation: progressBar 6s 1;
+    }
+    @keyframes progressBar{
+        0% {width: 0%;}
+        100% {width: 100%;}
+    }
+.preview_card:hover .pro_bar{
+    animation-play-state: paused;
+}
+
+.slick-dots li.slick-active .pro_bar.bar1{
+    background-color: rgb(16, 106, 224);
+}
+.slick-dots li.slick-active .pro_bar.bar2{
+    background-color: rgb(193, 224, 16);
+}
+.slick-dots li.slick-active .pro_bar.bar3{
+    background-color: rgb(16, 220, 224);
+}
+.slick-dots li.slick-active .pro_bar.bar4{
+    background-color: rgb(213, 0, 50);
+}
+
+.main_slider_box button{
+    background: url('../images/square_arrow.svg') no-repeat center center;
+    background-size: 10px;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+    position: absolute;
+    top: 42%;
+    background-color: rgba(62, 62, 62, 0.338);
+    border-radius: 2px;
+    border: none;
+}
+.main_slider_box button.slide_prev{
+    left: 40px;
+    transform: translate(-50%);
+}
+.main_slider_box button.slide_next{
+    right: 40px;
+    -webkit-transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    transform: scale(-1, 1) translate(-50%);;
+}
+.main_slider_box button:hover{
+    background-color: rgba(62, 62, 62, 0.808);
+}
+
+
+/* s_list_n 이미지 위치, 변경되는 요소들 */
+.s_list_1  .single_slide_bg_txtBox{
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.s_list_1 .txtBox_content_btn .cbtn_item:nth-child(1) a{
+    background-color: rgb(16, 106, 224);
+    border: 1px solid rgb(16, 106, 224);
+}
+.s_list_1 .txtBox_content_btn .cbtn_item:nth-child(2) a{
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.s_list_2 .txtBox_content img{
+    width: 50%;
+}
+.s_list_2 .single_slide_bg_txtBox,
+.s_list_4 .single_slide_bg_txtBox{
+    width: 40%;
+    left: 5%;
+    top: 15%;
     text-align: left;
 }
-
-
-
-
-
-
-
-
-.slick-dots{
-    display: none;
+.s_list_4 .txtBox_content_btn .cbtn_item{
+    margin: 15px 15px 15px 0;
 }
-.main_slider_box button.slick-prev,
-.main_slider_box button.slick-next{
+.s_list_4 .txtBox_content_btn .cbtn_item:nth-child(1) a{
+    background-color: rgb(213, 0, 50);
+    border-color: rgb(213, 0, 50);
+}
+.s_list_4 .txtBox_content_btn .cbtn_item:nth-child(2) a{
+    border: 1px solid rgb(255, 255, 255);
+}
+
+
+
+
+/* section_single layout */
+.single{
+    position: relative;
+    margin-top: 50px;
+    padding: 0 10%;
     border: 1px solid red;
 }
+.single_bg img{
+    display: block; 
+    /* 이미지는 inline-block속성이므로 block으로 바꿔줘야 하단 여백이 생기지 않음. */
+    width: 100%;
+}
+.single .single_slide_bg_txtBox{
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 24%;
+    top: 80px;
+}
+.single .txtBox_content_desc{
+    font-size: 18px;
+    text-align: left;
+}
+.single .txtBox_content_btn{
+    text-align: left;
+}
+.single .txtBox_content_btn a{
+    font-size: 18px;
+    text-align: left;
+}
+.single .txtBox_content_btn .cbtn_item{
+    margin: 15px 15px 15px 0;
+}
+.single .txtBox_content_btn .cbtn_item:nth-child(1) a{
+    background-color: rgb(158, 69, 0);
+    border-color:  rgb(158, 69, 0);
+}
+.single .txtBox_content_btn .cbtn_item:nth-child(2) a{
+    border: 1px solid rgb(255, 255, 255);
+}
+
+/* item */
+.items{
+    display: inline-block;
+    width: 100%;
+    padding: 0 70px 50px;
+    background: url('../images/manda_f_bg.webp') no-repeat center;
+    background-color: #341405;
+    background-position: top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    font-size: 0;
+}
+.items > div + div{
+    padding-left: 20px;
+}
+.items .item{
+    font-size: 16px;
+    display: inline-block;
+    width: 50%;
+    height: 150px;
+    background-color: transparent;
+    transition: all .5s ease;
+}
+.items .col2_left{
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    border-radius: 5px 0 0 5px;
+}
+.items .col2_left img{
+    width: 100%;
+    transition: all .5s ease;
+}
+.items .col2_right{
+    float: right;
+    width: 50%;
+    position: relative;
+}
+.col2_right .top_contain{
+    height: 8px;
+    width: 100%;
+}
+.col2_right .top_contain:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    border-bottom: 8px solid rgba(26,26,26,0.9);
+    border-right: 8px solid transparent;
+}
+.col2_right .top_contain:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 20%;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid rgba(26,26,26,0.9);
+    border-radius: 0 5px 0 0;
+}
+.col2_right .content_contain{
+    height: 134px;
+    display: inline-block;
+    background-color: rgba(26,26,26,0.9);
+    border-radius: 0 0 5px 0;
+    text-align: left;
+    padding: 30px 20px 0;
+    font-size: 20px;
+}
+.col2_right .bottom_contain{
+    height: 8px;
+}
+.col2_right .bottom_contain:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 70%;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(26,26,26,0.9);
+}
+.neon{
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    top: 20px;
+    left: 20px;
+    background: #505050;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+.neon:after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    left: 20px;
+    background: #505050;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+.item:hover .col2_left img{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transition: all .5s ease;
+}
+.item:hover .neon,
+.item:hover .neon:after{
+    background: #ffffff;
+    box-shadow: 0 0 6px 1px white;
+    transition: all .5s ease;
+}
+
 
 /* footer */
 footer{

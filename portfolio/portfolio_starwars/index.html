@@ -95,19 +95,23 @@
 
 
     <div id="main">
-        <section id="main_top_line" class="hero_single">
+        <div id="main_top_line" class="hero_single">
             <div class="title"> 
                 <span class="title_txt">STAR WARS STREAMING ANYTIME ON</span>
                 <span class="title_img">
                     <img src="assets/images/d_grey_600f51ed.svg" class="d_icon" alt="">
                 </span>
             </div>
-        </section>
+        </div>
 
         <section id="main_slider" class="hero_single">
             <div class="main_slider_box">
+                <div class="slider_button">
+                    <button class="slide_prev"></button>
+                    <button class="slide_next"></button>
+                </div>
                 <ul class="single_slide">
-                    <li class="single_slide_list">
+                    <li class="single_slide_list s_list_1">
                         <div class="single_slide_bg_img">
                             <img src="assets/images/s_slide_1.jpeg" alt="">
                         </div>
@@ -126,46 +130,99 @@
                             </div>
                             <div class="txtBox_content_btn">
                                 <span class="cbtn_item">
-                                    <span>
+                             
                                         <a href="#">WATCH NOW</a>
-                                    </span>
+                         
                                 </span>
                                 <span class="cbtn_item">
-                                    <span>
+                                 
                                         <a href="#">READ MORE</a>
-                                    </span>
+                            
                                 </span>
                             </div>
                         </div>
                     </li>
-                    <li class="single_slide_list"> 
+                    <li class="single_slide_list s_list_2"> 
                         <div class="single_slide_bg_img">
                             <img src="assets/images/s_slide_2.jpeg" alt="">
                         </div>
-                        <div class="single_slide_bg_txtBox">
-
+                        <div class="single_slide_bg_txtBox">    
+                            <div class="txtBox_content">
+                                <img src="assets/images/s_slide_content_img2.webp" alt="">
+                            </div>
+                            <div class="txtBox_content_desc">
+                                <h3>
+                                    <b>
+                                        This week, Kristin Baver discusses
+                                        <i>Star Wars: Thrawn</i>
+                                        by Timothy Zahn with panelists Frank Knight, Gabriela Lopez, and Nick Ghanbarian.
+                                    </b>
+                                </h3>
+                            </div>
+                            <div class="txtBox_content_btn">
+                                <span class="play_btn">
+                                    <a href="#"></a>
+                                </span>
+                            </div>
                         </div>
                     </li>
-                    <li class="single_slide_list">
+                    <li class="single_slide_list s_list_3">
                         <div class="single_slide_bg_img">
                             <img src="assets/images/s_slide_3.jpeg" alt="">
                         </div>
-                        <div class="single_slide_bg_txtBox">
-
+                        <div class="single_slide_bg_txtBox">    
+                            <div class="txtBox_content">
+                                <!-- <img src="assets/images/s_slide_content_img2.webp" alt=""> -->
+                            </div>
+                            <div class="txtBox_content_desc">
+                                <h3>
+                                    <b>
+                                        <i>Vader Immortal: A Star Wars VR Series</i>
+                                        &nbsp;is coming to PlayStation VR on August 25!
+                                    </b>
+                                </h3>
+                            </div>
+                            <div class="txtBox_content_btn">
+                                <span class="cbtn_item">
+                                    <a href="#">READ MORE</a>
+                                </span>
+                                <span class="cbtn_item">
+                                    <a href="#">TRAILER</a>
+                                </span>
+                            </div>
                         </div>
                     </li>
-                    <li class="single_slide_list">
+                    <li class="single_slide_list s_list_4">
                         <div class="single_slide_bg_img">
-                            <img src="assets/images/s_slide_4.jpeg" alt="">
+                            <img src="assets/images/s_slide_5.jpeg" alt="">
                         </div>
-                        <div class="single_slide_bg_txtBox">
-
+                        <div class="single_slide_bg_txtBox">    
+                            <div class="txtBox_content">
+                                <img src="assets/images/s_slide_content_img4.webp" alt="">
+                            </div>
+                            <div class="txtBox_content_desc">
+                                <h3>
+                                    <b>
+                                        <i>Vader Immortal: A Star Wars VR Series</i>
+                                        &nbsp;is coming to PlayStation VR on August 25!
+                                    </b>
+                                </h3>
+                            </div>
+                            <div class="txtBox_content_btn">
+                                <span class="cbtn_item">
+                                    <a href="#">READ MORE</a>
+                                </span>
+                                <span class="cbtn_item">
+                                    <a href="#">TRAILER</a>
+                                </span>
+                            </div>
                         </div>
                     </li>
                 </ul>
-                <div class="preview_cards active">
+                <!-- 만들어놓은걸 붙이고 싶은데 어떻게 해야할지 감이 안잡히네 ^ㅇ^.....
+                <div class="preview_cards"> 
                     <span class="preview_card">
-                        <div class="pro_bar"></div>
+                        <div class="pro_bar bar1"></div>
                         <div class="pro_contents">
                             <div class="pro_bg">
                                 <img src="assets/images/s_slide_1.jpeg" alt="">
@@ -178,7 +235,7 @@
                         </div>
                     </span>
                     <span class="preview_card">
-                         <div class="pro_bar"></div>
+                         <div class="pro_bar bar2"></div>
                         <div class="pro_contents">
                             <div class="pro_bg">
                                 <img src="assets/images/s_slide_2.jpeg" alt="">
@@ -191,7 +248,7 @@
                         </div>
                     </span>
                     <span class="preview_card">
-                         <div class="pro_bar"></div>
+                         <div class="pro_bar bar3"></div>
                         <div class="pro_contents">
                             <div class="pro_bg">
                                 <img src="assets/images/s_slide_3.jpeg" alt="">
@@ -204,10 +261,10 @@
                         </div>
                     </span>
                     <span class="preview_card">
-                         <div class="pro_bar"></div>
+                        <div class="pro_bar bar4"></div>
                         <div class="pro_contents">
                             <div class="pro_bg">
-                                <img src="assets/images/s_slide_4.jpeg" alt="">
+                                <img src="assets/images/s_slide_5.jpeg" alt="">
                             </div>
                             <div class="pro_txt">
                                 <span>
@@ -216,31 +273,91 @@
                             </div>
                         </div>
                     </span>
+                </div>  -->
+            </div>
+        </section>
+
+
+        <section id="mandalorian" class="single">
+            <div class="single_bg">
+                <img src="assets/images/mando_bg.webp" alt="">
+            </div>
+            <div class="single_slide_bg_txtBox">
+                <div class="txtBox_content">
+                    <img src="assets/images/mando-logo.webp" alt="">
+                </div>
+                <div class="txtBox_content_desc">
+                    <h3>
+                        <b>
+                            All Season One episodes now
+                            streaming! New episodes coming
+                            Fall 2020, only on Disney+.
+                        </b>
+                    </h3>
+                </div>
+                <div class="txtBox_content_btn">
+                    <span class="cbtn_item">
+                        <a href="#">STREAM NOW</a>
+                    </span>
+                    <span class="cbtn_item">
+                        <a href="#">EXPLORE</a>
+                    </span>
+                </div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <div class="col2_left">
+                        <img src="assets/images/manda_f_img1.webp" alt="">
+                    </div>
+                    <div class="col2_right">
+                        <div class="top_contain"></div>
+                        <div class="neon"></div>
+                        <div class="content_contain">
+                            <p>The Mandalorian Nominated for 15 Emmy Awards</p>
+                        </div>
+                        <div class="bottom_contain"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="col2_left">
+                        <img src="assets/images/manda_f_img2.jpeg" alt="">
+                    </div>
+                    <div class="col2_right">
+                        <div class="top_contain"></div>
+                        <div class="neon"></div>
+                        <div class="content_contain">
+                            <p>The Mandalorian Nominated for 15 Emmy Awards</p>
+                        </div>
+                        <div class="bottom_contain"></div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="disney_gallery" class="hero_single">
 
-        </section>
-        <section id="empire_strikes_back" class="hero_single">
 
+        <section id="empire_strikes_back" class="single">
+            <div>
+                <img src="assets/images/empire_bg.webp" alt="">
+            </div>
         </section>
-        <section id="enjoy_while_staying_home" class="hero_single">
 
+        <section id="activities" class="single">
+            <div>
+                <img src="assets/images/activities_bg.png" alt="">
+            </div>
         </section>
-        <section  id="skywalker" class="hero_single">
 
-        </section>
         <section  id="latest_newsBlog" class="lastest_thing">
 
         </section>
+
         <section  id="latest_video" class="lastest_thing">
 
         </section>
+
         <section>
-            <article></article>
-            <article></article>
-            <article></article>
+            <div>
+            </div>
         </section>
     </div> 
 
@@ -280,14 +397,49 @@
     </footer>
 
     <script>
+
         $('.single_slide').slick({
             dots: true,
+            customPaging: function(slider, i) { //슬라이더의 갯수(i인덱스)만큼 돌아감.
+                var targetImg = slider.$slides.eq(i).find('img').attr('src'); //슬라이드에 있는 이미지src를 변수에 담기.
+                var appendImg = "<img src="  + targetImg +  " />"; //이미지 태그에 src담기.
+                var a = "<div class='pro_bg'>" + appendImg + "</div>"; //pro_bg 안에 이미지 담기.
+                var b = "<div class='pro_txt'>" + + "</div>"; //아 근데 이렇게 하기 싫은데 다른 방법 없을까 생각해보깅
+                var appendPro = `<div class='pro_bar bar${i+1}'></div>` + a; 
+                // var appendPro = `<div class='pro_bar bar${i+1}'></div>` + appendImg; 
+
+                // <span class="preview_card">
+                //     <div class="pro_bar bar4"></div>
+                //     <div class="pro_contents">
+                //         <div class="pro_bg">
+                //             <img src="assets/images/s_slide_5.jpeg" alt="">
+                //         </div>
+                //         <div class="pro_txt">
+                //             <span>
+                //                 Star Wars: Jedi Temple Challenge
+                //             </span>
+                //         </div>
+                //     </div>
+                // </span
+                return appendPro;
+               
+            },
             infinite: true,
             speed: 300,
             slidesToShow: 1,
             adaptiveHeight: true,
-            // autoplay: true,
-            autoplaySpeed: 2000,  
+            autoplay: true,
+            autoplaySpeed: 6000,  
+            prevArrow: $('.slide_prev'),
+            nextArrow: $('.slide_next'),
+            // pauseOnHover:true,
+        });
+
+        $(".slick-slider").on('afterChange',function(){
+            $(".pro_bar").addClass('pro_ani');
+        });
+        $(".slick-slider").on('beforeChange',function(){
+            $(".pro_bar").removeClass('pro_ani');
         });
     </script>
 </body>

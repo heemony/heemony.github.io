@@ -307,7 +307,9 @@ button#slick-slide-control00, button#slick-slide-control01{
     height: 2px;
     background-color: #fff;
 }
-
+.txt{
+    color: black;
+}
 .txt h3{
     font-size: 14px;
     text-align: left;
@@ -315,7 +317,7 @@ button#slick-slide-control00, button#slick-slide-control01{
 .txt span{
     font-size: 12px;
     float: right;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 @media screen and (max-width: 900px){
@@ -337,5 +339,14 @@ button#slick-slide-control00, button#slick-slide-control01{
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+    .txt h3{
+        font-size: 24px;
+        text-align: left;
+    }
+    .txt span{
+        font-size: 20px;
+        float: right;
+        padding: 20px 0;
     }
 }
