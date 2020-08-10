@@ -125,6 +125,9 @@
                         <img src="" alt="">
                         <span>Bye.</span>
                     </li>
+                    <li class="menuitem blank">
+                        <br>
+                    </li>
                     <li class="menuitem shutdown">
                         <img src="" alt="">
                         <span>Shutdown</span>
@@ -148,7 +151,6 @@
         </div>
     </div>
 
-    <!-- 클릭하면 div를 추가하면서 얘가 보이게 만들어야함. -->
 
     <div class="window off">
         <div class="window_titlebar">
@@ -162,6 +164,7 @@
         </div>
         <div class="window_content">
             <div class="window_content_area">
+                <h3><span class="content_title"> /* Contact me */ </span></h3>
                 <div>
                     <img class="window_c_icon" src="win93_images/paint.png" alt=""><span>SONG HEE MYUN</span>
                 </div>
@@ -174,24 +177,33 @@
                 <div>
                     <img class="window_c_icon" src="win93_images/mail.png" alt=""><span>noodle9323@naver.com</span>
                 </div>
+            
+                <h3><span class="content_title"> /* Skill */ </span></h3>
+                <div>
+                    <span class="skill_txt">
+                        HTML5, CSS, JS, JQuery, Vue.js, Java, JSP, MySQL
+                    </span>
+                </div>
             </div>
         </div>    
     </div>
     <script>
-        var desktopBtn = document.querySelector('.desktop');
-        var startBtn = document.querySelector('.startBtn');
-        var showMenu = document.querySelector('.taskBar_submenu');
+        const desktopBtn = document.querySelector('.desktop');
+        const startBtn = document.querySelector('.startBtn');
+        const showMenu = document.querySelector('.taskBar_submenu');
 
-        // 릭 캐릭터 누르면 readme 나오고 닫히는거.
+        // readme 나오고 닫히는거.
         const whoamiBtn = document.querySelector('.right_top');
         const windowModal = document.querySelector('.window');
         const closeBtn = windowModal.querySelector('.window_close_button');
         const minBtn = windowModal.querySelector('.window_min_button');
         const maxBtn = windowModal.querySelector('.window_max_button');
         const taskbar = document.querySelector('.task');
+        const shutdownBtn = document.querySelector('.shutdown');
 
         const openModal = () => {
             windowModal.classList.remove('off');
+            
         }
         const closeModal = () => {
             windowModal.classList.add('off');
@@ -215,7 +227,6 @@
             const mClone = windowModal.cloneNode(true);  //클론을 해서 붙인거라서, 이 함수 안에서 최소화된 창 눌렀을 때 클론된 요소를 삭제하려고 했음
             windowModal.classList.add('off'); 
             taskbar.appendChild(mClone);
-            
         }
          //최소화 된거 다시 누르면 원상태.
         const min_maxModal = (e) => {
@@ -223,7 +234,7 @@
             if(taskbar.children.length === 0) return; //task에 아무것도 없을 때 누르면 반응없음.
             windowModal.classList.remove('min'); //다시 창 보이게 원상태로. 1/2) 작게된 거 원상태.
             windowModal.classList.remove('off'); //다시 창 보이게 원상태로. 2/2) 안 보이는 거 원상태,
-        
+
         }
     
         //최대화 버튼
@@ -234,11 +245,34 @@
             } else windowModal.classList.add('max');     
         }
 
+        // shutdown 버튼
+        const shutdownWork = () => {
+            document.body.style.height = window.innerHeight + "px";
+            document.body.style.backgroundColor = "#000";
+            document.body.className = "zoomOut";
+            // $audio("/c/files/sounds/shutdown.mp3").play();
+            setTimeout(function() {
+                document.body.innerHTML = "<div style='display: table; width: 100%; height: "+window.innerHeight+"px; text-align:center; font-size: 25px; font-family: px_sans_nouveaux;'><p style='display:table-cell;vertical-align:middle;'> Bye! <br/> See you again :D</p></div>";
+                document.body.style.color = "#C3FF00";
+                document.body.className = "zoomIn";
+            }, 1000);
+        }
+
+
         whoamiBtn.addEventListener('click', openModal);
         closeBtn.addEventListener('click', closeModal);
         minBtn.addEventListener('click', minModal);
         maxBtn.addEventListener('click', maxModal);
         taskbar.addEventListener('click', min_maxModal);
+        taskbar.addEventListener('click', min_maxModal);
+        shutdownBtn.addEventListener('click', shutdownWork);
+
+
+
+
+
+
+
 
 
 
@@ -270,6 +304,7 @@
             document.body.insertBefore(newDiv, desktopBtn); 
         };
 
+        
     </script>
 
     
