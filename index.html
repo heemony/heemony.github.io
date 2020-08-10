@@ -207,17 +207,12 @@
         }
         const closeModal = () => {
             windowModal.classList.add('off');
+
             var v = Array.from(taskbar.children);
             if(v.length > 0)
-             for(let i = 1; i < v.length; i++){
-                   v.remove[i]; 
+             for(let i = 0; i < v.length; i++){
+                   v[i].remove(); 
                 }
-
-            var a = taskbar.getElementsByTagName('.div');
-            if( a.className !== 'window.min'){
-                taskbar.removeChild('window.min');
-            }
-            windowModal.removeChild('window.min');
            
         }
         //최소화 버튼
