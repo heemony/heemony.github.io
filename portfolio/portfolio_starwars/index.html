@@ -321,13 +321,13 @@
 
 
         <section id="empire_strikes_back" class="single">
-            <div>
+            <div class="single_img">
                 <img src="assets/images/empire_bg.webp" alt="">
             </div>
         </section>
 
         <section id="activities" class="single">
-            <div>
+            <div class="single_img">
                 <img src="assets/images/activities_bg.png" alt="">
             </div>
         </section>
@@ -341,7 +341,7 @@
                             <div class="row1_top">
                                 <img src="assets/images/latest_n_img1.jpeg" alt="">
                             </div>
-                            <div class="col2_right row1_btm">
+                            <div class="row1_btm">
                                 <div class="neon"></div>
                                 <div class="content_contain">
                                     <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
@@ -353,7 +353,7 @@
                             <div class="row1_top">
                                 <img src="assets/images/latest_n_img2.webp" alt="">
                             </div>
-                            <div class="col2_right row1_btm">
+                            <div class="row1_btm">
                                 <div class="neon"></div>
                                 <div class="content_contain">
                                     <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
@@ -365,7 +365,7 @@
                             <div class="row1_top">
                                 <img src="assets/images/latest_n_img3.jpeg" alt="">
                             </div>
-                            <div class="col2_right row1_btm">
+                            <div class="row1_btm">
                                 <div class="neon"></div>
                                 <div class="content_contain">
                                     <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
@@ -379,7 +379,7 @@
                             <div class="row1_top">
                                 <img src="assets/images/latest_n_2_img1.webp" alt="">
                             </div>
-                            <div class="col2_right row1_btm">
+                            <div class="row1_btm">
                                 <div class="neon"></div>
                                 <div class="content_contain">
                                     <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
@@ -391,7 +391,7 @@
                             <div class="row1_top">
                                 <img src="assets/images/latest_n_2_img2.webp" alt="">
                             </div>
-                            <div class="col2_right row1_btm">
+                            <div class="row1_btm">
                                 <div class="neon"></div>
                                 <div class="content_contain">
                                     <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
@@ -403,7 +403,7 @@
                             <div class="row1_top">
                                 <img src="assets/images/latest_n_2_img3.jpeg" alt="">
                             </div>
-                            <div class="col2_right row1_btm">
+                            <div class="row1_btm">
                                 <div class="neon"></div>
                                 <div class="content_contain">
                                     <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
@@ -415,7 +415,7 @@
                             <div class="row1_top">
                                 <img src="assets/images/latest_n_2_img4.jpeg" alt="">
                             </div>
-                            <div class="col2_right row1_btm">
+                            <div class="row1_btm">
                                 <div class="neon"></div>
                                 <div class="content_contain">
                                     <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
@@ -425,21 +425,62 @@
                         </div>
                     </li>
                 </ul>
-            
-                
-                
             </div>
         </section>
 
         <section  id="latest_video" class="lastest_thing">
             <h1>Latest Video</h1>
             <div class="latest_slide">
-                
+                <ul>
+                    <li class="latest_slide3">
+                        <div class="item3">
+                            <div class="row1_top">
+                                <img src="assets/images/latest_n_img1.jpeg" alt="">
+                            </div>
+                            <div class="row1_btm">
+                                <div class="neon"></div>
+                                <div class="content_contain">
+                                    <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
+                                </div>
+                                <div class="bottom_contain"></div>
+                            </div>
+                        </div>
+                        <div class="item3">
+                            <div class="row1_top">
+                                <img src="assets/images/latest_n_img2.webp" alt="">
+                            </div>
+                            <div class="row1_btm">
+                                <div class="neon"></div>
+                                <div class="content_contain">
+                                    <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
+                                </div>
+                                <div class="bottom_contain"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section>
-            <div>
+        <section class="adv">
+            <div class="adv_slide">
+                <ul>
+                    <li>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </li>
+                </ul>
             </div>
         </section>
     </div> 
@@ -508,7 +549,6 @@
                 //     </div>
                 // </span
                 return appendPro;
-               
             },
             infinite: true,
             speed: 300,
@@ -518,7 +558,6 @@
             autoplaySpeed: 6000,  
             prevArrow: $('.slide_prev'),
             nextArrow: $('.slide_next'),
-            // pauseOnHover:true,
         });
 
         $(".slick-slider").on('afterChange',function(){
