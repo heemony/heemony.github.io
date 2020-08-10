@@ -120,6 +120,59 @@ a{ text-decoration: none; }
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 1px;
 }
+    .right_top_title {
+        -webkit-animation: pBox 2s infinite;
+        animation: pBox 2s infinite;
+    }
+    :root {
+        --firstColor:#e6ce1c;
+        --secondColor:rgb(63, 255, 104);
+        --thirdColor:#6433f9;
+        --fourthColor:#275f5e;
+    }
+    @keyframes pBox {
+        0% {
+            background-color: var(--firstColor)
+        }
+
+        25% {
+            background-color: var(--secondColor)
+        }
+
+        50% {
+            background-color: var(--thirdColor)
+        }
+
+        75% {
+            background-color: var(--fourthColor)
+        }
+
+        100% {
+            background-color: var(--firstColor)
+        }
+    }
+    @-webkit-keyframes pBox {
+        0% {
+            background-color: var(--firstColor)
+        }
+
+        25% {
+            background-color: var(--secondColor)
+        }
+
+        50% {
+            background-color: var(--thirdColor)
+        }
+
+        75% {
+            background-color: var(--fourthColor)
+        }
+
+        100% {
+            background-color: var(--firstColor)
+        }
+    }
+
 .desktop_icon.iconMs{top: 5px;}
 .desktop_icon.icon29{top: 90px;}
 .desktop_icon.iconCarhartt{top: 175px;}
@@ -281,6 +334,7 @@ button.clickbtn{
 .menu{
     width: 100%;
     padding: 5px;
+    position: relative;
 }
 .menu li{
     padding: 3px;
@@ -288,17 +342,37 @@ button.clickbtn{
 .menu li:hover{
     background-color: teal;
     color: white;
+    cursor: pointer;
+}
+.menu li.blank:hover{
+    background-color: transparent;
+    cursor: pointer;
 }
 .menu .blank{
     height: 170px;
-    border-style: solid;
+    /* border-style: solid;
     border-width: 1px;
     border-color: rgb(80, 80, 80) rgb(255, 255, 255) rgb(255, 255, 255) rgb(84, 84, 84);
-    background-color: rgb(169, 169, 169);
+    background-color: rgb(169, 169, 169); */
+    border-bottom: 1px solid rgb(80, 80, 80);
 }
-
-
-
+.submenu{
+    display: none;
+}
+.menu li:hover .submenu li{
+    width: 222px;
+}
+.menu li:hover .submenu{
+    position: absolute;
+    left: 222px;
+    top: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255) rgb(128, 128, 128) rgb(128, 128, 128) rgb(255, 255, 255);
+    background-color: rgb(192, 192, 192);
+    display: block;
+    color: black;
+}
 
 
 /* class = window */
@@ -484,4 +558,66 @@ button.clickbtn{
     display: inline-block;
     width: 30px;
     vertical-align: middle;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 520px){
+    .window {
+        font-family: 'px_sans_nouveaux';
+        position: absolute;
+        z-index: 28;
+        left: 26px;
+        top: 227px;
+        width: 80%;
+        min-width: 450px;
+        height: 560px;
+        display: flex;
+        border-color: rgb(223, 223, 223) rgb(128, 128, 128) rgb(128, 128, 128) rgb(223, 223, 223);
+        border-style: solid;
+        border-width: 2px 2px;
+    }
+    .desktop_icon.right_top .icon_wrapper {
+        position: absolute;
+        padding-left: 5px;
+        right: -100px;
+        top: -20px;
+        width: 99%;
+        height: 100%;
+    }
+    .desktop_icon.right_top .icon_wrapper img {
+        width: 130px;
+        height: auto;
+    }
+    .desktop_icon .right_top_title {
+        position: absolute;
+        right: -40px;
+        display: block;
+        font-size: 19px;
+        font-style: italic;
+        font-weight: 900;
+        text-align: right;
+        width: 100px;
+        padding: 10px;
+        border: 4px dashed rgb(255, 255, 255);
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 1px;
+    }
+    .window_content_area h3:nth-child(2){
+        padding-top: 65px;
+    }
+    .desktop_icon{
+        position: absolute;
+        top: 120px;
+        width: 80px;
+        height: 80px;
+        margin: 10px 0 0 10px;
+    }
+
 }

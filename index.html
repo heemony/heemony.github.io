@@ -17,7 +17,11 @@
             <div class="icon_wrapper">
                 <a href="#"><img src="gif_files/XlO9.gif" alt=""></a>         
             </div>
-            <div class="right_top_title">Click  Me!</div>
+            <div class="right_top_title">
+                <p>
+                    Click  Me!
+                </p>
+            </div>
         </div>
         <div class="desktop_icon iconMs">
             <div class="icon_wrapper">
@@ -78,7 +82,7 @@
         <div class="desktop_icon iconBootleg">
             <div class="icon_wrapper">
                 <a href="portfolio/portfolio_bootlegsouvenir/index.html">
-                    <img src="icon_images/starwars.png" alt="Bootleg">
+                    <img src="icon_images/DS.gif" alt="Bootleg">
                 </a>         
             </div>
             <div class="title">BootlegSouvenir</div>
@@ -107,7 +111,13 @@
                 <ul class="menu">
                     <li class="menuitem">
                         <img src="win93_images/start.png" alt="">
-                        <span>HI</span>
+                        <span>HI
+                            <ul class="submenu">
+                                <li>하이</li>
+                                <li>하이</li>
+                            </ul>
+                        </span>
+
                     </li>
                     <li class="menuitem">
                         <img src="" alt="">
@@ -175,7 +185,7 @@
                     <img class="window_c_icon" src="win93_images/voice.png" alt=""><span>01075530514</span>
                 </div>
                 <div>
-                    <img class="window_c_icon" src="win93_images/mail.png" alt=""><span>noodle9323@naver.com</span>
+                    <img class="window_c_icon" src="win93_images/mail.png" alt=""><span>heemon14@gmail.com</span>
                 </div>
             
                 <h3><span class="content_title"> /* Skill */ </span></h3>
@@ -201,6 +211,7 @@
         const taskbar = document.querySelector('.task');
         const shutdownBtn = document.querySelector('.shutdown');
 
+        
         const openModal = () => {
             windowModal.classList.remove('off');
             
@@ -209,6 +220,7 @@
             windowModal.classList.add('off');
 
             var v = Array.from(taskbar.children);
+            //우선 모달창이 하나라서 가능함. 여러개 뜰 땐 다시짜야함.
             if(v.length > 0)
              for(let i = 0; i < v.length; i++){
                    v[i].remove(); 
@@ -263,16 +275,6 @@
         shutdownBtn.addEventListener('click', shutdownWork);
 
 
-
-
-
-
-
-
-
-
-
-
         //taskbar  start버튼 누르면 메뉴 열림.닫힘.
         startBtn.addEventListener('click', function(){
             if(startBtn.className === 'startBtn toggle'){
@@ -314,6 +316,7 @@
         setDrag('div.iconStarwars');
         setDrag('div.iconKakaobank');
         setDrag('div.iconYoutube');
+        setDrag('div.iconBootleg');
         setDrag('.window');
 
         function setDrag(selector) {
