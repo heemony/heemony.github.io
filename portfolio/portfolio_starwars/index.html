@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" media="screen and (max-width:950px) "  href="assets/css/index_media_1.css">
@@ -110,7 +110,7 @@
                     <button class="slide_prev"></button>
                     <button class="slide_next"></button>
                 </div>
-                <ul class="single_slide">
+                <ul id="here" class="single_slide">
                     <li class="single_slide_list s_list_1">
                         <div class="single_slide_bg_img">
                             <img src="assets/images/s_slide_1.jpeg" alt="">
@@ -130,14 +130,10 @@
                             </div>
                             <div class="txtBox_content_btn">
                                 <span class="cbtn_item">
-                             
-                                        <a href="#">WATCH NOW</a>
-                         
+                                    <a href="#">WATCH NOW</a>
                                 </span>
                                 <span class="cbtn_item">
-                                 
-                                        <a href="#">READ MORE</a>
-                            
+                                    <a href="#">READ MORE</a>
                                 </span>
                             </div>
                         </div>
@@ -172,9 +168,8 @@
                         </div>
                         <div class="single_slide_bg_txtBox">    
                             <div class="txtBox_content">
-                                <!-- <img src="assets/images/s_slide_content_img2.webp" alt=""> -->
+                               
                             </div>
-                           
                         </div>
                     </li>
                     <li class="single_slide_list s_list_4">
@@ -529,62 +524,143 @@
         <section  id="latest_video" class="lastest_thing">
             <h1>Latest Video</h1>
             <div class="latest_slide">
-                <ul>
-                    <li class="latest_slide3">
-                        <div class="item3">
-                            <div class="row1_top">
-                                <img src="assets/images/latest_n_img1.jpeg" alt="">
-                            </div>
-                            <div class="row1_btm">
-                                <div class="neon"></div>
-                                <div class="content_contain">
-                                    <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
-                                </div>
-                                <div class="bottom_contain"></div>
+                <div class="latest_video_slide">
+                    <div class="item3">
+                        <div class="row1_top">
+                            <img src="assets/images/latest_v_img1.webp" alt="">
+                            <div class="youtube_btn">
+                                <button class="playBtn"></button>
                             </div>
                         </div>
-                        <div class="item3">
-                            <div class="row1_top">
-                                <img src="assets/images/latest_n_img2.webp" alt="">
+                        <div class="row1_btm">
+                            <div class="neon"></div>
+                            <div class="content_contain">
+                                <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
                             </div>
-                            <div class="row1_btm">
-                                <div class="neon"></div>
-                                <div class="content_contain">
-                                    <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
-                                </div>
-                                <div class="bottom_contain"></div>
+                            <div class="bottom_contain"></div>
+                        </div>
+                    </div>
+                    <div class="item3">
+                        <div class="row1_top">
+                            <img src="assets/images/latest_v_img2.webp" alt="">
+                            <div class="youtube_btn">
+                                <button class="playBtn"></button>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                        <div class="row1_btm">
+                            <div class="neon"></div>
+                            <div class="content_contain">
+                                <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
+                            </div>
+                            <div class="bottom_contain"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest_video_slide">
+                    <div class="item3">
+                        <div class="row1_top">
+                            <img src="assets/images/latest_v_img3.jpeg" alt="">
+                            <div class="youtube_btn">
+                                <button class="playBtn"></button>
+                            </div>
+                        </div>
+                        <div class="row1_btm">
+                            <div class="neon"></div>
+                            <div class="content_contain">
+                                <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
+                            </div>
+                            <div class="bottom_contain"></div>
+                        </div>
+                    </div>
+                    <div class="item3">
+                        <div class="row1_top">
+                            <img src="assets/images/latest_v_img4.jpeg" alt="">
+                            <div class="youtube_btn">
+                                <button class="playBtn"></button>
+                            </div>
+                        </div>
+                        <div class="row1_btm">
+                            <div class="neon"></div>
+                            <div class="content_contain">
+                                <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
+                            </div>
+                            <div class="bottom_contain"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest_video_slide">
+                    <div class="item3">
+                        <div class="row1_top">
+                            <img src="assets/images/latest_v_img5.jpeg" alt="">
+                            <div class="youtube_btn">
+                                <button class="playBtn"></button>
+                            </div>
+                        </div>
+                        <div class="row1_btm">
+                            <div class="neon"></div>
+                            <div class="content_contain">
+                                <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
+                            </div>
+                            <div class="bottom_contain"></div>
+                        </div>
+                    </div>
+                    <div class="item3">
+                        <div class="row1_top">
+                            <img src="assets/images/latest_v_img6.webp" alt="">
+                            <div class="youtube_btn">
+                                <button class="playBtn"></button>
+                            </div>
+                        </div>
+                        <div class="row1_btm">
+                            <div class="neon"></div>
+                            <div class="content_contain">
+                                <p>How Innovative Technology Immersed Us in The World of the Mandalorian</p>
+                            </div>
+                            <div class="bottom_contain"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="adv">
-            <div class="adv_slide">
-                <ul>
-                    <li>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </li>
-                    <li>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </li>
-                    <li>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </li>
-                </ul>
+        <section id="adv" class="lastest_thing">
+            <div class="latest_slide">
+                <div class="adv_slide">
+                    <div class="item4">
+                        <img src="assets/images/ad_n_2_img1.jpeg" alt="">
+                    </div>
+                    <div class="item4">
+                        <img src="assets/images/ad_n_2_img2.webp" alt="">
+                    </div>
+                    <div class="item4">
+                        <img src="assets/images/ad_n_2_img3.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="adv_slide">
+                    <div class="item4">
+                        <img src="assets/images/ad_n_2_img4.webp" alt="">
+                    </div>
+                    <div class="item4">
+                        <img src="assets/images/ad_n_2_img5.jpeg" alt="">
+                    </div>
+                    <div class="item4">
+                        <img src="assets/images/ad_n_2_img6.webp" alt="">
+                    </div>
+                </div>
+                <div class="adv_slide">
+                    <div class="item4">
+                        <img src="assets/images/ad_n_2_img7.webp" alt="">
+                    </div>
+                    <div class="item4">
+                        <img src="assets/images/ad_n_2_img8.webp" alt="">
+                    </div>
+                    <div class="item4">
+                        <img src="assets/images/ad_n_2_img9.webp" alt="">
+                    </div>
+                </div>
             </div>
         </section>
     </div> 
-
-
-
 
     <footer>
         <section id="social_list">
@@ -615,37 +691,18 @@
                 </ul>
             </div>   
         </section>
-
     </footer>
 
     <script>
-    // var slider = {
-    //     slide : '.single_slide' , btn : '.slide_prev'
 
-    // }
         $('.single_slide').slick({
             dots: true,
             customPaging: function(slider, i) { //슬라이더의 갯수(i인덱스)만큼 돌아감.
                 var targetImg = slider.$slides.eq(i).find('img').attr('src'); //슬라이드에 있는 이미지src를 변수에 담기.
                 var appendImg = "<img src="  + targetImg +  " />"; //이미지 태그에 src담기.
-                var a = "<div class='pro_bg'>" + appendImg + "</div>"; //pro_bg 안에 이미지 담기.
-                var b = "<div class='pro_txt'>" + + "</div>"; //아 근데 이렇게 하기 싫은데 다른 방법 없을까 생각해보깅
-                var appendPro = `<div class='pro_bar bar${i+1}'></div>` + a; 
-                // var appendPro = `<div class='pro_bar bar${i+1}'></div>` + appendImg; 
-
-                // <span class="preview_card">
-                //     <div class="pro_bar bar4"></div>
-                //     <div class="pro_contents">
-                //         <div class="pro_bg">
-                //             <img src="assets/images/s_slide_5.jpeg" alt="">
-                //         </div>
-                //         <div class="pro_txt">
-                //             <span>
-                //                 Star Wars: Jedi Temple Challenge
-                //             </span>
-                //         </div>
-                //     </div>
-                // </span
+                var darkPage = "<div style='position: absolute; bottom: 0; background-color: #24242463; width: 100%; height: 80px;'></div>";
+                var a = "<div class='pro_bg'>" + darkPage + appendImg + "</div>"; //pro_bg 안에 이미지 담기.
+                var appendPro = `<div class='pro_bar bar${i+1}'></div>` + a;
                 return appendPro;
             },
             infinite: true,
@@ -665,17 +722,14 @@
             $(".pro_bar").removeClass('pro_ani');
         });
 
+        // latest news
         $('.latest_slide').slick({
             dots: false,
             infinite: false,
             slidesToShow: 1
         });
         
-        const prevBTN = document.querySelector(".slick-prev")
-        const nextBTN = document.querySelector(".slick-next")
-        nextBTN.addEventListener("click", () => {
-            prevBTN.classList.add("on")
-        })
+
     </script>
 </body>
 </html>
