@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" async="" src="http://www.googleadservices.com/pagead/conversion_async.js"></script>
-    <script type="text/javascript" async="" src="http://www.googletagmanager.com/gtag/js?id=AW-944994218&amp;l=dataLayer&amp;cx=c"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" async="" src="https://www.googleadservices.com/pagead/conversion_async.js"></script>
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-944994218&amp;l=dataLayer&amp;cx=c"></script>
     <title>CARHARTT WIP COLNE</title>
     
     <link rel="stylesheet" href="carhartt_css/reset.css">
@@ -16,9 +16,15 @@
     
     <script>
         $(document).ready(function(){
-            //토글
+            //토글 
             $('#menutgl').click(function(){
-                $('#menutgl>span').toggleClass('on');   
+                $('#menutgl>span').toggleClass('on');  
+                $('.webV_menu').toggleClass('active');
+                $('.add_title').toggleClass('hidden');
+            }),
+            //최상단 adv창 닫기
+            $('#close_news').click(function(){
+                $('.add_title').toggleClass('none');
             }),
             // list mouseover, out
             $('.sub_ctr_menu>li').mouseover(function(){
@@ -28,6 +34,7 @@
                 $(this).removeClass('on');   
             })
         });
+    
     </script>
 
 </head>
@@ -214,9 +221,31 @@
             </div> <!--header-->
         </header>
         <!-- 웹버전 메뉴영역 -->
-
-        <!-- 모바일버전 메뉴영역 --> 
-
+        <div class="webV_menu">
+            <div class="web_menu_wrapper">
+                <ul class="web_menu_lists">
+                    <li><a href="carhartt_onlineshop.html">ONLINE SHOP</a></li>
+                    <li><a href="carhartt_store.html">STORE INFO</a></li>
+                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">LOOKBOOK</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CUSTOMER CARE</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 모바일버전 메뉴영역 
+        <div class="mobileV_menu">
+            <div class="mobile_menu_wrapper">
+                <ul class="mobile_menu_lists">
+                    <li>ONLINE SHOP</li>
+                    <li>STORE INFO</li>
+                    <li>NEWS</li>
+                    <li>LOOKBOOK</li>
+                    <li>ABOUT</li>
+                    <li>CUSTOMER CARE</li>
+                </ul>
+            </div>
+        </div>--> 
 
         <h2 class="blind">본문 영역</h2>
         <div class="container">

@@ -62,15 +62,10 @@ ul#section_links > li:last-child{border-right: 1px solid #333;}
 /* main */
 
 #main{
-    display: block;
-    width: 100%;
-    min-height: 500px;
+    display: block; width: 100%; min-height: 500px;
     background-color: #000000;
     background-image: url('../images/background-stars-desktop.webp');
-    background-position: center top;
-    background-repeat: repeat;
-    margin-top: 188px;
-    text-align: center;
+    background-position: center top; background-repeat: repeat; margin-top: 188px; text-align: center;
 }
 #main_top_line{
     width: 100%; height: 40px; 
@@ -169,20 +164,14 @@ li.single_slide_list{
 
 /* dots */
 .slick-dots{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    font-size: 0;
+    position: absolute; bottom: 0; width: 100%; font-size: 0;
 }
-.slick-dots li{
-    position: relative;
-    display: inline-block;
-    width: 200px;
-    height: 80px;
+.slick-dots li{ 
+    position: relative; display: inline-block; width: 200px; height: 80px;
 }
 .slick-dots li::after {
     display: block; color: #c7c7c7; position: absolute; top: 15px; left: 12px;
-    width: 180px; z-index: 999; font-size: 15px; text-align: left; font-weight: bold; letter-spacing: 1px;
+    width: 180px; z-index: 9; font-size: 15px; text-align: left; font-weight: bold; letter-spacing: 1px;
 }
 .slick-dots li:nth-child(1)::after {
     content: 'VADER IMMORTAL COMING TO PLAYSTATION VR';
@@ -204,17 +193,13 @@ li.single_slide_list{
 } 
 
 .pro_bar{
-    position: absolute;
-    top: 0;
-    height: 4px;
-    z-index: 1;
+    position: absolute; top: 0; height: 4px; z-index: 1;
 }
 .slick-dots li.slick-active .pro_ani{
         animation: progressBar 6s 1;
     }
     @keyframes progressBar{
-        0% {width: 0%;}
-        100% {width: 100%;}
+        0% {width: 0%;} 100% {width: 100%;}
     }
 .preview_card:hover .pro_bar{
     animation-play-state: paused;
@@ -235,15 +220,9 @@ li.single_slide_list{
 
 .main_slider_box button{
     background: url('../images/square_arrow.svg') no-repeat center center;
-    background-size: 10px;
-    width: 35px;
-    height: 35px;
-    z-index: 10;
-    position: absolute;
-    top: 42%;
-    background-color: rgba(62, 62, 62, 0.338);
-    border-radius: 2px;
-    border: none;
+    background-size: 10px;  width: 35px; height: 35px; z-index: 10;
+    position: absolute; top: 42%; background-color: rgba(62, 62, 62, 0.338);
+    border-radius: 2px; border: none;
 }
 .main_slider_box button.slide_prev{
     left: 40px;
@@ -346,9 +325,7 @@ li.single_slide_list{
 
 /* item */
 .items{
-    display: inline-block;
-    width: 100%;
-    padding: 0 70px 50px;
+    display: inline-block; width: 100%; padding: 0 70px 50px;
     background: url('../images/manda_f_bg.webp') no-repeat center;
     background-color: #341405;
     background-position: top;
@@ -359,65 +336,37 @@ li.single_slide_list{
 .items > div + div{
     padding-left: 20px;
 }
-.items .item
-/* .items .item2 */
-{
-    font-size: 16px;
-    display: inline-block;
-    width: 50%;
-    height: 150px;
-    background-color: transparent;
-    transition: all .5s ease;
+.items .item{
+    font-size: 16px; display: inline-block; width: 50%; height: 150px;
+    background-color: transparent; transition: all .5s ease;
 }
 .items .col2_left{
-    float: left;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 5px 0 0 5px;
+    float: left; width: 50%; height: 100%; overflow: hidden; border-radius: 5px 0 0 5px;
 }
 .items .col2_left img{
-    display: block;
-    width: 100%;
-    height: 150px;
-    border-radius: 5px 0 0 5px;
-    transition: all .5s ease;
+    display: block; width: 100%; height: 150px; border-radius: 5px 0 0 5px; transition: all .5s ease;
 }
 .items .col2_right{
-    position: relative;
-    float: right;
-    width: 50%;
-    /* height: 150px; */
-    overflow: hidden;
+    position: relative; float: right; width: 50%; overflow: hidden;
 }
 .col2_right .top_contain{
-    height: 8px;
-    width: 100%;
+    height: 8px; width: 100%;
 }
 .col2_right .top_contain:before{
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 50%;
+    content: ''; position: absolute; left: 0; width: 50%;
     border-bottom: 8px solid rgba(26,26,26,0.9);
     border-right: 8px solid transparent;
 }
 .col2_right .top_contain:after{
     content: '';
-    position: absolute;
-    right: 0;
-    width: 20%;
+    position: absolute; right: 0; width: 20%;
     border-left: 8px solid transparent;
     border-bottom: 8px solid rgba(26,26,26,0.9);
     border-radius: 0 5px 0 0;
 }
 .col2_right .content_contain{
-    height: 134px;
-    display: inline-block;
-    background-color: rgba(26,26,26,0.9);
-    border-radius: 0 0 5px 0;
-    text-align: left;
-    padding: 25px 15px 0;
+    height: 134px; display: inline-block; background-color: rgba(26,26,26,0.9);
+    border-radius: 0 0 5px 0; text-align: left; padding: 25px 15px 0;
 }
 /* .col2_right .content_contain p{
     white-space: nowrap;
@@ -430,32 +379,16 @@ li.single_slide_list{
     height: 8px;
 }
 .col2_right .bottom_contain:before{
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 70%;
-    border-right: 8px solid transparent;
-    border-top: 8px solid rgba(26,26,26,0.9);
+    content: ''; position: absolute; left: 0; width: 70%;
+    border-right: 8px solid transparent; border-top: 8px solid rgba(26,26,26,0.9);
 }
 .neon{
-    position: absolute;
-    width: 15px;
-    height: 3px;
-    top: 20px;
-    left: 20px;
-    background: #505050;
-    border-radius: 5px;
-    transition: all .5s ease;
+    position: absolute; width: 15px; height: 3px; top: 20px; left: 20px;
+    background: #505050; border-radius: 5px; transition: all .5s ease;
 }
 .neon:after{
-    content: '';
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    left: 20px;
-    background: #505050;
-    border-radius: 5px;
-    transition: all .5s ease;
+    content: ''; position: absolute; width: 3px; height: 3px; left: 20px;
+    background: #505050; border-radius: 5px; transition: all .5s ease;
 }
 .item:hover .col2_left img{
     transform: scale(1.1);
@@ -465,15 +398,10 @@ li.single_slide_list{
     -o-transform: scale(1.1);
     transition: all .5s ease;
 }
-.item:hover .neon,
-.item:hover .neon:after,
-.item2:hover .neon,
-.item2:hover .neon:after,
-.item3:hover .neon,
-.item3:hover .neon:after{
-    background: #ffffff;
-    box-shadow: 0 0 6px 1px white;
-    transition: all .5s ease;
+.item:hover .neon, .item:hover .neon:after,
+.item2:hover .neon, .item2:hover .neon:after,
+.item3:hover .neon, .item3:hover .neon:after{
+    background: #ffffff; box-shadow: 0 0 6px 1px white; transition: all .5s ease;
 }
 
 /* latest */
@@ -600,22 +528,17 @@ li.single_slide_list{
 
 .latest_slide button.slick-prev:hover,
 .latest_slide button.slick-next:hover{
-    background-color: rgba(62, 62, 62, 0.6);
-    transition: all 0.3s ease;
+    background-color: rgba(62, 62, 62, 0.6); transition: all 0.3s ease;
 }
-
 .latest_slide button.slick-prev {
     left: -15px;
 }
-
 .latest_slide button.slick-next {
-    right: 10px;
-    transform: scale(-1, 1) translate(-50%);
+    right: 10px; transform: scale(-1, 1) translate(-50%);
 }
 
 .latest_video_slide .item3{
-    width: 49.5%;
-    display: inline-block;
+    width: 49.5%; display: inline-block;
 }
 .latest_video_slide > .item3{
     padding-right: 8px;
@@ -623,14 +546,9 @@ li.single_slide_list{
 .latest_video_slide .row1_top{
     height: 235px;
 }
-
 .youtube_btn{
-    cursor: pointer;
-    position: absolute;
-    top: 38%;
-    left: 43%;
+    cursor: pointer;  position: absolute; top: 38%; left: 43%;
 }
-
 .youtube_btn .playBtn{
     border-color: transparent;
     background: url(https://static-mh.content.disney.io/starwars/assets/video/videoplayer_skin/play-icon-87b2f7072129.svg) center no-repeat;
@@ -645,20 +563,14 @@ li.single_slide_list{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 .youtube_btn:hover .playBtn {
-    background-color: rgba(213,0,14, 0.7);
-    transition: all 0.3s ease;
+    background-color: rgba(213,0,14, 0.7); transition: all 0.3s ease;
 }
-
 .adv_slide .item4{
-    width: 32.9%;
-    display: inline-block;
+    width: 32.9%; display: inline-block;
 }
-
 .adv_slide .item4 > img {
-    width: 100%;
-    border-radius: 1.5%;
+    width: 100%; border-radius: 1.5%;
 }
 
 #adv button.slick-next {right: 0;}
@@ -672,13 +584,27 @@ footer{
     background-repeat: no-repeat;
     text-align: center; color: #cccccc; font-size: 0.875rem; font-weight: 600;
 }
-#social_list{padding-top: 20px; }
-#social_list p { margin: 64px 0 22px}
-#help{ margin-top: 32px; margin-bottom: 12px; font-weight: 400; letter-spacing: 0.5px;}
-#help p#copyright{padding: 10px 0;}
-#help ul#legal{ font-size: 0; padding: 10px;}
-#help ul#legal > li{ display: inline-block; font-size: 15px; line-height: 20px; border-right: 1px solid #cccccc; padding: 0 20px;}
-#help ul#legal > li:last-child{ border: none;}
+#social_list{ 
+    padding-top: 20px; 
+}
+#social_list p { 
+    margin: 64px 0 22px;
+}
+#help{ 
+    margin-top: 32px; margin-bottom: 12px; font-weight: 400; letter-spacing: 0.5px;
+}
+#help p#copyright{
+    padding: 10px 0;
+}
+#help ul#legal{ 
+    font-size: 0; padding: 10px;
+}
+#help ul#legal > li{ 
+    display: inline-block; font-size: 15px; line-height: 20px; border-right: 1px solid #cccccc; padding: 0 20px;
+}
+#help ul#legal > li:last-child{ 
+    border: none;
+}
 
 
 
