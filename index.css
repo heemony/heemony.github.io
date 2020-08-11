@@ -211,11 +211,11 @@ a{ text-decoration: none; }
 }
 .taskBar button{
     position: relative;
-    top: -2px;
+    /* top: -2px; */
     line-height: 18px;
     height: 40px;
     margin-left: 2px;
-    /* margin-top: 3px; */
+    margin-top: 5px;
     padding: 5px;
     overflow: hidden;
     align-items: center;
@@ -315,21 +315,30 @@ button.clickbtn{
     display: flex;
     flex-direction: row;
 }
-.taskBar_submenu p{
+/* .taskBar_submenu p{
     display: none;
-}
-.taskBar_submenu.clickbtn p{
+} */
+.taskBar_submenu.clickbtn .taskBar_titleBar p{
     position: absolute;
-    bottom: 28px;
-    left: -29px;
+    bottom: 38px;
+    left: -33px;
     display: block;
     transform: rotate(270deg);
-    color: rgb(245, 245, 245); 
+    color: rgb(245, 245, 245);
     font-weight: bold;
+}
+.taskBar_submenu.clickbtn .menu .shutdown{
+    border-top: 1px solid rgb(128, 128, 128);
+    position: absolute;
+    bottom: 0;
+    width: 93%;
 }
 .taskBar_titleBar{
     width: 35px;
     background: linear-gradient( to top, #000080, rgb(128, 128, 128));
+}
+.taskBar_titleBar p{
+    line-height: 20px;
 }
 .menu{
     width: 100%;
@@ -354,7 +363,7 @@ button.clickbtn{
     border-width: 1px;
     border-color: rgb(80, 80, 80) rgb(255, 255, 255) rgb(255, 255, 255) rgb(84, 84, 84);
     background-color: rgb(169, 169, 169); */
-    border-bottom: 1px solid rgb(80, 80, 80);
+    /* border-bottom: 1px solid rgb(80, 80, 80); */
 }
 .submenu{
     display: none;
