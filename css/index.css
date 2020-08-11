@@ -376,7 +376,8 @@ button.clickbtn{
     display: none;
 }
 .menu li:hover .submenu li{
-    width: 222px;
+    width: auto;
+    min-width: 230px;
 }
 .menu li:hover .submenu{
     position: absolute;

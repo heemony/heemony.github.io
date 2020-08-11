@@ -7,12 +7,14 @@ jQuery(document).ready(function() {
 	mute = $('#mute');
 	muted = $('#muted');
 	close = $('#close');
-	song = new Audio('music/sunshower.ogg','music/sunshower.mp3');
+	song = new Audio('music/CanIKickIt.mp3','music/sunshower.mp3');
 	duration = song.duration;
+	song.loop = true;
 
 	if (song.canPlayType('audio/mpeg;')) {
     	song.type= 'audio/mpeg';
-    	song.src= 'music/sunshower.mp3';
+		song.src= 'music/CanIKickIt.mp3';
+
 	} else {
     	song.type= 'audio/ogg';
     	song.src= 'music/sunshower.ogg';
