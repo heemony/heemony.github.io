@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <!-- <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="css/musicbarstyle.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 
     <title>SONGHEEMYUN93</title>
 </head>
@@ -113,8 +114,8 @@
                         <img src="win93_images/start.png" alt="">
                         <span>HI
                             <ul class="submenu">
-                                <li>하이</li>
-                                <li>하이</li>
+                                <li>SONG HEE MYUN</li>
+                                <li>age : 28</li>
                             </ul>
                         </span>
                     </li>
@@ -147,6 +148,16 @@
         <div class="taskBar_divider"></div>
         <div class="task">
 
+        </div>
+        <div class="jukeBox">
+            <div class="container">
+                <img class="cover" src="icon_images/yoda.gif" alt="">
+                <div class="player">
+                    <a class="button" id="play" href="" title=""></a>
+                        <input type="range" id="seek" value="0" max=""/>
+                    <a class="button" id="mute" href="" title=""></a>
+                </div>
+            </div>
         </div>
         <div class="taskBar_divider"></div>
         <div class="taskTray">
@@ -364,6 +375,7 @@
             }
         }
     </script>
-    <script src="taskBar_time.js"></script>
+    <script type="text/javascript" src="js/taskBar_time.js"></script>
+    <script type="text/javascript" src="js/musicjs.js"></script>
 </body>
 </html>

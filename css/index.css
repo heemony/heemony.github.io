@@ -1,0 +1,648 @@
+
+@font-face{
+    font-family: 'px_sans_nouveaux';
+    src: url('../font/px_sans_nouveaux.ttf') format('truetype');
+}
+
+*{ padding: 0; margin: 0; image-rendering: pixelated;  font-family: px_sans_nouveaux;}
+ul li{ list-style: none; }
+a{ text-decoration: none; }
+
+/* desktop */
+.desktop{
+    background: linear-gradient(135deg,#f0f 0,#0ff 100%);
+    width: 100vw; height: 100vh; 
+    font-family: px_sans_nouveaux;
+    font-style: normal;
+    font-weight: normal;
+}
+.desktop_icon{
+    position: absolute;
+    top: 0px;
+    width: 80px;
+    height: 80px;
+    margin: 10px 0 0 10px;
+}
+.desktop_icon .icon_wrapper{
+    height: 61px;
+    /* background-color:rgb(192, 192, 192) */
+}
+.desktop_icon .icon_wrapper img{
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    padding-left: 5px;
+}
+.desktop_icon .title{   
+    font-size: 12px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    width: 110%;
+    line-height: 17px;
+    color: #fff;
+    /* background-color: blue; */
+    text-align: center;
+}
+.desktop_icon.right_top{
+    position: absolute;
+    /* right: 100px;        */
+    top: 30px;
+    right: 180px;
+}
+.desktop_icon.right_top .icon_wrapper{
+    position: absolute;
+    /* padding-left: 5px; */
+}
+.desktop_icon.right_top .icon_wrapper img{
+    width: 200px;
+    height: auto;
+    animation-name:rotating;
+    animation-duration:1.5s;
+    animation-iteration-count:infinite;
+}
+/* zz */
+/* @-webkit-keyframes rotating{
+    0% {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+    100% {
+      -webkit-transform: rotate(-180deg);
+      -o-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+    }
+  }
+  @keyframes rotating {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    
+      }
+      50%{
+          -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+      100% {
+        -webkit-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        
+      }
+  }
+  .rotating {
+    -webkit-animation: rotating 3s linear infinite;
+    -moz-animation: rotating 3s linear infinite;
+    -ms-animation: rotating 3s linear infinite;
+    -o-animation: rotating 3s linear infinite;
+    animation: rotating 3s linear infinite;
+  } */
+/* zz */
+.desktop_icon .right_top_title{
+    position: absolute;
+    right: 50px;
+    display: block;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 900;
+    text-align: right;
+    width: 100px;
+    padding-right: 20px;
+    border: 4px dashed rgb(255, 255, 255);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 1px;
+}
+    .right_top_title {
+        -webkit-animation: pBox 2s infinite;
+        animation: pBox 2s infinite;
+    }
+    :root {
+        --firstColor:#e6ce1c;
+        --secondColor:rgb(63, 255, 104);
+        --thirdColor:#6433f9;
+        --fourthColor:#275f5e;
+    }
+    @keyframes pBox {
+        0% {
+            background-color: var(--firstColor)
+        }
+
+        25% {
+            background-color: var(--secondColor)
+        }
+
+        50% {
+            background-color: var(--thirdColor)
+        }
+
+        75% {
+            background-color: var(--fourthColor)
+        }
+
+        100% {
+            background-color: var(--firstColor)
+        }
+    }
+    @-webkit-keyframes pBox {
+        0% {
+            background-color: var(--firstColor)
+        }
+
+        25% {
+            background-color: var(--secondColor)
+        }
+
+        50% {
+            background-color: var(--thirdColor)
+        }
+
+        75% {
+            background-color: var(--fourthColor)
+        }
+
+        100% {
+            background-color: var(--firstColor)
+        }
+    }
+
+.desktop_icon.iconMs{top: 5px;}
+.desktop_icon.icon29{top: 90px;}
+.desktop_icon.iconCarhartt{top: 175px;}
+.desktop_icon.iconEyescream{top: 275px;}
+.desktop_icon.iconNaver{top: 370px;}
+.desktop_icon.iconStarwars{left: 100px; top: 90px;}
+.desktop_icon.iconStarwars .icon_wrapper img{
+    width: 65px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+}
+.desktop_icon.iconKakaobank{left: 100px; top: 175px;}
+.desktop_icon.iconYoutube{right: 30px; top: 280px;}
+.desktop_icon.iconYoutube .icon_wrapper img{
+    width: 60px;
+    height: 45px;
+    display: block;
+    margin: 0 auto;
+}
+.desktop_icon.iconBootleg{left: 100px; top: 275px;}
+
+
+
+/* taskBar */
+.taskBar{ 
+    font-family: px_sans_nouveaux; 
+    position: fixed; 
+    display: flex; 
+    flex-direction: row; 
+    height: 49px; 
+    bottom:0; left: 0; right: 0; 
+    background-color: #b3b3b3;
+    outline: 1px solid rgb(87, 87, 87);
+    border-top: 1px solid rgb(233, 233, 242);
+}
+.taskBar button{
+    position: relative;
+    /* top: -2px; */
+    line-height: 18px;
+    height: 40px;
+    margin-left: 2px;
+    margin-top: 5px;
+    padding: 5px;
+    overflow: hidden;
+    align-items: center;
+    background-color: transparent;
+}
+.taskBar_divider{
+    content: '';
+    margin: 2px 2px;
+    width: .5px;
+    height: 45px;
+    border-style: solid;
+    border-width: 1px 1px;
+    border-color: rgb(255, 255, 255) rgb(255, 255, 255) rgb(128, 128, 128) rgb(128, 128, 128);}
+.taskBar button img{
+    width: 28px; 
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;  
+}
+.taskBar button b{
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}        
+button{
+    position: absolute;
+    outline: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255) rgb(128, 128, 128) rgb(128, 128, 128) rgb(255, 255, 255);
+    background-color: rgb(192, 192, 192);
+    color: rgb(0, 0, 0);    
+    position: relative;
+    border-color: rgb(223, 223, 223) rgb(128, 128, 128) rgb(128, 128, 128) rgb(223, 223, 223);
+    border-style: solid;
+    border-width: 2px 2px;
+}
+button.clickbtn{
+    outline: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255) rgb(128, 128, 128) rgb(128, 128, 128) rgb(255, 255, 255);
+    background-color: rgb(192, 192, 192);
+    color: rgb(0, 0, 0);
+    position: relative;
+    border-color: rgb(223, 223, 223) rgb(128, 128, 128) rgb(128, 128, 128) rgb(223, 223, 223);
+    border-color: rgb(36, 36, 36) rgb(223, 223, 223) rgb(223, 223, 223) rgb(36, 36, 36);
+    border-style: solid;
+    border-width: 2px;
+}
+.task{ 
+    display: flex;
+    flex: 1;
+    height: 100%;
+    min-width: 0;
+}
+.taskTray{
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(128, 128, 128) rgb(255, 255, 255) rgb(255, 255, 255) rgb(128, 128, 128);
+    line-height: 18px; 
+    height: 39px;
+    margin: 3px;
+}
+.taskTray .tray_icon{
+    display: flex;
+    align-items: center;
+    margin-left: 3px;      
+}
+.taskTray .tray_icon img{
+    margin: 0 2px;
+}
+.taskTray .taskBar_time{
+    line-height: 37px;
+    padding-right: 3px;
+    font-size: 13px;
+    color: rgb(40, 40, 40);
+}
+
+
+/* taskBar_submenu */
+.taskBar_submenu{
+    position: relative;
+    display: none;
+}
+.taskBar_submenu.clickbtn{
+    position: absolute;
+    bottom: 50px;
+    left: 2px;
+    height: 450px;
+    width: 250px;
+    min-width: 100px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255) rgb(128, 128, 128) rgb(128, 128, 128) rgb(255, 255, 255);
+    background-color: rgb(192, 192, 192);
+    display: flex;
+    flex-direction: row;
+}
+/* .taskBar_submenu p{
+    display: none;
+} */
+.taskBar_submenu.clickbtn .taskBar_titleBar p{
+    position: absolute;
+    bottom: 34px;
+    left: -30px;
+    display: block;
+    transform: rotate(270deg);
+    color: rgb(245, 245, 245);
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+}
+.taskBar_submenu.clickbtn .taskBar_titleBar span{
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+}
+.taskBar_submenu.clickbtn .menu .shutdown{
+    border-top: 1px solid rgb(128, 128, 128);
+    position: absolute;
+    bottom: 0;
+    width: 93%;
+}
+.taskBar_titleBar{
+    width: 35px;
+    background: linear-gradient( to top, #000080, rgb(128, 128, 128));
+}
+.menu{
+    width: 100%;
+    padding: 5px;
+    position: relative;
+}
+.menu li{
+    padding: 3px;
+}
+.menu li:hover{
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
+.menu li.blank:hover{
+    background-color: transparent;
+    cursor: pointer;
+}
+.menu .blank{
+    height: 170px;
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(80, 80, 80) rgb(255, 255, 255) rgb(255, 255, 255) rgb(84, 84, 84);
+    background-color: rgb(169, 169, 169); */
+    /* border-bottom: 1px solid rgb(80, 80, 80); */
+}
+.submenu{
+    display: none;
+}
+.menu li:hover .submenu li{
+    width: 222px;
+}
+.menu li:hover .submenu{
+    position: absolute;
+    left: 222px;
+    top: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255) rgb(128, 128, 128) rgb(128, 128, 128) rgb(255, 255, 255);
+    background-color: rgb(192, 192, 192);
+    display: block;
+    color: black;
+}
+
+
+/* jukeBox */
+.jukeBox{
+    height: 45px;
+    padding: 2px;
+}
+.jukeBox audio{
+    height: 100%;
+    background-color: rgb(128, 128, 128);
+}
+/* class = window */
+.window{
+    position: absolute;
+    z-index: 28;
+    /* left: 583px; */
+    top: 20px;
+    left: 33%;
+    width: 460px;
+    height: 500px;
+    display: flex;
+    border-color: rgb(223, 223, 223) rgb(128, 128, 128) rgb(128, 128, 128) rgb(223, 223, 223);
+    border-style: solid;
+    border-width: 2px 2px;
+    font-family: 'px_sans_nouveaux';
+    /*transform: translateX(-50%);  얘 때문에 자꾸 클릭이 이상해짐*/
+    /* transition: all 0.3s ease-in-out; */
+}
+.window.off { 
+    display: none;
+}
+/* min */
+.task.modal{
+    position: relative;
+}
+.window.min{ 
+    position: absolute;
+    top: 6px !important; /*임폴턴트 넣기 싫은데.....*/
+    left: 3px !important; /*임폴턴트 넣기 싫은데.....*/
+    height: 36px;
+    width: 150px;
+}
+.window.min .window_content{
+    display: none;
+}
+.window.min .window_btn{ 
+    display: none;
+}
+.window.min .window_titlebar{
+    position: absolute;
+    bottom: 1px;
+    max-width: 149px;
+    height: 96%;
+    transition: all 1.2s ease-in-out;
+}
+.window.min img.icon{
+    width: 35px;
+    height: 35px;
+}
+.window.min .window_title_area {
+    line-height: 35px;
+    padding-left: 11px;
+}
+.window.min .btnShaow{
+    background-color: rgb(192, 192, 192);
+    border-color: rgb(36, 36, 36) rgb(223, 223, 223) rgb(223, 223, 223) rgb(36, 36, 36);
+    border-style: solid;
+    border-width: 2px;
+}
+/* min */
+.window.max{ 
+    display: absolute !important;
+    left:0 !important;
+    right:0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
+}
+.window img.icon{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.window_title_area{
+    display: inline-block !important;
+    width: 60%;
+    line-height: 28px;
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top:0;
+    left: 34px;
+    padding-left: 3px;
+    text-overflow: ellipsis;
+}
+.window_titlebar{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to right, rgb(0, 0, 128) 0%, rgb(16, 132, 208) 100%);
+    color: rgb(255, 255, 255);
+}
+.window_btn{ 
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAKCAYAAADo3z3CAAAAoUlEQVRIS9VVWw7AIAib9z/0FpZgCOFRgpluf9MClhYdV++7gfDhYLxYDw+UyiHd5F8S5lr6zNa6Xpv/KwhHOahQpLB1+CwfycgYrwmE0WK8MTsIR1aOGsR+NYkkYzN5/pGwVA9xA/diq8LeHCKuQxQ+aoYt2yJWtpSNZth0edRpGVC5eGQcSg4hXLml3fdpBeHs8evWyPKX9ruXVqnYCeAHA8IyC9K2kmkAAAAASUVORK5CYII=);
+    background-size: 130px;
+    image-rendering: pixelated;
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+.window_min_button{ 
+    display: inline-block;
+    position: absolute;
+    top:0;
+    right: 60px;
+    width: 30px;
+    height: 30px;
+}
+.window_max_button{ 
+    display: inline-block;
+    position: absolute;
+    top:0;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+}
+.window_close_button{ 
+    display: inline-block;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+}
+.window_min_button{background-position: calc(-0 * 13px - 1px) 1px;}
+.window_max_button{background-position: calc(3 * 34px - 1px) 3px;}
+.window_close_button{background-position: calc(-7 * 31px + 1px) 3px;}
+
+.window.min .window_min_button, .window.max .window_max_button, .window.off .window_close_button{ 
+    background-color: rgb(206, 206, 206); 
+    border-color: rgb(143, 143, 143) rgb(233, 233, 233) rgb(224, 224, 224) rgb(122, 122, 122);
+    border-width: 3px;
+    border-style: solid;
+}
+.window_content{
+    font-size: 20px;
+    width: 100%;
+    background-color: #b3b3b3;
+}
+.window_content_area{
+    position: absolute;
+    top: 60px;
+    bottom: 7px;
+    left: 5px;
+    right: 5px;
+    width: auto;
+    height: auto;
+    background-color: rgb(245, 245, 245); 
+    border-color: rgb(143, 143, 143) rgb(233, 233, 233) rgb(224, 224, 224) rgb(122, 122, 122);
+    border-width: 3px;
+    border-style: solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.window_content_area > div{
+    padding: 10px;
+    /* border: 1px solid green; */
+}
+.window_content_area span{
+    display: inline-block;
+    line-height: 30px;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+.window_content_area .content_title{
+    font-size: 16px;
+    padding-top: 10px; 
+    color: rgb(35, 65, 238);
+}
+
+.window_content_area img.window_c_icon{
+    display: inline-block;
+    width: 30px;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 520px){
+    .window {
+        font-family: 'px_sans_nouveaux';
+        position: absolute;
+        z-index: 28;
+        left: 26px;
+        top: 227px;
+        width: 80%;
+        min-width: 450px;
+        height: 560px;
+        display: flex;
+        border-color: rgb(223, 223, 223) rgb(128, 128, 128) rgb(128, 128, 128) rgb(223, 223, 223);
+        border-style: solid;
+        border-width: 2px 2px;
+    }
+    .desktop_icon.right_top .icon_wrapper {
+        position: absolute;
+        padding-left: 5px;
+        right: -100px;
+        top: -20px;
+        width: 99%;
+        height: 100%;
+    }
+    .desktop_icon.right_top .icon_wrapper img {
+        width: 130px;
+        height: auto;
+    }
+    .desktop_icon .right_top_title {
+        position: absolute;
+        right: -40px;
+        display: block;
+        font-size: 19px;
+        font-style: italic;
+        font-weight: 900;
+        text-align: right;
+        width: 100px;
+        padding: 10px;
+        border: 4px dashed rgb(255, 255, 255);
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 1px;
+    }
+    .window_content_area h3:nth-child(2){
+        padding-top: 65px;
+    }
+    .desktop_icon{
+        position: absolute;
+        top: 120px;
+        width: 80px;
+        height: 80px;
+        margin: 10px 0 0 10px;
+    }
+
+}
