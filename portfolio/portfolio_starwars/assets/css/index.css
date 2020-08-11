@@ -180,6 +180,22 @@ li.single_slide_list{
     width: 200px;
     height: 80px;
 }
+.slick-dots li::after {
+    display: block; color: #c7c7c7; position: absolute; top: 15px; left: 12px;
+    width: 180px; z-index: 999; font-size: 15px; text-align: left; font-weight: bold; letter-spacing: 1px;
+}
+.slick-dots li:nth-child(1)::after {
+    content: 'VADER IMMORTAL COMING TO PLAYSTATION VR';
+}
+.slick-dots li:nth-child(2)::after {
+    content: 'STAR WARS: TALES FROM THE GALAXY’S EDGE';
+}
+.slick-dots li:nth-child(3)::after {
+    content: 'STAR WARS EMMY NOMINATIONS';
+}
+.slick-dots li:nth-child(4)::after {
+    content: 'STAR WARS: THE BAD BATCH TO DEBUT IN 2021';
+}
 .slick-dots li+li{
     margin-left: 20px;
 }

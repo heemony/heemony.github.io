@@ -10,7 +10,8 @@ header{position: fixed; top: 0; left: 0; right: 0;}
 #nav_sw_logo a.logo_img{ display: block; max-width: 203px; height: 43px; margin:0 auto; text-align: center;background: url('../images/sw_logo_horiz@2x-f98247cb30aa.png') no-repeat center; background-size: contain;}
 .nav_header_fade { position: absolute; opacity: 1; height: 80px; width: 200px;}
 
-
+/* header.on{transform: translateX(280px);}
+#main.on{transform: translateX(280px);} */
 /* toggle-icon */
 .toggle-icon{display: block; position: absolute; top: 0px; width: 70px; height: 62px; border-right: 1px solid rgba(153, 153, 153, 0.432); background-color: black; padding: 13px; z-index: 10;}
 .toggle-icon .bar{display: block; width: 30px; height: 2px; margin: 8px; border-right: 20px solid #999; border-left: 4px solid #999; border-radius: 1px; box-sizing: border-box;}
@@ -45,14 +46,14 @@ header{position: fixed; top: 0; left: 0; right: 0;}
     height: 100vh;
     /* overflow-y: hidden; */
     padding:20px;
+    z-index: 1000;
 }
 .menubar_wrapper.on #drawer{
     transform: translateX(0px);
 }
 .menubar_wrapper.on .toggle-icon{
     transform: translateX(280px);
-}
-
+} 
 .menubar_wrapper.on .page_overlap{
     background-color: rgba(0, 0, 0, 0.776);
     position: absolute;
@@ -169,3 +170,19 @@ footer{
 
 
 
+
+/* 슬릭슬라이더 */
+.slick-slider{
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}
+
+.slick-slider .slick-list {
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+  transform: none !important;
+}
