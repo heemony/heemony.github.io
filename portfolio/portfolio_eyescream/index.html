@@ -18,10 +18,27 @@
     <link rel="stylesheet" href="eyes_css/eyes_index.css">
     <link rel="stylesheet" href="eyes_css/eyes_media.css">
 
-    <script src="https://kit.fontawesome.com/e545ec33c1.js" crossorigin="anonymous"></script>
     <title>EYESCREAM Main</title>
+    <script>
+        //loader
+        window.addEventListener("load", loadWork);
+        function loadWork(){
+            const loader = document.querySelector("#loader_bg");
+            loader.classList.add("loaded_active");
+            setTimeout(function(){
+                loader.classList.remove("loaded_active")
+            }, 5000);
+        }   
+    </script>
 </head>
 <body>
+    <div id="loader_bg" class="loaded_active">
+        <div class="loading_box">
+            <div class="circle c_one"></div>
+            <div class="circle c_two"></div>
+            <div class="circle c_three"></div>
+        </div>
+    </div>
     <div id="wrap">
         <header> <!--우측최상단에 위치. 전체 베이스.-->
             <div class="main_header"> <!-- 위치잡고-->
@@ -519,6 +536,7 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <link rel="stylesheet" href="eyes_js/eyes.mjs"> -->
     <script>
         $(function(){
             var $slider = $('.slider'),
@@ -584,8 +602,7 @@
                 }
             ]
         });
-    
-        // const box = document.querySelector('.btnBox');
+
         const menuBtn = document.querySelector('a.menu_toggle_btn');
         const b = document.querySelector('#nav_menu');
         menuBtn.addEventListener('click', activeWork);
