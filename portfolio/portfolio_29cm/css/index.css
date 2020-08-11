@@ -427,9 +427,11 @@ li.gridfeed_items div.item .items_imgBox {
 li.gridfeed_items div.item .items_imgBox img{
     width: 100%;
 }
-li.gridfeed_items div.item .items_descBox h2,
+li.gridfeed_items div.item .items_descBox h2{
+    font-size: 22px; padding-top: 20px;
+}
 li.gridfeed_items div.item .items_descBox p{
-    padding-top: 20px;
+    font-size: 16px; padding-top: 20px;
 }
 li.gridfeed_items div.item .item_info_blackBox{
     position: absolute;
@@ -442,25 +444,26 @@ li.gridfeed_items div.item .item_info_blackBox{
     padding: 10px;
 }
 li.gridfeed_items div.item .item_info_blackBox .editorfind{
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: block;   
     float:left;
-    margin: 4px;
+    margin: 5px;
 }
 li.gridfeed_items div.item .item_info_blackBox p{
     width: auto;
-    line-height: 18px;
+    line-height: 20px;
+    font-size: 16px;
     display: inline-block;   
     padding: 10px 10px;
 }
 li.gridfeed_items div.item .item_info_blackBox .linefeed{
-    display: inline-block;
-    width: 23px;
-    height: 6px;
-    margin-bottom: 10px;
-    margin-left: 15px;
+    float: right;
+    display: block;
+    width: 22px;
+    height: 8px;
+    margin: 23px 10px;
 }
 
 
@@ -556,6 +559,7 @@ li.gridfeed_items div.item .item_info_blackBox .linefeed{
     padding: 10px 0;
     margin: 0 auto;
     text-align: center;
+    font-size: 14px;
 }
 
 

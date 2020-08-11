@@ -11,16 +11,21 @@ jQuery(document).ready(function() {
 	duration = song.duration;
 	song.loop = true;
 
-	if (song.canPlayType('audio/mpeg;')) {
-    	song.type= 'audio/mpeg';
-		song.src= 'music/CanIKickIt.mp3';
-
-	} else {
-    	song.type= 'audio/ogg';
-    	song.src= 'music/sunshower.ogg';
-	}
 
 
+	// if (song.canPlayType('audio/mpeg;')) {
+    // 	song.type= 'audio/mpeg';
+	// 	song.src= 'music/CanIKickIt.mp3';
+
+	// } else {
+    // 	song.type= 'audio/ogg';
+    // 	song.src= 'music/sunshower.ogg';
+	// }
+
+	// song.addEventListener('ended', playGoingon);
+	// function playGoingon(){
+	// 	song.load();
+	// }
 
 	play.on('click', function(e) {
 		e.preventDefault();

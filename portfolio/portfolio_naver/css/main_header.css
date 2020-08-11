@@ -282,12 +282,12 @@ nav.click ul.gnb_menu  li.gnb_menu_list{
     display: inline-block;
     vertical-align: top;
 }
-nav.click ul.gnb_menu  li.gnb_menu_list, li.gnb_menu_list_recruit{
+/* nav.click ul.gnb_menu  li.gnb_menu_list, li.gnb_menu_list_recruit{
     font-size: 1rem;
     display: inline-block;
     width: 190px;
-    /* border: 1px solid red; */
-}
+   
+} */
 nav.click ul.gnb_menu a.gnb_menu_item{
     display: inline-block;
     margin: 0 20px;
