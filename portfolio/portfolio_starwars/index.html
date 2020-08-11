@@ -110,7 +110,7 @@
                     <button class="slide_prev"></button>
                     <button class="slide_next"></button>
                 </div>
-                <ul id="here" class="single_slide">
+                <ul class="single_slide">
                     <li class="single_slide_list s_list_1">
                         <div class="single_slide_bg_img">
                             <img src="assets/images/s_slide_1.jpeg" alt="">
@@ -694,7 +694,7 @@
     </footer>
 
     <script>
-
+       
         $('.single_slide').slick({
             dots: true,
             customPaging: function(slider, i) { //슬라이더의 갯수(i인덱스)만큼 돌아감.
@@ -710,7 +710,7 @@
             slidesToShow: 1,
             adaptiveHeight: true,
             autoplay: true,
-            autoplaySpeed: 6000,  
+            autoplaySpeed: 5000,  
             prevArrow: $('.slide_prev'),
             nextArrow: $('.slide_next'),
         });
