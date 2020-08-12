@@ -11,10 +11,40 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
 
     <title>SONGHEEMYUN93</title>
-  
+    <script>
+        var array1 = [ ": ", "H", "E", "E", "M", "Y", "U", "N", "'", "S", 
+                        " ", "P","or","tF","oli","o", " ", " ", 
+                        "[ ", "V", "e", "r", "s", "i", "o", "n", " > ", "20", ".", "08",".","11"," ]"," ", 
+                        "W", "E", "L", "C", "O", "M", "E", ".", ".", "."
+                    ];
+        var cnt1 = 0;
+        var cnt2 = array1.length;
+        //온로드 되면서 시작창 overwrap
+        window.onload = function() {
+            const loadPage = document.querySelector('.loadBox');
+            const pageTxt = document.querySelector('#loadBox_text1');
+            loadPage.classList.add('active');
+            increase1(); 
+            setTimeout(function(){
+                loadPage.classList.remove('active')
+            }, 10000);     
+        }
+        //한글자씩 증가하는 메서드
+        function increase1(){
+            if(cnt1 < array1.length){     
+                loadBox_text1.innerHTML += array1[cnt1];
+                cnt1++;
+                setTimeout("increase1()", 200);  //0.2초후에 증가 메서드를 호출한다.
+            }
+        }
+    </script>
 </head>
 <body>
-   
+    <div class="loader">
+        <div class="loadBox">
+            <p id="loadBox_text1"></p>
+        </div>
+    </div>
 
     <div class="desktop">
         <div class="desktop_icon right_top">
