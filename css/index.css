@@ -6,7 +6,7 @@
 
 *{ padding: 0; margin: 0; image-rendering: pixelated;  font-family: px_sans_nouveaux;}
 ul li{ list-style: none; }
-a{ text-decoration: none; }
+a{ text-decoration: none; color:black; }
 /* loader */
 .loadBox{
     display: none;
@@ -24,7 +24,7 @@ a{ text-decoration: none; }
 }
 @keyframes bgchng{
     0%{
-        background-color: rgb(4, 10, 205);
+        background-color: rgb(0, 7, 215);
     }
     95%{
         background-color: rgb(30, 32, 82);
@@ -35,11 +35,11 @@ a{ text-decoration: none; }
 }
 #loadBox_text1{
     display: inline-block;
-    font-size: 35px;
-    width: 69%;
+    font-size: 20px;
+    width: 70%;
     height: 5%;
     padding: 20px;
-    color: rgb(124, 124, 124);
+    color: rgb(138, 138, 138);
 }
 /* desktop */
 .desktop{
